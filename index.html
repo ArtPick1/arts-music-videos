@@ -310,15 +310,18 @@
   </footer>
 
   <script>
-    const scriptures = [
-      "Let everything that has breath praise the Lord. – Psalm 150:6",
-      "Trust in the Lord with all your heart. – Proverbs 3:5",
-      "Be still and know that I am God. – Psalm 46:10",
-      "The Lord is my shepherd; I shall not want. – Psalm 23:1",
-      "The joy of the Lord is your strength. – Nehemiah 8:10",
-      "Draw near to God and He will draw near to you. – James 4:8"
-    ];
-
+ 	window.onload = function () {
+    fetch('verse.txt')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById("daily-scripture").innerText = text.trim();
+      })
+      .catch(error => {
+        document.getElementById("daily-scripture").innerText = "Verse not found.";
+      });
+  };
+</script>
+    
     window.onload = function () {
       const verse = scriptures[Math.floor(Math.random() * scriptures.length)];
       document.getElementById("daily-scripture").innerText = verse;
