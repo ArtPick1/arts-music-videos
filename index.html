@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art's Music Videos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    header {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem auto;
+      display: block;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ff5555;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background: #ff5555;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h3.section-title {
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: #ffcc00;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+
+    .video {
+      background-color: #111;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .video h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+      color: #ffcc00;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #bbb;
+      margin-top: 0.5rem;
+    }
+
+    .scripture-box {
+      background-color: #222;
+      border-left: 4px solid #ffcc00;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 6px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .scripture-box h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+
+    .scripture-box p {
+      margin: 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="art_logo_circle.png" alt="Art Logo" class="logo" />
+    <h1>Art’s Music Videos</h1>
+    <p>Bold. Biblical. Original.</p>
+    <a class="button" href="https://www.youtube.com/@artpick4259" target="_blank">Visit YouTube Channel</a>
+  </header>
+
+  <div class="scripture-box">
+    <h3>Scripture of the Day</h3>
+    <p id="daily-scripture">Loading verse...</p>
+  </div>
+
+  <main>
+    <div class="video-grid">
+      <div class="video">
+        <h2>Are You Living a Lie?</h2>
+        <iframe src="https://www.youtube.com/embed/-SrZNafvoio" allowfullscreen></iframe>
+        <p class="description">Confronts self-deception and surface-level faith. Inspired by 2 Corinthians 13:5.</p>
+      </div>
+
+      <div class="video">
+        <h2>Not Just Another Pretty Voice</h2>
+        <iframe src="https://www.youtube.com/embed/Imp4sM4-7g0" allowfullscreen></iframe>
+        <p class="description">A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2).</p>
+      </div>
+
+      <div class="video">
+        <h2>The Temple of the Living God</h2>
+        <iframe src="https://www.youtube.com/embed/93E1lOJSq6I" allowfullscreen></iframe>
+        <p class="description">A challenge to live holy and set apart. Based on 2 Corinthians 6:14–7:1.</p>
+      </div>
+
+      <div class="video">
+        <h2>Why Go to Church?</h2>
+        <iframe src="https://www.youtube.com/embed/KIF8zRQWsis" allowfullscreen></iframe>
+        <p class="description">Answers common objections and gives biblical reasons for gathering with believers (Hebrews 10:25).</p>
+      </div>
+
+      <div class="video">
+        <h2>Come and Grow (Blues R&B)</h2>
+        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
+        <p class="description">An alternate soulful take on the Agape Life Fellowship anthem with blues and R&B vibes.</p>
+      </div>
+
+      <div class="video">
+        <h2>Come and Grow</h2>
+        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
+        <p class="description">Promotional song for Agape Life Fellowship, inviting people to experience growth and healing.</p>
+      </div>
+
+      <div class="video">
+        <h2>Jesus or Bocephus</h2>
+        <iframe src="https://www.youtube.com/embed/9OQmrhu7UPY" allowfullscreen></iframe>
+        <p class="description">A bold response to cultural religion, challenging idolatry with the truth of Christ.</p>
+      </div>
+
+      <div class="video">
+        <h2>We Can't Let Go</h2>
+        <iframe src="https://www.youtube.com/embed/0lBXQ7u8Z6g" allowfullscreen></iframe>
+        <p class="description">A cry of faith and perseverance when hope is hard to hold onto.</p>
+      </div>
+
+      <div class="video">
+        <h2>Depths Of My Distress</h2>
+        <iframe src="https://www.youtube.com/embed/Rh69t81Co9Q" allowfullscreen></iframe>
+        <p class="description">A raw prayer from the pit, drawn from Jonah 2 and Psalm 88.</p>
+      </div>
+
+      <div class="video">
+        <h2>His Holy Call</h2>
+        <iframe src="https://www.youtube.com/embed/GyccPooWTrc" allowfullscreen></iframe>
+        <p class="description">God is calling His people to repentance, purity, and boldness in the last days.</p>
+      </div>
+
+      <div class="video">
+        <h2>A New Creation (Behold the New)</h2>
+        <iframe src="https://www.youtube.com/embed/BZKlUIWSv4E" allowfullscreen></iframe>
+        <p class="description">Based on 2 Corinthians 5:17. We are not just improved—we are reborn in Christ.</p>
+      </div>
+
+      <div class="video">
+        <h2>Born Again (Metal)</h2>
+        <iframe src="https://www.youtube.com/embed/2DjXCaqsNpk" allowfullscreen></iframe>
+        <p class="description">A heavy-hitting declaration of true new birth and transformation.</p>
+      </div>
+
+      <div class="video">
+        <h2>Born Again (Rock)</h2>
+        <iframe src="https://www.youtube.com/embed/yK4YxAU5e_E" allowfullscreen></iframe>
+        <p class="description">Rock version of the call to examine our salvation and be truly born again.</p>
+      </div>
+
+      <div class="video">
+        <h2>Sing Hallelujah</h2>
+        <iframe src="https://www.youtube.com/embed/HZYPymgsTNU" allowfullscreen></iframe>
+        <p class="description">A celebration of God's greatness, calling the Church to joyful worship.</p>
+      </div>
+
+      <div class="video">
+        <h2>Chase Worthless Idols</h2>
+        <iframe src="https://www.youtube.com/embed/6DSL94G6Tko" allowfullscreen></iframe>
+        <p class="description">Inspired by Jeremiah 2:5 and Jonah 2:8. What are we trading God for?</p>
+      </div>
+
+      <div class="video">
+        <h2>This Ain’t for Awards—It’s for War</h2>
+        <iframe src="https://www.youtube.com/embed/QNN2oaTuWMM" allowfullscreen></iframe>
+        <p class="description">This is spiritual warfare, not entertainment. Armor up.</p>
+      </div>
+
+      <div class="video">
+        <h2>Yet I Will Rejoice</h2>
+        <iframe src="https://www.youtube.com/embed/NfZtq1BN5LU" allowfullscreen></iframe>
+        <p class="description">Even in loss or silence from God, I will praise Him. Based on Habakkuk 3:17–19.</p>
+      </div>
+
+      <div class="video">
+        <h2>Does God Revolve Around You?</h2>
+        <iframe src="https://www.youtube.com/embed/Q4_JYGVL8Wo" allowfullscreen></iframe>
+        <p class="description">A confrontational question about who's really at the center of your faith.</p>
+      </div>
+
+      <div class="video">
+        <h2>Dust to Dust</h2>
+        <iframe src="https://www.youtube.com/embed/goYC-AN2Rzs" allowfullscreen></iframe>
+        <p class="description">We came from dust and to dust we will return—but there’s hope in Jesus.</p>
+      </div>
+
+      <div class="video">
+        <h2>Disturb the City (Version 2)</h2>
+        <iframe src="https://www.youtube.com/embed/jGJYsMzGUls" allowfullscreen></iframe>
+        <p class="description">Revamped version of the bold call to turn the world upside down with the gospel.</p>
+      </div>
+
+      <div class="video">
+        <h2>Disturb the City</h2>
+        <iframe src="https://www.youtube.com/embed/QLz4KNQmrAo" allowfullscreen></iframe>
+        <p class="description">Inspired by Acts 17:6. Real faith changes everything around us.</p>
+      </div>
+
+      <div class="video">
+        <h2>Disciple or Fan</h2>
+        <iframe src="https://www.youtube.com/embed/FulLRuDHai0" allowfullscreen></iframe>
+        <p class="description">Are you just cheering Jesus on from the stands—or carrying your cross?</p>
+      </div>
+
+      <div class="video">
+        <h2>From Where I Stand</h2>
+        <iframe src="https://www.youtube.com/embed/eOtEThVwtTs" allowfullscreen></iframe>
+        <p class="description">A personal testimony of faith, struggle, and seeing God’s hand over time.</p>
+      </div>
+
+      <div class="video">
+        <h2>Accident or Design</h2>
+        <iframe src="https://www.youtube.com/embed/kJU5JDUgItY" allowfullscreen></iframe>
+        <p class="description">A challenge to evolution and chance: your life has purpose and design.</p>
+      </div>
+
+      <div class="video">
+        <h2>When Minds Meet Machine</h2>
+        <iframe src="https://www.youtube.com/embed/Q7cg_SLXDm4" allowfullscreen></iframe>
+        <p class="description">In an age of AI, what makes us truly human and accountable before God?</p>
+      </div>
+
+      <div class="video">
+        <h2>The Cry Unheard (Silent Cry of the Heart)</h2>
+        <iframe src="https://www.youtube.com/embed/lZyDvOS5iIQ" allowfullscreen></iframe>
+        <p class="description">God hears the cries we never speak. A message of hope for the hurting.</p>
+      </div>
+
+      <div class="video">
+        <h2>Strength in Surrender</h2>
+        <iframe src="https://www.youtube.com/embed/ZHfX1J60YcA" allowfullscreen></iframe>
+        <p class="description">Power is made perfect in weakness. Let go—and find real strength in Christ.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Art's Music Ministry | All Rights Reserved
+  </footer>
+
+  <script>
+    const scriptures = [
+      "Let everything that has breath praise the Lord. – Psalm 150:6",
+      "Trust in the Lord with all your heart. – Proverbs 3:5",
+      "Be still and know that I am God. – Psalm 46:10",
+      "The Lord is my shepherd; I shall not want. – Psalm 23:1",
+      "The joy of the Lord is your strength. – Nehemiah 8:10",
+      "Draw near to God and He will draw near to you. – James 4:8"
+    ];
+
+    window.onload = function () {
+      const verse = scriptures[Math.floor(Math.random() * scriptures.length)];
+      document.getElementById("daily-scripture").innerText = verse;
+    };
+  </script>
+</body>
+</html>
