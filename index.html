@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Music Videos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art's Music Videos</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="videos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="scripture-of-the-day">
-    <h2>📖 Scripture of the Day</h2>
-    <p id="verse">Loading verse...</p>
-  </div>
+  <header>
+    <img src="art_logo_circle.png" alt="Art Logo" class="logo">
+    <h1>Art’s Music Videos</h1>
+    <p>Bold. Biblical. Original.</p>
+    <a class="button" href="https://www.youtube.com/@artpick4259" target="_blank">Visit YouTube Channel</a>
+  </header>
 
-  <main id="video-container" class="video-grid">
-    <!-- Videos will be inserted here by videos.js -->
+  <main>
+    <section class="scripture">
+      <h2 class="scripture-heading">Scripture of the Day</h2>
+      <div id="scripture-of-the-day">Loading...</div>
+    </section>
+
+    <h3 class="section-title">2025 Releases</h3>
+    <div id="video-container" class="video-grid"></div>
   </main>
 
+  <footer>
+    &copy; 2025 Art's Music Ministry | All Rights Reserved
+  </footer>
+
+  <script src="videos.js"></script>
   <script>
-    // Load verse from verse.txt
     fetch('verse.txt')
       .then(response => response.text())
       .then(text => {
-        const verseElement = document.getElementById('verse');
-        if (verseElement) {
-          verseElement.textContent = text.trim();
-        }
+        const verseEl = document.getElementById('scripture-of-the-day');
+        const verses = text.trim().split(/\n+/);
+        const today = new Date().getDate() % verses.length;
+        verseEl.textContent = verses[today];
       })
-      .catch(error => {
-        console.error('Error loading verse:', error);
+      .catch(err => {
+        document.getElementById('scripture-of-the-day').textContent = 'Verse not found.';
       });
+
+    const container = document.getElementById("video-container");
+    videos.forEach(video => {
+      const videoDiv = document.createElement("div");
+      videoDiv.className = "video-item";
+      videoDiv.innerHTML = `
+        <h2>${video.title}</h2>
+        <iframe src="${video.url}" allowfullscreen></iframe>
+        <button class="info-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">Click for more info</button>
+        <p class="description hidden">${video.description}</p>
+      `;
+      container.appendChild(videoDiv);
+    });
   </script>
 </body>
 </html>
