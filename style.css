@@ -87,10 +87,11 @@ h3.section-title {
   font-size: 0.9rem;
   color: #bbb;
   margin-top: 0.5rem;
+  display: none;
 }
 
-.description.hidden {
-  display: none;
+.description.show {
+  display: block;
 }
 
 .info-btn {
@@ -122,4 +123,12 @@ footer {
   font-size: 2rem;
   color: #ffdd55;
   margin-bottom: 1rem;
+}
+
+#scripture-text {
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
