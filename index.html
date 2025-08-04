@@ -2,242 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Art's Music Videos</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: white;
-    }
-
-    header {
-      background-color: #111;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    .logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1rem auto;
-      display: block;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: #ff5555;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-top: 0.5rem;
-    }
-
-    a.button {
-      display: inline-block;
-      background: #ff5555;
-      color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-
-    main {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h3.section-title {
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
-      margin-bottom: 2rem;
-      font-size: 1.4rem;
-      color: #ffcc00;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2rem;
-    }
-
-    .video {
-      background-color: #111;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    .video h2 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.1rem;
-      color: #ffcc00;
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-      border-radius: 6px;
-    }
-
-    .description {
-      font-size: 0.9rem;
-      color: #bbb;
-      margin-top: 0.5rem;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-
-    .scripture-box {
-      background-color: #222;
-      border-left: 4px solid #ffcc00;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      border-radius: 6px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .scripture-box h3 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
-      color: #ffcc00;
-    }
-
-    .scripture-box p {
-      margin: 0;
-      font-size: 1rem;
-      color: #ccc;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="art_logo_circle.png" alt="Art Logo" class="logo" />
     <h1>Art’s Music Videos</h1>
     <p>Bold. Biblical. Original.</p>
+    <div id="verse-of-the-day">Loading verse of the day...</div>
     <a class="button" href="https://www.youtube.com/@artpick4259" target="_blank">Visit YouTube Channel</a>
   </header>
 
   <main>
-    <div class="scripture-box">
-      <h3>Scripture of the Day</h3>
-      <p id="daily-scripture">Loading verse...</p>
-    </div>
-
     <h3 class="section-title">2025 Releases</h3>
-
-    <div class="video-grid" id="videoGrid">
-      <!-- JavaScript will populate this section -->
-    </div>
+    <div id="video-grid"></div>
   </main>
 
   <footer>
     &copy; 2025 Art's Music Ministry | All Rights Reserved
   </footer>
 
+  <script src="videos.js"></script>
   <script>
-    fetch('verse.txt')
+    const grid = document.getElementById("video-grid");
+    videos.forEach(video => {
+      const card = document.createElement("div");
+      card.className = "video-card";
+      card.innerHTML = `
+        <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
+        <h2>${video.title}</h2>
+        <button class="info-button" onclick="toggleInfo(this)">More Info</button>
+        <p class="description hidden">${video.description}</p>
+      `;
+      grid.appendChild(card);
+    });
+
+    function toggleInfo(button) {
+      const desc = button.nextElementSibling;
+      desc.classList.toggle("hidden");
+      button.textContent = desc.classList.contains("hidden") ? "More Info" : "Hide Info";
+    }
+
+    fetch("verse.txt")
       .then(response => response.text())
       .then(text => {
-        document.getElementById("daily-scripture").innerText = text.trim();
+        document.getElementById("verse-of-the-day").textContent = text;
       })
-      .catch(error => {
-        document.getElementById("daily-scripture").innerText = "Verse not found.";
+      .catch(() => {
+        document.getElementById("verse-of-the-day").textContent = "Verse not found.";
       });
-  </script>
-
-  <script>
-    const videos = [
-      {
-        title: "Are You Living a Lie?",
-        url: "https://www.youtube.com/embed/-SrZNafvoio",
-        description: "\"Are You Living a Lie\" presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence."
-      },
-      {
-        title: "Not Just Another Pretty Voice",
-        url: "https://www.youtube.com/embed/Imp4sM4-7g0",
-        description: "A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2)."
-      },
-      {
-        title: "The Temple of the Living God",
-        url: "https://www.youtube.com/embed/93E1lOJSq6I",
-        description: "This song is a bold call to holiness in a compromised age. Drawing directly from 2 Corinthians 6:14–7:1, it challenges believers to be truly set apart from the world — not just in words, but in lifestyle, worship, and witness. It exposes the spiritual dangers of unequally yoked living, worldly compromise, and halfhearted faith. \"The Temple of the Living God\" reminds us that we are not our own — we are God’s dwelling place."
-      },
-      {
-        title: "Why Go to Church?",
-        url: "https://www.youtube.com/embed/KIF8zRQWsis",
-        description: "This song addresses one of the most common modern objections to Christian life: \"Why do I even need to go to church?\" Rooted in Hebrews 10:25, it affirms the importance of gathering with other believers—not out of obligation, but because it’s essential for encouragement, growth, correction, worship, and spiritual warfare."
-      },
-      {
-        title: "Come and Grow (Original)",
-        url: "https://www.youtube.com/embed/8JGBLmRi14M",
-        description: "The original version of “Come and Grow” serves as both a personal testimony and a heartfelt invitation. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds."
-      },
-      {
-        title: "Come and Grow (Blues R&B)",
-        url: "https://www.youtube.com/embed/skXVC7SjMIg",
-        description: "This soulful R&B arrangement of “Come and Grow” draws listeners into a warm and welcoming worship atmosphere. It emphasizes the call to grow deeper in God’s Word and to walk together in love, humility, and grace. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds."
-      },
-      {
-        title: "Jesus and Bocephus",
-        url: "https://www.youtube.com/embed/9OQmrhu7UPY",
-        description: "A bluesy gospel critique of cultural Christianity that challenges listeners to follow the real Jesus — not just an American symbol."
-      },
-      {
-        title: "We Can't Let Go",
-        url: "https://www.youtube.com/embed/0lBXQ7u8Z6g",
-        description: "“We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity. Inspired by Acts 17 and Ezekiel 33, it challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls."
-      },
-      {
-        title: "The Cry Unheard",
-        url: "https://www.youtube.com/embed/lZyDvOS5iIQ",
-        description: "The Cry Unheard was inspired by a photo I took back in 2009 on the southern edge of Bricktown in Oklahoma City. Later, Proverbs 21:13 hit home: \"Whoever closes his ear to the cry of the poor will himself call out and not be answered.\""
-      }
-    ];
-
-    const grid = document.getElementById("videoGrid");
-
-    videos.forEach(video => {
-      const container = document.createElement("div");
-      container.className = "video";
-
-      const title = document.createElement("h2");
-      title.textContent = video.title;
-
-      const iframe = document.createElement("iframe");
-      iframe.src = video.url;
-      iframe.allowFullscreen = true;
-
-      const desc = document.createElement("p");
-      desc.className = "description";
-      desc.textContent = video.description;
-
-      container.appendChild(title);
-      container.appendChild(iframe);
-      container.appendChild(desc);
-
-      grid.appendChild(container);
-    });
   </script>
 </body>
 </html>

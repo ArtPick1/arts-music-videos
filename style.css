@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #ff5555;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+a.button {
+  display: inline-block;
+  background: #ff5555;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+/* Scripture of the Day */
+.scripture {
+  background-color: #1a1a1a;
+  border-left: 4px solid #ffcc00;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width: 720px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+/* Main Layout */
+main {
+  padding: 2rem 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+h3.section-title {
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+/* Video Grid */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual Video Item */
+.video {
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 6px;
+  flex: 1 1 45%;
+  min-width: 300px;
+  max-width: 620px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video h2 {
+  font-size: 1.1rem;
+  color: #ffcc00;
+  margin: 0 0 0.5rem 0;
+}
+
+.video iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.video .info-link {
+  color: #00ccff;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  display: none;
+}
+
+.video.show-description .description {
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .video-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .video iframe {
+    height: 250px;
+  }
+}
