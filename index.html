@@ -88,7 +88,7 @@
       border-radius: 6px;
     }
 
-    .description, .full-description {
+    .description {
       font-size: 0.9rem;
       color: #bbb;
       margin-top: 0.5rem;
@@ -96,14 +96,6 @@
 
     .hidden {
       display: none;
-    }
-
-    .read-more {
-      color: #55aaff;
-      cursor: pointer;
-      display: block;
-      margin-top: 0.5rem;
-      text-decoration: underline;
     }
 
     footer {
@@ -158,24 +150,50 @@
       <div class="video">
         <h2>Are You Living a Lie?</h2>
         <iframe src="https://www.youtube.com/embed/-SrZNafvoio" allowfullscreen></iframe>
-        <div class="description">Confronts self-deception and surface-level faith. Inspired by 2 Corinthians 13:5.</div>
-        <span class="read-more" onclick="toggleInfo('desc-lie')">Click to read more…</span>
-        <div id="desc-lie" class="full-description hidden">
-          “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
+        <div class="description">
+          Confronts self-deception and surface-level faith. Inspired by 2 Corinthians 13:5.<br>
+          <a href="#" onclick="toggleInfo('info-lie'); return false;">Click to read more…</a>
+          <div id="info-lie" class="hidden">
+            “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
+          </div>
         </div>
       </div>
 
       <div class="video">
         <h2>Not Just Another Pretty Voice</h2>
         <iframe src="https://www.youtube.com/embed/Imp4sM4-7g0" allowfullscreen></iframe>
-        <div class="description">A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2).</div>
-        <span class="read-more" onclick="toggleInfo('desc-pretty')">Click to read more…</span>
-        <div id="desc-pretty" class="full-description hidden">
-          This isn’t a soft ballad for Sunday morning. It’s a declaration that worship is war. Based on Psalm 100:1–2 and the Hebrew concept of TERUAH — the battle cry, the trumpet blast, the shout that brought Jericho's walls down — this song calls believers to worship with power and purpose. It rebukes the idol of polished, performance-based worship and reminds us that God is looking for surrendered, Spirit-filled praise that shakes the atmosphere. Whether your voice is smooth or rough, the command is the same: shout to the Lord with joy, lift up a sound that tears through spiritual strongholds, and don’t hold back.
+        <div class="description">
+          A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2).<br>
+          <a href="#" onclick="toggleInfo('info-pretty'); return false;">Click to read more…</a>
+          <div id="info-pretty" class="hidden">
+            This song is about authentic worship that refuses to be tamed. Drawing from Psalm 100:1–2 and the meaning of “teruah”—a Hebrew word meaning a battle cry or trumpet blast—it celebrates the kind of worship that shakes spiritual walls. It challenges listeners to bring their whole selves before God without shame or performance. It’s not about sounding good — it’s about surrendering loud, messy, passionate praise to the Lord who deserves it.
+          </div>
         </div>
       </div>
 
-      <!-- Rest of the videos go here -->
+      <div class="video">
+        <h2>The Temple of the Living God</h2>
+        <iframe src="https://www.youtube.com/embed/93E1lOJSq6I" allowfullscreen></iframe>
+        <div class="description">
+          A challenge to live holy and set apart. Based on 2 Corinthians 6:14–7:1.<br>
+          <a href="#" onclick="toggleInfo('info-temple'); return false;">Click to read more…</a>
+          <div id="info-temple" class="hidden">
+            This song is a bold call to holiness in a compromised age. Drawing directly from 2 Corinthians 6:14–7:1, it challenges believers to be truly set apart from the world — not just in words, but in lifestyle, worship, and witness. It exposes the spiritual dangers of unequally yoked living, worldly compromise, and halfhearted faith. “The Temple of the Living God” reminds us that we are not our own — we are God’s dwelling place. The lyrics call the Church to reclaim its sacred identity and live in purity, reverence, and power. It’s a prophetic cry for the people of God to stop blending in and start standing out.
+          </div>
+        </div>
+      </div>
+
+      <div class="video">
+        <h2>Why Go to Church?</h2>
+        <iframe src="https://www.youtube.com/embed/KIF8zRQWsis" allowfullscreen></iframe>
+        <div class="description">
+          Answers common objections and gives biblical reasons for gathering with believers (Hebrews 10:25).<br>
+          <a href="#" onclick="toggleInfo('info-church'); return false;">Click to read more…</a>
+          <div id="info-church" class="hidden">
+            This song addresses one of the most common modern objections to Christian life: “Why do I even need to go to church?” It’s a heartfelt yet confrontational answer to the rise of isolation, hurt from past church experiences, and the cultural drift toward “just me and Jesus” Christianity. Rooted in Hebrews 10:25, it affirms the importance of gathering with other believers—not out of obligation, but because it’s essential for encouragement, growth, correction, worship, and spiritual warfare. The tone is compassionate but clear: the Church isn’t perfect, but God still calls us to be part of His Body — together.
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -185,8 +203,8 @@
 
   <script>
     function toggleInfo(id) {
-      const info = document.getElementById(id);
-      info.classList.toggle("hidden");
+      const infoBox = document.getElementById(id);
+      infoBox.classList.toggle('hidden');
     }
 
     fetch('verse.txt')
