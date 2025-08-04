@@ -147,67 +147,47 @@
     <h3 class="section-title">2025 Releases</h3>
 
     <div class="video-grid">
-
-      <!-- Song Block Template -->
-      <!-- REPEAT THIS FORMAT FOR EACH SONG -->
-      <!-- You can copy the block below and update each one -->
-
-      <div class="video">
-        <h2>Come and Grow</h2>
-        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-grow'); return false;">For information about the song, click here.</a>
-        <div id="info-grow" class="description hidden">
-          A church invitation song expressing healing, community, and spiritual growth.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Come and Grow (Blues R&B)</h2>
-        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">For information about the song, click here.</a>
-        <div id="info-grow-blues" class="description hidden">
-          It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
-        </div>
-      </div>
-
+      <!-- Sample Song 1 -->
       <div class="video">
         <h2>Are You Living a Lie?</h2>
         <iframe src="https://www.youtube.com/embed/-SrZNafvoio" allowfullscreen></iframe>
         <a href="#" onclick="toggleInfo('info-lie'); return false;">For information about the song, click here.</a>
         <div id="info-lie" class="description hidden">
-          “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
+          “Are You Living a Lie?” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
         </div>
       </div>
 
+      <!-- Sample Song 2 -->
       <div class="video">
         <h2>Not Just Another Pretty Voice</h2>
         <iframe src="https://www.youtube.com/embed/Imp4sM4-7g0" allowfullscreen></iframe>
         <a href="#" onclick="toggleInfo('info-pretty'); return false;">For information about the song, click here.</a>
         <div id="info-pretty" class="description hidden">
-          This gritty praise anthem was written as a direct call to passionate, noisy worship based on the Hebrew word “Teruah.” The song breaks down cultural and stylistic barriers and challenges the idea that worship must be polished and performative. It’s a rallying cry for unashamed, wholehearted praise.
+          This song cuts through polished performances to declare that worship isn’t about image. Drawing from Psalm 100, it’s a raw, loud call to authentic praise—shouting to the Lord with joy, not just singing sweetly. “Teruah” is the Hebrew word invoked here: a blast of noise, a shout of war, a cry of victory.
         </div>
       </div>
 
+      <!-- Sample Song 3 -->
       <div class="video">
-        <h2>Jesus or Bocephus</h2>
-        <iframe src="https://www.youtube.com/embed/9OQmrhu7UPY" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-bocephus'); return false;">For information about the song, click here.</a>
-        <div id="info-bocephus" class="description hidden">
-          A response to cultural Christianity, calling out idolatry and urging surrender to Christ.
+        <h2>Come and Grow (Blues R&B)</h2>
+        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
+        <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">For information about the song, click here.</a>
+        <div id="info-grow-blues" class="description hidden">
+          Written for Agape Life Fellowship, this R&B-flavored version highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
         </div>
       </div>
 
+      <!-- Sample Song 4 -->
       <div class="video">
-        <h2>We Can't Let Go</h2>
-        <iframe src="https://www.youtube.com/embed/0lBXQ7u8Z6g" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-letgo'); return false;">For information about the song, click here.</a>
-        <div id="info-letgo" class="description hidden">
-          “We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity. Inspired by Acts 17 and Ezekiel 33, the song issues a wake-up call to Christians who’ve grown silent in a dark and idol-filled world. It challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls. It’s not just musical; it’s missional.
+        <h2>Come and Grow</h2>
+        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
+        <a href="#" onclick="toggleInfo('info-grow'); return false;">For information about the song, click here.</a>
+        <div id="info-grow" class="description hidden">
+          A heartfelt invitation to those burned by past churches. This version of “Come and Grow” is gentler, expressing the healing that can happen in biblical community where truth and grace meet.
         </div>
       </div>
 
-      <!-- Continue with remaining song blocks using the same structure -->
-
+      <!-- (Add the rest of your songs in similar format below...) -->
     </div>
   </main>
 
@@ -223,6 +203,7 @@
       }
     }
 
+    // Load verse of the day
     fetch('verse.txt')
       .then(response => response.text())
       .then(text => {
