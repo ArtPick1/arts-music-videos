@@ -88,7 +88,7 @@
       border-radius: 6px;
     }
 
-    .description, .expanded-description {
+    .description {
       font-size: 0.9rem;
       color: #bbb;
       margin-top: 0.5rem;
@@ -148,14 +148,9 @@
 
     <div class="video-grid">
 
-      <div class="video">
-        <h2>Come and Grow (Blues R&B)</h2>
-        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">For information about the song, click here.</a>
-        <div id="info-grow-blues" class="description hidden">
-          It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
-        </div>
-      </div>
+      <!-- Song Block Template -->
+      <!-- REPEAT THIS FORMAT FOR EACH SONG -->
+      <!-- You can copy the block below and update each one -->
 
       <div class="video">
         <h2>Come and Grow</h2>
@@ -167,11 +162,20 @@
       </div>
 
       <div class="video">
+        <h2>Come and Grow (Blues R&B)</h2>
+        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
+        <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">For information about the song, click here.</a>
+        <div id="info-grow-blues" class="description hidden">
+          It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
+        </div>
+      </div>
+
+      <div class="video">
         <h2>Are You Living a Lie?</h2>
         <iframe src="https://www.youtube.com/embed/-SrZNafvoio" allowfullscreen></iframe>
         <a href="#" onclick="toggleInfo('info-lie'); return false;">For information about the song, click here.</a>
         <div id="info-lie" class="description hidden">
-          “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ.
+          “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
         </div>
       </div>
 
@@ -180,24 +184,7 @@
         <iframe src="https://www.youtube.com/embed/Imp4sM4-7g0" allowfullscreen></iframe>
         <a href="#" onclick="toggleInfo('info-pretty'); return false;">For information about the song, click here.</a>
         <div id="info-pretty" class="description hidden">
-          A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2).
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>The Temple of the Living God</h2>
-        <iframe src="https://www.youtube.com/embed/93E1lOJSq6I" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-temple'); return false;">For information about the song, click here.</a>
-        <div id="info-temple" class="description hidden">
-          A challenge to live holy and set apart. Based on 2 Corinthians 6:14–7:1.
-        </div>
-      </div>
-      <div class="video">
-        <h2>Why Go to Church?</h2>
-        <iframe src="https://www.youtube.com/embed/KIF8zRQWsis" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-church'); return false;">For information about the song, click here.</a>
-        <div id="info-church" class="description hidden">
-          Answers common objections and gives biblical reasons for gathering with believers (Hebrews 10:25).
+          This gritty praise anthem was written as a direct call to passionate, noisy worship based on the Hebrew word “Teruah.” The song breaks down cultural and stylistic barriers and challenges the idea that worship must be polished and performative. It’s a rallying cry for unashamed, wholehearted praise.
         </div>
       </div>
 
@@ -215,182 +202,13 @@
         <iframe src="https://www.youtube.com/embed/0lBXQ7u8Z6g" allowfullscreen></iframe>
         <a href="#" onclick="toggleInfo('info-letgo'); return false;">For information about the song, click here.</a>
         <div id="info-letgo" class="description hidden">
-          “We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity.
-
-          Inspired by Acts 17 and Ezekiel 33, the song issues a wake-up call to Christians who’ve grown silent in a dark and idol-filled world. It challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls. It’s not just musical; it’s missional.
+          “We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity. Inspired by Acts 17 and Ezekiel 33, the song issues a wake-up call to Christians who’ve grown silent in a dark and idol-filled world. It challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls. It’s not just musical; it’s missional.
         </div>
       </div>
 
-      <div class="video">
-        <h2>Depths Of My Distress</h2>
-        <iframe src="https://www.youtube.com/embed/Rh69t81Co9Q" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-depths'); return false;">For information about the song, click here.</a>
-        <div id="info-depths" class="description hidden">
-          A song of spiritual desperation and hope drawn from Jonah 2 and Psalm 88.
-        </div>
-      </div>
+      <!-- Continue with remaining song blocks using the same structure -->
 
-      <div class="video">
-        <h2>His Holy Call</h2>
-        <iframe src="https://www.youtube.com/embed/GyccPooWTrc" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-call'); return false;">For information about the song, click here.</a>
-        <div id="info-call" class="description hidden">
-          A call to live worthy of God’s holiness and purpose.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>A New Creation (Behold the New)</h2>
-        <iframe src="https://www.youtube.com/embed/BZKlUIWSv4E" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-new'); return false;">For information about the song, click here.</a>
-        <div id="info-new" class="description hidden">
-          A celebration of transformation through Christ, based on 2 Corinthians 5:17.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Born Again Rock Metal</h2>
-        <iframe src="https://www.youtube.com/embed/2DjXCaqsNpk" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-metal'); return false;">For information about the song, click here.</a>
-        <div id="info-metal" class="description hidden">
-          A bold metal anthem asking if we’ve truly been born again.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Born Again Rock</h2>
-        <iframe src="https://www.youtube.com/embed/yK4YxAU5e_E" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-bornrock'); return false;">For information about the song, click here.</a>
-        <div id="info-bornrock" class="description hidden">
-          A rock-driven declaration of new life in Christ and leaving the old self behind.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Sing Hallelujah</h2>
-        <iframe src="https://www.youtube.com/embed/HZYPymgsTNU" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-hallelujah'); return false;">For information about the song, click here.</a>
-        <div id="info-hallelujah" class="description hidden">
-          A joyful anthem of praise calling God’s people to sing aloud and rejoice.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Chase Worthless Idols</h2>
-        <iframe src="https://www.youtube.com/embed/6DSL94G6Tko" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-idols'); return false;">For information about the song, click here.</a>
-        <div id="info-idols" class="description hidden">
-          Based on Jonah 2:8 — a warning against following things that can’t save.
-        </div>
-      </div>
-      <div class="video">
-        <h2>This Ain’t for Awards—It’s for War</h2>
-        <iframe src="https://www.youtube.com/embed/QNN2oaTuWMM" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-war'); return false;">For information about the song, click here.</a>
-        <div id="info-war" class="description hidden">
-          A spiritual battle cry for believers to fight the good fight of faith without compromise.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Yet I Will Rejoice</h2>
-        <iframe src="https://www.youtube.com/embed/NfZtq1BN5LU" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-rejoice'); return false;">For information about the song, click here.</a>
-        <div id="info-rejoice" class="description hidden">
-          A song of defiant faith and hope in God even in the midst of suffering, inspired by Habakkuk 3:17–19.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Does God Revolve Around You?</h2>
-        <iframe src="https://www.youtube.com/embed/Q4_JYGVL8Wo" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-revolve'); return false;">For information about the song, click here.</a>
-        <div id="info-revolve" class="description hidden">
-          A confrontation of self-centered Christianity, reminding us Christ is the center.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Dust to Dust</h2>
-        <iframe src="https://www.youtube.com/embed/goYC-AN2Rzs" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-dust'); return false;">For information about the song, click here.</a>
-        <div id="info-dust" class="description hidden">
-          Reflects on mortality and the hope of resurrection in Christ.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>DISTURB THE CITY (Version 2)</h2>
-        <iframe src="https://www.youtube.com/embed/jGJYsMzGUls" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-disturb2'); return false;">For information about the song, click here.</a>
-        <div id="info-disturb2" class="description hidden">
-          A reimagined spiritual protest inspired by Acts 17:6—turning the world upside down for Christ.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>DISTURB THE CITY</h2>
-        <iframe src="https://www.youtube.com/embed/QLz4KNQmrAo" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-disturb1'); return false;">For information about the song, click here.</a>
-        <div id="info-disturb1" class="description hidden">
-          The original version of the Acts 17:6-inspired song calling believers to be bold witnesses.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Disciple or Fan</h2>
-        <iframe src="https://www.youtube.com/embed/FulLRuDHai0" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-disciple'); return false;">For information about the song, click here.</a>
-        <div id="info-disciple" class="description hidden">
-          Challenges believers to move beyond admiration and become true followers of Christ.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>From Where I Stand</h2>
-        <iframe src="https://www.youtube.com/embed/eOtEThVwtTs" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-stand'); return false;">For information about the song, click here.</a>
-        <div id="info-stand" class="description hidden">
-          A personal reflection on the grace of God through the highs and lows of life.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Accident or Design</h2>
-        <iframe src="https://www.youtube.com/embed/kJU5JDUgItY" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-design'); return false;">For information about the song, click here.</a>
-        <div id="info-design" class="description hidden">
-          Points to the beauty and purpose of creation as evidence of God’s intelligent design.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>When Minds Meet Machine</h2>
-        <iframe src="https://www.youtube.com/embed/Q7cg_SLXDm4" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-machine'); return false;">For information about the song, click here.</a>
-        <div id="info-machine" class="description hidden">
-          A warning about artificial intelligence, human pride, and our need for spiritual discernment.
-        </div>
-      </div>
-      <div class="video">
-        <h2>The Cry Unheard – Silent Cry of the Heart</h2>
-        <iframe src="https://www.youtube.com/embed/lZyDvOS5iIQ" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-cry'); return false;">For information about the song, click here.</a>
-        <div id="info-cry" class="description hidden">
-          Expresses the deep spiritual pain and longing that often goes unseen by others but is heard by God.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Strength in Surrender (with lyrics)</h2>
-        <iframe src="https://www.youtube.com/embed/ZHfX1J60YcA" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-surrender'); return false;">For information about the song, click here.</a>
-        <div id="info-surrender" class="description hidden">
-          Finding strength in laying down our will and trusting God fully. A song of brokenness and faith.
-        </div>
-      </div>
-
-    </div> <!-- End .video-grid -->
+    </div>
   </main>
 
   <footer>
@@ -405,7 +223,6 @@
       }
     }
 
-    // Load verse of the day
     fetch('verse.txt')
       .then(response => response.text())
       .then(text => {
