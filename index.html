@@ -3,56 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art's Music Videos</title>
+  <title>My Music Videos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="art_logo_circle.png" alt="Art Logo" class="logo" />
-    <h1>Art’s Music Videos</h1>
-    <p>Bold. Biblical. Original.</p>
-    <div id="verse-of-the-day">Loading verse of the day...</div>
-    <a class="button" href="https://www.youtube.com/@artpick4259" target="_blank">Visit YouTube Channel</a>
+    <h1>🎵 My Christian Music Video Collection</h1>
   </header>
 
+  <section id="verse">
+    <h3 class="section-title">📖 Scripture of the Day</h3>
+    <pre id="verseText">Loading verse...</pre>
+  </section>
+
   <main>
-    <h3 class="section-title">Music Videos</h3>
+    <h3 class="section-title">🎬 Music Videos</h3>
     <div class="video-grid" id="videoGrid"></div>
   </main>
 
-  <footer>
-    &copy; 2025 Art's Music Ministry | All Rights Reserved
-  </footer>
-
   <script src="videos.js"></script>
   <script>
-    const grid = document.getElementById("video-grid");
-    videos.forEach(video => {
-      const card = document.createElement("div");
-      card.className = "video-card";
-      card.innerHTML = `
-        <iframe src="${video.url}" frameborder="0" allowfullscreen></iframe>
-        <h2>${video.title}</h2>
-        <button class="info-button" onclick="toggleInfo(this)">More Info</button>
-        <p class="description hidden">${video.description}</p>
-      `;
-      grid.appendChild(card);
-    });
-
-    function toggleInfo(button) {
-      const desc = button.nextElementSibling;
-      desc.classList.toggle("hidden");
-      button.textContent = desc.classList.contains("hidden") ? "More Info" : "Hide Info";
-    }
-
+    // Load Scripture of the Day
     fetch("verse.txt")
       .then(response => response.text())
       .then(text => {
-        document.getElementById("verse-of-the-day").textContent = text;
+        document.getElementById("verseText").textContent = text;
       })
-      .catch(() => {
-        document.getElementById("verse-of-the-day").textContent = "Verse not found.";
+      .catch(err => {
+        document.getElementById("verseText").textContent = "Verse not found.";
       });
+
+    // Load music videos
+    const videoGrid = document.getElementById("videoGrid");
+
+    videos.forEach(video => {
+      const div = document.createElement("div");
+      div.className = "video";
+      div.innerHTML = `
+        <iframe src="${video.url}" allowfullscreen></iframe>
+        <h2>${video.title}</h2>
+        <span class="toggle-description" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+          Click to show more
+        </span>
+        <div class="description" style="display: none;">
+          ${video.description}
+        </div>
+      `;
+      videoGrid.appendChild(div);
+    });
   </script>
 </body>
 </html>
