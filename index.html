@@ -88,7 +88,7 @@
       border-radius: 6px;
     }
 
-    .description {
+    .description, .expanded-description {
       font-size: 0.9rem;
       color: #bbb;
       margin-top: 0.5rem;
@@ -128,6 +128,14 @@
       font-size: 1rem;
       color: #ccc;
     }
+
+    .read-more {
+      color: #66ccff;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -147,32 +155,56 @@
     <h3 class="section-title">2025 Releases</h3>
 
     <div class="video-grid">
-      <!-- First four videos already inserted with expanded descriptions -->
-
       <div class="video">
-        <h2>Come and Grow (Blues R&B)</h2>
-        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
+        <h2>Are You Living a Lie?</h2>
+        <iframe src="https://www.youtube.com/embed/-SrZNafvoio" allowfullscreen></iframe>
         <div class="description">
-          An R&B blues version celebrating growth in Christ and fellowship through Agape Life Fellowship.<br>
-          <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">Click to read more…</a>
-          <div id="info-grow-blues" class="hidden">
-            This soulful R&B arrangement of “Come and Grow” draws listeners into a warm and welcoming worship atmosphere. It’s a celebration of God’s healing work in community — especially for those who have been hurt or disillusioned by church in the past. With bluesy guitar riffs and a laid-back groove, the song paints a picture of a place where wounded hearts can find hope again. It emphasizes the call to grow deeper in God’s Word and to walk together in love, humility, and grace. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
-          </div>
+          “Are You Living a Lie” presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence.
+          <span class="read-more" onclick="toggleInfo('info-lie')">Click to read more...</span>
+        </div>
+        <div id="info-lie" class="expanded-description hidden">
+          The song challenges listeners to examine whether their lives match the faith they profess. It calls out shallow belief, self-deception, and cultural religion that lacks true transformation. Inspired by 2 Corinthians 13:5, this piece acts as a mirror—urging the audience to test themselves and return to genuine surrender.
         </div>
       </div>
 
       <div class="video">
-        <h2>Come and Grow</h2>
-        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
+        <h2>Not Just Another Pretty Voice</h2>
+        <iframe src="https://www.youtube.com/embed/Imp4sM4-7g0" allowfullscreen></iframe>
         <div class="description">
-          A church invitation song expressing healing, community, and spiritual growth.<br>
-          <a href="#" onclick="toggleInfo('info-grow'); return false;">Click to read more…</a>
-          <div id="info-grow" class="hidden">
-            The original version of “Come and Grow” serves as both a personal testimony and a heartfelt invitation. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds. The lyrics affirm that healing happens in healthy fellowship. It’s not about hype or showmanship — it’s about real people growing together under the love and truth of Christ.
-          </div>
+          A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2).
+          <span class="read-more" onclick="toggleInfo('info-pretty')">Click to read more...</span>
+        </div>
+        <div id="info-pretty" class="expanded-description hidden">
+          “Not Just Another Pretty Voice” was written to break the stereotype of sanitized, polished praise. It draws from the biblical call to shout joyfully to the Lord—not just sing nicely. With dynamic vocal energy and raw instrumentation, it invites listeners to worship God boldly, with soul and conviction, not just style.
         </div>
       </div>
 
+      <div class="video">
+        <h2>Jesus or Bocephus</h2>
+        <iframe src="https://www.youtube.com/embed/9OQmrhu7UPY" allowfullscreen></iframe>
+        <div class="description">
+          A response to cultural Christianity, calling out idolatry and urging surrender to Christ.
+          <span class="read-more" onclick="toggleInfo('info-bocephus')">Click to read more...</span>
+        </div>
+        <div id="info-bocephus" class="expanded-description hidden">
+          This song directly responds to the themes and tone of Kid Rock’s “Jesus and Bocephus.” Rather than mixing rebellion with religious language, “Jesus or Bocephus” confronts the idolatry of American individualism, country pride, and self-made religion. It asks bluntly: Are you really following Christ, or are you worshiping a god made in your own image? With a blues-rock groove and gritty vocals, the song challenges listeners to choose between the real Jesus and the symbols of a hollow faith. It’s not just critique—it’s a call to repentance and transformation.
+        </div>
+      </div>
+
+      <div class="video">
+        <h2>We Can't Let Go</h2>
+        <iframe src="https://www.youtube.com/embed/0lBXQ7u8Z6g" allowfullscreen></iframe>
+        <div class="description">
+          A cry to hold fast to the truth even when the world tempts us to give up.
+          <span class="read-more" onclick="toggleInfo('info-letgo')">Click to read more...</span>
+        </div>
+        <div id="info-letgo" class="expanded-description hidden">
+          “We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity.  
+          Inspired by Acts 17 and Ezekiel 33, the song issues a wake-up call to Christians who’ve grown silent in a dark and idol-filled world.  
+          It challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls.  
+          It’s not just musical; it’s missional.
+        </div>
+      </div>
     </div>
   </main>
 
@@ -182,8 +214,8 @@
 
   <script>
     function toggleInfo(id) {
-      const infoBox = document.getElementById(id);
-      infoBox.classList.toggle('hidden');
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
     }
 
     fetch('verse.txt')
