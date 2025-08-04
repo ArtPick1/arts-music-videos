@@ -1,67 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Music Videos</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    .scripture-heading {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2em;
-      margin: 0.5em 0;
-      color: #333;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🎵 My Christian Music Video Collection</h1>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
 
-  <section id="verse">
-    <h2 class="scripture-heading">📖 Scripture of the Day</h2>
-    <pre id="verseText">Loading verse...</pre>
-  </section>
+#scripture-of-the-day {
+  padding: 2rem 1rem 1rem;
+  background-color: #1e1e1e;
+  text-align: center;
+}
 
-  <main>
-    <h3 class="section-title">🎬 Music Videos</h3>
-    <div class="video-grid" id="videoGrid"></div>
-  </main>
+#scripture-of-the-day h2,
+#verse {
+  font-family: "Matura MT Script Capitals", cursive;
+  font-size: 1.4rem;
+  color: #ffd700; /* bright gold */
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-  <script src="videos.js"></script>
-  <script>
-    // Load Scripture of the Day once
-    fetch("verse.txt")
-      .then(response => response.text())
-      .then(text => {
-        const verseEl = document.getElementById("verseText");
-        verseEl.textContent = text.trim();
-      })
-      .catch(err => {
-        document.getElementById("verseText").textContent = "Verse not found.";
-      });
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
 
-    // Load videos
-    const videoGrid = document.getElementById("videoGrid");
+.video-card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
-    videos.forEach(video => {
-      const div = document.createElement("div");
-      div.className = "video";
-      div.innerHTML = `
-        <iframe src="${video.url}" allowfullscreen></iframe>
-        <h2>${video.title}</h2>
-        <span class="toggle-description" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
-          Click to show more
-        </span>
-        <div class="description" style="display: none;">
-          ${video.description}
-        </div>
-      `;
-      videoGrid.appendChild(div);
-    });
-  </script>
-</body>
-</html>
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 5px;
+}
+
+.video-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.video-card button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.video-card .description {
+  margin-top: 0.5rem;
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.video-card button:hover {
+  background-color: #666;
+}
