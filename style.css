@@ -96,6 +96,13 @@ h3.section-title {
   display: inline-block;
 }
 
+/* Apply the font to both the title and the verse content */
+#scripture-of-the-day h2,
+#verse {
+  font-family: "Matura MT Script Capitals", cursive;
+}
+
+
 footer {
   text-align: center;
   padding: 2rem;
