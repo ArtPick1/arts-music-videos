@@ -146,37 +146,8 @@
 
     <h3 class="section-title">2025 Releases</h3>
 
-    <div class="video-grid">
-      <!-- Other videos above -->
-
-      <div class="video">
-        <h2>Come and Grow (Original)</h2>
-        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-grow'); return false;">For information about the song, click here.</a>
-        <div id="info-grow" class="description hidden">
-          🎶 Come and Grow (Original)<br>
-          The original version of “Come and Grow” serves as both a personal testimony and a heartfelt invitation.<br>
-          It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.<br>
-          The lyrics affirm that healing happens in healthy fellowship.<br>
-          It’s not about hype or showmanship — it’s about real people growing together under the love and truth of Christ.
-        </div>
-      </div>
-
-      <div class="video">
-        <h2>Come and Grow (Blues R&B)</h2>
-        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
-        <a href="#" onclick="toggleInfo('info-grow-blues'); return false;">For information about the song, click here.</a>
-        <div id="info-grow-blues" class="description hidden">
-          🎵 Come and Grow (Blues R&B)<br>
-          This soulful R&B arrangement of “Come and Grow” draws listeners into a warm and welcoming worship atmosphere.<br>
-          It’s a celebration of God’s healing work in community — especially for those who have been hurt or disillusioned by church in the past.<br>
-          With bluesy guitar riffs and a laid-back groove, the song paints a picture of a place where wounded hearts can find hope again.<br>
-          It emphasizes the call to grow deeper in God’s Word and to walk together in love, humility, and grace.<br>
-          It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds.
-        </div>
-      </div>
-
-      <!-- Other videos below -->
+    <div class="video-grid" id="videoGrid">
+      <!-- JavaScript will populate this section -->
     </div>
   </main>
 
@@ -185,11 +156,6 @@
   </footer>
 
   <script>
-    function toggleInfo(id) {
-      const infoBox = document.getElementById(id);
-      infoBox.classList.toggle('hidden');
-    }
-
     fetch('verse.txt')
       .then(response => response.text())
       .then(text => {
@@ -198,6 +164,80 @@
       .catch(error => {
         document.getElementById("daily-scripture").innerText = "Verse not found.";
       });
+  </script>
+
+  <script>
+    const videos = [
+      {
+        title: "Are You Living a Lie?",
+        url: "https://www.youtube.com/embed/-SrZNafvoio",
+        description: "\"Are You Living a Lie\" presents a musically driven, lyrical reflection on spiritual identity, the emptiness of worldly pursuits, and the invitation to surrender fully to Christ. While its delivery feels intimate and declarative, it is sung throughout with expressive phrasing—blending poetic lyricism and melodic cadence."
+      },
+      {
+        title: "Not Just Another Pretty Voice",
+        url: "https://www.youtube.com/embed/Imp4sM4-7g0",
+        description: "A call to shout in worship—TERUAH style. Loud, raw praise that breaks down walls (Psalm 100:1–2)."
+      },
+      {
+        title: "The Temple of the Living God",
+        url: "https://www.youtube.com/embed/93E1lOJSq6I",
+        description: "This song is a bold call to holiness in a compromised age. Drawing directly from 2 Corinthians 6:14–7:1, it challenges believers to be truly set apart from the world — not just in words, but in lifestyle, worship, and witness. It exposes the spiritual dangers of unequally yoked living, worldly compromise, and halfhearted faith. \"The Temple of the Living God\" reminds us that we are not our own — we are God’s dwelling place."
+      },
+      {
+        title: "Why Go to Church?",
+        url: "https://www.youtube.com/embed/KIF8zRQWsis",
+        description: "This song addresses one of the most common modern objections to Christian life: \"Why do I even need to go to church?\" Rooted in Hebrews 10:25, it affirms the importance of gathering with other believers—not out of obligation, but because it’s essential for encouragement, growth, correction, worship, and spiritual warfare."
+      },
+      {
+        title: "Come and Grow (Original)",
+        url: "https://www.youtube.com/embed/8JGBLmRi14M",
+        description: "The original version of “Come and Grow” serves as both a personal testimony and a heartfelt invitation. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds."
+      },
+      {
+        title: "Come and Grow (Blues R&B)",
+        url: "https://www.youtube.com/embed/skXVC7SjMIg",
+        description: "This soulful R&B arrangement of “Come and Grow” draws listeners into a warm and welcoming worship atmosphere. It emphasizes the call to grow deeper in God’s Word and to walk together in love, humility, and grace. It was written for Agape Life Fellowship and highlights the church’s focus on biblical teaching, midweek discipleship, and spiritual recovery from church wounds."
+      },
+      {
+        title: "Jesus and Bocephus",
+        url: "https://www.youtube.com/embed/9OQmrhu7UPY",
+        description: "A bluesy gospel critique of cultural Christianity that challenges listeners to follow the real Jesus — not just an American symbol."
+      },
+      {
+        title: "We Can't Let Go",
+        url: "https://www.youtube.com/embed/0lBXQ7u8Z6g",
+        description: "“We Can’t Let Go” — a bold and urgent anthem calling believers to awaken from spiritual passivity. Inspired by Acts 17 and Ezekiel 33, it challenges the Church to be lightbearers, watchmen, and vocal heralds of truth—emphasizing that silence equals complicity and lost souls."
+      },
+      {
+        title: "The Cry Unheard",
+        url: "https://www.youtube.com/embed/lZyDvOS5iIQ",
+        description: "The Cry Unheard was inspired by a photo I took back in 2009 on the southern edge of Bricktown in Oklahoma City. Later, Proverbs 21:13 hit home: \"Whoever closes his ear to the cry of the poor will himself call out and not be answered.\""
+      }
+    ];
+
+    const grid = document.getElementById("videoGrid");
+
+    videos.forEach(video => {
+      const container = document.createElement("div");
+      container.className = "video";
+
+      const title = document.createElement("h2");
+      title.textContent = video.title;
+
+      const iframe = document.createElement("iframe");
+      iframe.src = video.url;
+      iframe.allowFullscreen = true;
+
+      const desc = document.createElement("p");
+      desc.className = "description";
+      desc.textContent = video.description;
+
+      container.appendChild(title);
+      container.appendChild(iframe);
+      container.appendChild(desc);
+
+      grid.appendChild(container);
+    });
   </script>
 </body>
 </html>
