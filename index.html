@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Music Videos</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    .scripture-heading {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2em;
+      margin: 0.5em 0;
+      color: #333;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,7 +22,7 @@
   </header>
 
   <section id="verse">
-    <h3 class="section-title">📖 Scripture of the Day</h3>
+    <h2 class="scripture-heading">📖 Scripture of the Day</h2>
     <pre id="verseText">Loading verse...</pre>
   </section>
 
@@ -23,17 +33,18 @@
 
   <script src="videos.js"></script>
   <script>
-    // Load Scripture of the Day
+    // Load Scripture of the Day once
     fetch("verse.txt")
       .then(response => response.text())
       .then(text => {
-        document.getElementById("verseText").textContent = text;
+        const verseEl = document.getElementById("verseText");
+        verseEl.textContent = text.trim();
       })
       .catch(err => {
         document.getElementById("verseText").textContent = "Verse not found.";
       });
 
-    // Load music videos
+    // Load videos
     const videoGrid = document.getElementById("videoGrid");
 
     videos.forEach(video => {
