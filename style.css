@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  padding: 20px 0 10px;
+  line-height: 1.2;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.video-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.video-card h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.description {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
