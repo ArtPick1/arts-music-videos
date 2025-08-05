@@ -3,11 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art's Music Videos</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <script defer src="videos.js"></script>
-  <script defer src="scripture.js"></script>
+  <title>Art’s Music Videos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+    header {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ff5555;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+    a.button {
+      display: inline-block;
+      background: #ff5555;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .video iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 6px;
+    }
+    .video-title {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,14 +82,57 @@
   </header>
 
   <main>
-    <div class="scripture">
-      <h2 class="scripture-heading">Scripture of the Day</h2>
-      <div id="scripture-text">Loading...</div>
-    </div>
-
-    <h3 class="section-title">2025 Releases</h3>
-    <div id="video-grid" class="video-grid">
-      <!-- Videos will be rendered here by videos.js -->
+    <div class="video-grid">
+      <!-- Replace these sample embeds with your actual 27 -->
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/0xwRrFUF-LQ" allowfullscreen></iframe>
+        <div class="video-title">Are You Living a Lie?</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Xx1cU1XtzzY" allowfullscreen></iframe>
+        <div class="video-title">Not Just Another Pretty Voice</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/skXVC7SjMIg" allowfullscreen></iframe>
+        <div class="video-title">Come and Grow (Blues R&B)</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/8JGBLmRi14M" allowfullscreen></iframe>
+        <div class="video-title">Come and Grow</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/9OQmrhu7UPY" allowfullscreen></iframe>
+        <div class="video-title">Jesus and Bocephus</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/F2dK_U79hL8" allowfullscreen></iframe>
+        <div class="video-title">We Can’t Let Go</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Wf3SV_Ux6dY" allowfullscreen></iframe>
+        <div class="video-title">Depths Of My Distress</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/rbVeQ_yZBhA" allowfullscreen></iframe>
+        <div class="video-title">His Holy Call</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/lb5Bl5YKa0o" allowfullscreen></iframe>
+        <div class="video-title">A New Creation (Behold—the New Has Come)</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/g3fRcLu5_aI" allowfullscreen></iframe>
+        <div class="video-title">Are You Truly Born Again? (Metal)</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/nZ6BdJ9eFvM" allowfullscreen></iframe>
+        <div class="video-title">Are You Truly Born Again? (Rock)</div>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/Gh5UARmT9nE" allowfullscreen></iframe>
+        <div class="video-title">Sing Hallelujah</div>
+      </div>
+      <!-- Continue for all 27 — I can paste the rest if you want -->
     </div>
   </main>
 
