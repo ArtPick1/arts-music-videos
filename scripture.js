@@ -1,4 +1,8 @@
+// scripture.js
+
 document.addEventListener("DOMContentLoaded", () => {
+  const scriptureText = document.getElementById("scripture-text");
+
   fetch("verse.txt")
     .then(response => {
       if (!response.ok) {
@@ -6,14 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       return response.text();
     })
-    .then(text => {
-      const lines = text.trim().split(/\r?\n/).filter(line => line.trim() !== "");
-      const uniqueLines = [...new Set(lines)];
-      const verse = uniqueLines.length > 0 ? uniqueLines[0] : "Verse not found.";
-      document.getElementById("scripture-text").textContent = verse;
+    .then(data => {
+      const verses = data
+        .split("\n")
+        .map(v => v.trim())
+        .filter(v => v.length > 0); // Remove empty lines
+
+      if (verses.length === 0) {
+        scriptureText.textContent = "No verses found.";
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * verses.length);
+      scriptureText.textContent = verses[randomIndex];
     })
     .catch(error => {
-      document.getElementById("scripture-text").textContent = "Verse not found.";
-      console.error("Error loading verse:", error);
+      scriptureText.textContent = "Error loading scripture.";
+      console.error("Scripture load error:", error);
     });
 });
