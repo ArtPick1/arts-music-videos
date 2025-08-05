@@ -1,7 +1,8 @@
+/* Reset and body styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000;
+  background: #000;
   color: white;
 }
 
@@ -42,69 +43,98 @@ a.button {
   margin-top: 1rem;
 }
 
-main {
-  padding: 2rem 1rem;
+/* Scripture Section */
+.scripture {
+  background-color: #111;
+  padding: 1rem;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scripture-heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #ffcc00;
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+#scripture-text {
+  font-size: 1.2rem;
+  color: #eee;
+  padding: 0.5rem;
+}
+
+/* Section Title */
+.section-title {
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin: 2rem auto 1rem auto;
+  font-size: 1.4rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
+/* Video Grid Layout */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem 3rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-h3.section-title {
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
-  color: #ffcc00;
-}
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.video-item {
-  background: #111;
-  padding: 1rem;
+/* Individual Video Cards */
+.video-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.video-item h2 {
-  font-size: 1.1rem;
-  color: #ffcc00;
+.video-card h2 {
   margin-top: 0;
+  font-size: 1.2rem;
+  color: #ffcc00;
 }
 
-.video-item iframe {
+.video-card iframe {
   width: 100%;
   height: 200px;
   border: none;
   border-radius: 6px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.description {
-  font-size: 0.9rem;
-  color: #bbb;
-  margin-top: 0.5rem;
-  display: none;
+/* Description + Toggle Link */
+.video-description {
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
-.description.show {
-  display: block;
-}
-
-.info-btn {
+.show-more {
   display: inline-block;
-  background-color: #444;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 4px;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #66aaff;
   cursor: pointer;
-  margin-top: 0.5rem;
+  text-decoration: underline;
 }
 
+.extended-description {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  white-space: pre-wrap;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -113,22 +143,15 @@ footer {
   color: #aaa;
 }
 
-.scripture {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Responsive Fixes */
+@media (max-width: 500px) {
+  .scripture-heading {
+    font-size: 1.6rem;
+  }
+
+  .video-card iframe {
+    height: 180px;
+  }
 }
 
-.scripture-heading {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
-  color: #ffdd55;
-  margin-bottom: 1rem;
-}
 
-#scripture-text {
-  font-size: 1.1rem;
-  color: #fff;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
