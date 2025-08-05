@@ -1,4 +1,4 @@
-/* Reset and body styles */
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -43,98 +43,100 @@ a.button {
   margin-top: 1rem;
 }
 
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h3.section-title {
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: #ffcc00;
+  text-align: center;
+}
+
 /* Scripture Section */
 .scripture {
   background-color: #111;
   padding: 1rem;
-  border-top: 2px solid #444;
-  border-bottom: 2px solid #444;
-  text-align: center;
   margin-bottom: 2rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .scripture-heading {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
   color: #ffcc00;
-  margin: 0.2rem 0 0.5rem 0;
+  margin-bottom: 0.5rem;
 }
 
 #scripture-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #eee;
-  padding: 0.5rem;
 }
 
-/* Section Title */
-.section-title {
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.5rem;
-  margin: 2rem auto 1rem auto;
-  font-size: 1.4rem;
+/* Grid Layout for Videos */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.video-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   color: #ffcc00;
   text-align: center;
 }
 
-/* Video Grid Layout */
-
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Individual Video Cards */
-.video-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.video-card h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  color: #ffcc00;
-}
-
 .video-card iframe {
   width: 100%;
-  height: 200px;
+  max-width: 320px;
+  height: 180px;
   border: none;
   border-radius: 6px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Description + Toggle Link */
-.video-description {
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-.show-more {
-  display: inline-block;
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  color: #66aaff;
+/* Info Button and Toggle Text */
+.info-button {
+  background-color: #ff5555;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  text-decoration: underline;
-}
-
-.extended-description {
-  display: none;
   margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  white-space: pre-wrap;
 }
 
-/* Footer */
+.info-button:hover {
+  background-color: #ff7777;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  display: none;
+  text-align: left;
+  max-width: 100%;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
@@ -143,15 +145,13 @@ footer {
   color: #aaa;
 }
 
-/* Responsive Fixes */
-@media (max-width: 500px) {
+/* Responsive Adjustments */
+@media (max-width: 600px) {
   .scripture-heading {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
-  .video-card iframe {
-    height: 180px;
+  .video-card h2 {
+    font-size: 1rem;
   }
 }
-
-

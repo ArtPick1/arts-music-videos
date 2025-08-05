@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Art's Music Videos</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -18,10 +18,10 @@
   </header>
 
   <main>
-    <section class="scripture">
+    <div class="scripture">
       <h2 class="scripture-heading">Scripture of the Day</h2>
       <div id="scripture-text">Loading...</div>
-    </section>
+    </div>
 
     <h3 class="section-title">2025 Releases</h3>
     <div id="video-grid" class="video-grid"></div>
@@ -30,5 +30,17 @@
   <footer>
     &copy; 2025 Art's Music Ministry | All Rights Reserved
   </footer>
+
+  <script>
+    // Optional: Fallback message if Scripture doesn't load
+    document.addEventListener("DOMContentLoaded", function () {
+      const scriptureText = document.getElementById("scripture-text");
+      setTimeout(() => {
+        if (scriptureText.textContent === "Loading...") {
+          scriptureText.textContent = "Verse not found. Please check verse.txt on the server.";
+        }
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
