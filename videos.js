@@ -60,51 +60,6 @@ const videos = [
     moreInfo: "“His Holy Call” is a compelling invitation to surrender everything to the Lord’s purpose.\nWith a tone that blends urgency and tenderness, the song explores what it means to answer God’s call — not just to believe, but to follow.\nIt reflects themes of obedience, sacrifice, and the cost of discipleship, urging listeners to respond to God’s voice with wholehearted devotion."
   },
   // PART 2 will continue from here
-];
-
-function renderVideos(videoList) {
-  const container = document.getElementById("video-grid");
-  container.innerHTML = "";
-
-  videoList.forEach((video) => {
-    const videoDiv = document.createElement("div");
-    videoDiv.className = "video";
-
-    const iframe = document.createElement("iframe");
-    iframe.src = video.url.replace("watch?v=", "embed/");
-    iframe.allowFullscreen = true;
-
-    const title = document.createElement("div");
-    title.className = "video-title";
-    title.textContent = video.title;
-
-    const description = document.createElement("div");
-    description.className = "video-description";
-    description.textContent = video.description;
-
-    const moreInfo = document.createElement("div");
-    moreInfo.className = "more-info";
-    moreInfo.textContent = video.moreInfo;
-
-    const toggleBtn = document.createElement("button");
-    toggleBtn.className = "toggle-button";
-    toggleBtn.textContent = "Click for more about this song";
-    toggleBtn.onclick = () => {
-      moreInfo.style.display =
-        moreInfo.style.display === "block" ? "none" : "block";
-    };
-
-    videoDiv.appendChild(iframe);
-    videoDiv.appendChild(title);
-    videoDiv.appendChild(description);
-    videoDiv.appendChild(toggleBtn);
-    videoDiv.appendChild(moreInfo);
-    container.appendChild(videoDiv);
-  });
-}
-
-renderVideos(videos);
-
 videos.push(
   {
     title: "A New Creation (Behold—the New Has Come)",
@@ -217,3 +172,47 @@ videos.push(
 );
 
 
+];
+
+function renderVideos(videoList) {
+  const container = document.getElementById("video-grid");
+  container.innerHTML = "";
+
+  videoList.forEach((video) => {
+    const videoDiv = document.createElement("div");
+    videoDiv.className = "video";
+
+    const iframe = document.createElement("iframe");
+    iframe.src = video.url.replace("watch?v=", "embed/");
+    iframe.allowFullscreen = true;
+
+    const title = document.createElement("div");
+    title.className = "video-title";
+    title.textContent = video.title;
+
+    const description = document.createElement("div");
+    description.className = "video-description";
+    description.textContent = video.description;
+
+    const moreInfo = document.createElement("div");
+    moreInfo.className = "more-info";
+    moreInfo.textContent = video.moreInfo;
+
+    const toggleBtn = document.createElement("button");
+    toggleBtn.className = "toggle-button";
+    toggleBtn.textContent = "Click for more about this song";
+    toggleBtn.onclick = () => {
+      moreInfo.style.display =
+        moreInfo.style.display === "block" ? "none" : "block";
+    };
+
+    videoDiv.appendChild(iframe);
+    videoDiv.appendChild(title);
+    videoDiv.appendChild(description);
+    videoDiv.appendChild(toggleBtn);
+    videoDiv.appendChild(moreInfo);
+    container.appendChild(videoDiv);
+  });
+}
+
+renderVideos(videos);
