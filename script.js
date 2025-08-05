@@ -1,139 +1,139 @@
 const videos = [
   {
-    title: "Song 1",
-    videoUrl: "https://www.youtube.com/embed/example1",
-    description: `<p><strong>Song 1</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Are You Living a Lie?",
+    videoUrl: "https://www.youtube.com/embed/-SrZNafvoio",
+    description: `<p><strong>Are You Living a Lie?</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 2",
-    videoUrl: "https://www.youtube.com/embed/example2",
-    description: `<p><strong>Song 2</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Not Just Another Pretty Voice",
+    videoUrl: "https://www.youtube.com/embed/Imp4sM4-7g0",
+    description: `<p><strong>Not Just Another Pretty Voice</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 3",
-    videoUrl: "https://www.youtube.com/embed/example3",
-    description: `<p><strong>Song 3</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "The Temple of the Living God",
+    videoUrl: "https://www.youtube.com/embed/93E1lOJSq6I",
+    description: `<p><strong>The Temple of the Living God</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 4",
-    videoUrl: "https://www.youtube.com/embed/example4",
-    description: `<p><strong>Song 4</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Why Go to Church?",
+    videoUrl: "https://www.youtube.com/embed/KIF8zRQWsis",
+    description: `<p><strong>Why Go to Church?</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 5",
-    videoUrl: "https://www.youtube.com/embed/example5",
-    description: `<p><strong>Song 5</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Come and Grow",
+    videoUrl: "https://www.youtube.com/embed/8JGBLmRi14M",
+    description: `<p><strong>Come and Grow</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 6",
-    videoUrl: "https://www.youtube.com/embed/example6",
-    description: `<p><strong>Song 6</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Come and Grow Pencil Drawings Blues RB",
+    videoUrl: "https://www.youtube.com/embed/skXVC7SjMIg",
+    description: `<p><strong>Come and Grow Pencil Drawings Blues RB</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 7",
-    videoUrl: "https://www.youtube.com/embed/example7",
-    description: `<p><strong>Song 7</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Jesus and Bocephus",
+    videoUrl: "https://www.youtube.com/embed/9OQmrhu7UPY",
+    description: `<p><strong>Jesus and Bocephus</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 8",
-    videoUrl: "https://www.youtube.com/embed/example8",
-    description: `<p><strong>Song 8</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "We Can’t Let Go",
+    videoUrl: "https://www.youtube.com/embed/0lBXQ7u8Z6g",
+    description: `<p><strong>We Can’t Let Go</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 9",
-    videoUrl: "https://www.youtube.com/embed/example9",
-    description: `<p><strong>Song 9</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Depths Of My Distress",
+    videoUrl: "https://www.youtube.com/embed/Rh69t81Co9Q",
+    description: `<p><strong>Depths Of My Distress</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 10",
-    videoUrl: "https://www.youtube.com/embed/example10",
-    description: `<p><strong>Song 10</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "His Holy Call",
+    videoUrl: "https://www.youtube.com/embed/GyccPooWTrc",
+    description: `<p><strong>His Holy Call</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 11",
-    videoUrl: "https://www.youtube.com/embed/example11",
-    description: `<p><strong>Song 11</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "A New Creation (Behold—the New Has Come)",
+    videoUrl: "https://www.youtube.com/embed/BZKlUIWSv4E",
+    description: `<p><strong>A New Creation (Behold—the New Has Come)</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 12",
-    videoUrl: "https://www.youtube.com/embed/example12",
-    description: `<p><strong>Song 12</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Are You Truly Born Again Rock.",
+    videoUrl: "https://www.youtube.com/embed/yK4YxAU5e_E",
+    description: `<p><strong>Are You Truly Born Again Rock.</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 13",
-    videoUrl: "https://www.youtube.com/embed/example13",
-    description: `<p><strong>Song 13</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Are You Truly Born Again  Metal",
+    videoUrl: "https://www.youtube.com/embed/2DjXCaqsNpk",
+    description: `<p><strong>Are You Truly Born Again  Metal</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 14",
-    videoUrl: "https://www.youtube.com/embed/example14",
-    description: `<p><strong>Song 14</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Sing Hallelujah",
+    videoUrl: "https://www.youtube.com/embed/HZYPymgsTNU",
+    description: `<p><strong>Sing Hallelujah</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 15",
-    videoUrl: "https://www.youtube.com/embed/example15",
-    description: `<p><strong>Song 15</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Why Do We Go After Worthless Idols",
+    videoUrl: "https://www.youtube.com/embed/6DSL94G6Tko",
+    description: `<p><strong>Why Do We Go After Worthless Idols</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 16",
-    videoUrl: "https://www.youtube.com/embed/example16",
-    description: `<p><strong>Song 16</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "This Ain’t for Awards—It’s for War",
+    videoUrl: "https://www.youtube.com/embed/QNN2oaTuWMM",
+    description: `<p><strong>This Ain’t for Awards—It’s for War</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 17",
-    videoUrl: "https://www.youtube.com/embed/example17",
-    description: `<p><strong>Song 17</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Yet I Will Rejoice",
+    videoUrl: "https://www.youtube.com/embed/NfZtq1BN5LU",
+    description: `<p><strong>Yet I Will Rejoice</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 18",
-    videoUrl: "https://www.youtube.com/embed/example18",
-    description: `<p><strong>Song 18</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Does God Revolve Around You?",
+    videoUrl: "https://www.youtube.com/embed/Q4_JYGVL8Wo",
+    description: `<p><strong>Does God Revolve Around You?</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 19",
-    videoUrl: "https://www.youtube.com/embed/example19",
-    description: `<p><strong>Song 19</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Dust to Dust",
+    videoUrl: "https://www.youtube.com/embed/goYC-AN2Rzs",
+    description: `<p><strong>Dust to Dust</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 20",
-    videoUrl: "https://www.youtube.com/embed/example20",
-    description: `<p><strong>Song 20</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Disturb the City (Version 2)",
+    videoUrl: "https://www.youtube.com/embed/jGJYsMzGUls",
+    description: `<p><strong>Disturb the City (Version 2)</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 21",
-    videoUrl: "https://www.youtube.com/embed/example21",
-    description: `<p><strong>Song 21</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Disturb the City (Original)",
+    videoUrl: "https://www.youtube.com/embed/QLz4KNQmrAo",
+    description: `<p><strong>Disturb the City (Original)</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 22",
-    videoUrl: "https://www.youtube.com/embed/example22",
-    description: `<p><strong>Song 22</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Disciple or Fan",
+    videoUrl: "https://www.youtube.com/embed/FulLRuDHai0",
+    description: `<p><strong>Disciple or Fan</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 23",
-    videoUrl: "https://www.youtube.com/embed/example23",
-    description: `<p><strong>Song 23</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "From Where I Stand",
+    videoUrl: "https://www.youtube.com/embed/eOtEThVwtTs",
+    description: `<p><strong>From Where I Stand</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 24",
-    videoUrl: "https://www.youtube.com/embed/example24",
-    description: `<p><strong>Song 24</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Accident or Design",
+    videoUrl: "https://www.youtube.com/embed/kJU5JDUgItY",
+    description: `<p><strong>Accident or Design</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 25",
-    videoUrl: "https://www.youtube.com/embed/example25",
-    description: `<p><strong>Song 25</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "When Minds Meet Machine",
+    videoUrl: "https://www.youtube.com/embed/Q7cg_SLXDm4",
+    description: `<p><strong>When Minds Meet Machine</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 26",
-    videoUrl: "https://www.youtube.com/embed/example26",
-    description: `<p><strong>Song 26</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
+    title: "Strength in Surrender",
+    videoUrl: "https://www.youtube.com/embed/ZHfX1J60YcA",
+    description: `<p><strong>Strength in Surrender</strong> — full description placeholder. Ready to swap in final version.</p>`
   },
   {
-    title: "Song 27",
-    videoUrl: "https://www.youtube.com/embed/example27",
-    description: `<p><strong>Song 27</strong> full description goes here. This is a placeholder for real lyrics and commentary.</p>`
-  }
+    title: "The Cry Unheard",
+    videoUrl: "https://www.youtube.com/embed/EAoTEsSZGVE",
+    description: `<p><strong>The Cry Unheard</strong> — full description placeholder. Ready to swap in final version.</p>`
+  },
 ];
 
 
