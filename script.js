@@ -1,5 +1,10 @@
 const videos = [
   {
+    title: "The Pit of Destruction",
+    videoUrl: "https://www.youtube.com/embed/ZxMgrDx3_V8",
+    description: `<p><strong>The Pit of Destruction</strong> is a raw and powerful call to freedom in Christ. The song paints a vivid picture of being trapped in sin’s darkness, crying out for rescue, and being lifted by God’s mighty hand. With a gritty, worshipful tone, it declares that no pit is too deep for God’s saving power. It’s a testimony of deliverance — from chains to praise.</p>`
+  },
+  {
     title: "Are You Living a Lie?",
     videoUrl: "https://www.youtube.com/embed/-SrZNafvoio",
     description: `<p><strong>Are You Living a Lie?</strong> explores themes of self-deception, hollow desires, and the need for transformation through Christ. The song cuts deep into the heart of cultural Christianity and challenges listeners to examine their lives in light of truth — not convenience. With a gritty, introspective tone, it calls for genuine surrender, not surface-level faith.</p>`
@@ -135,7 +140,6 @@ const videos = [
     description: `<p><strong>The Cry Unheard</strong> is a sobering reminder of Proverbs 21:13 — that ignoring the cry of the poor has spiritual consequences. Inspired by an image from Bricktown and the haunting silence of neglect, it calls the Church to listen, respond, and love sacrificially. We must not close our ears to the hurting.</p>`
   },
 ];
-
 
 function renderVideos() {
   const container = document.getElementById("video-grid");
