@@ -1,5 +1,18 @@
 const videos = [
   {
+    title: "Come and Grow (Rap)",
+    videoUrl: "https://www.youtube.com/embed/buws9YQyytU",
+    description: `<p><strong>Come and Grow (Rap)</strong> hits hard with raw bars, heavy beats, and a straight-up call to truth.
+This track isn’t about hype — it’s about hope. It’s for the ones who’ve been burned, scarred, and left behind by fake religion or empty promises.</p>
+<p>Every verse spits the reality that Jesus still calls, His Word still heals, and His love still holds.
+It’s gritty. It’s real. It’s an open door to step into the light and grow in Christ.</p>
+<p>If you’ve been searching for something real — Come to Christ.</p>
+<p><strong>Scriptures behind the song:</strong><br>
+John 8:32 – “You will know the truth, and the truth will set you free.”<br>
+Hebrews 10:25 – “Do not neglect to meet together…”<br>
+2 Corinthians 6:7 – “In truthful speech and in the power of God…”</p>`
+  },
+  {
     title: "Nothing Held Back",
     videoUrl: "https://www.youtube.com/embed/be5UgHGGa4g",
     description: `<p><strong>Nothing Held Back</strong> is a raw, unapologetic rock/metal anthem calling believers to full surrender to Christ. Inspired by passages like Malachi 1, Acts 5, and Psalm 51, it challenges the halfhearted offerings we bring before the King of kings and calls us to lay everything at His feet.</p>
