@@ -36,6 +36,13 @@ Philippians 1:12–14
 Matthew 28:18–20`
   },
   {
+    title: `Nothing Held Back`,
+    videoUrl: `https://www.youtube.com/embed/be5UgHGGa4g`,
+    description: `"Nothing Held Back" is a raw, unapologetic rock/metal anthem calling believers to full surrender to Christ. Inspired by passages like Malachi 1, Acts 5, and Psalm 51, it challenges the halfhearted offerings we bring before the King of kings and calls us to lay everything at His feet.
+
+With gritty guitar riffs, heavy drums, and haunting breakdowns, this song confronts the danger of holding back — whether in worship, obedience, or sacrifice. It's a cry for holiness, repentance, and letting Christ reign over every part of our lives.`
+  },
+  {
     title: `Come and Grow (Rap)`,
     videoUrl: `https://www.youtube.com/embed/buws9YQyytU`,
     description: `Come and Grow (Rap) hits hard with raw bars, heavy beats, and a straight-up call to truth.  
@@ -70,11 +77,6 @@ Hebrews 10:25 – “Do not neglect to meet together…”
     title: `Come and Grow`,
     videoUrl: `https://www.youtube.com/embed/8JGBLmRi14M`,
     description: `Come and Grow — Full description coming soon.`
-  },
-  {
-    title: `Come and Grow Pencil Drawings Blues RB`,
-    videoUrl: `https://www.youtube.com/embed/skXVC7SjMIg`,
-    description: `Come and Grow Pencil Drawings Blues RB — Full description coming soon.`
   },
   {
     title: `Jesus and Bocephus`,
@@ -185,13 +187,6 @@ Hebrews 10:25 – “Do not neglect to meet together…”
     title: `Are You Living a Lie?`,
     videoUrl: `https://www.youtube.com/embed/-SrZNafvoio`,
     description: `Are You Living a Lie? — Full description coming soon.`
-  },
-  {
-    title: `Nothing Held Back`,
-    videoUrl: `https://www.youtube.com/embed/be5UgHGGa4g`,
-    description: `"Nothing Held Back" is a raw, unapologetic rock/metal anthem calling believers to full surrender to Christ. Inspired by passages like Malachi 1, Acts 5, and Psalm 51, it challenges the halfhearted offerings we bring before the King of kings and calls us to lay everything at His feet.
-
-With gritty guitar riffs, heavy drums, and haunting breakdowns, this song confronts the danger of holding back — whether in worship, obedience, or sacrifice. It's a cry for holiness, repentance, and letting Christ reign over every part of our lives.`
   },
   {
     title: `Come and Grow Pencil Drawings Blues R&B`,
