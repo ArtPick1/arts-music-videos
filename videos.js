@@ -2,7 +2,7 @@
 const videos = [
 {
     title: `Yirat Ometz – Song of Reverent Boldness`,
-    videoUrl: `https://www.youtube.com/embed/_m7Ko6mzxd0`,
+    videoUrl: `https://www.youtube.com/embed/Z7Jxiz39zQA`,
     description: `🔥 Yirat-Ometz — Hebrew for “Reverent Boldness” — is a cry for a generation to rise in holy fear and Spirit-empowered courage. 
 
 Inspired by Malachi 2:4–5 and Malachi 1:8, this song confronts a sobering truth:
