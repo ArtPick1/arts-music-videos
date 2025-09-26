@@ -1,227 +1,41 @@
-const videos = [
-  {
-    title: `Yirat Ometz – Song of Reverent Boldness`,
-    videoUrl: `https://www.youtube.com/embed/Z7Jxiz39zQA`,
-    description: `🔥 Yirat-Ometz — Hebrew for “Reverent Boldness” — is a cry for a generation to rise in holy fear and Spirit-empowered courage. 
+// videos.js — master manifest (newest first)
+// Tip: For YouTube thumbnails you can use: https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
 
-Inspired by Malachi 2:4–5 and Malachi 1:8, this song confronts a sobering truth:
-
-The modern Church has lost its fear and dread of God.  
-We’ve lost reverence… and we’ve lost our fire.
-
-We offer up polluted worship.  
-We withhold our best, our all.  
-We lay part of ourselves on the altar — but not everything.
-
-“When you offer blind animals in sacrifice, is that not evil? … Present that to your governor; will he accept you or show you favor?” – Malachi 1:8
-
-We talk of grace, but forget God’s holiness.  
-We speak of love, but neglect surrender.  
-This isn’t about louder music or better performances — it’s about laying our lives down in trembling obedience.
-
-“My covenant was with him, a covenant of life and peace… a covenant of fear, and he feared Me. He stood in awe of My name.” – Malachi 2:5
-
-This is not pride shouting — it’s humility burning.  
-🔥 This is Yirat-Ometz — reverent boldness.`
+window.VIDEOS = [
+  {
+    id: "voices-in-your-head-2025-09-24-1027",
+    title: "Voices in Your Head",
+    youtubeId: "x4U9iuwml18",
+    published: "2025-09-24",
+    tags: ["Rock", "Blues", "Gritty", "Intense", "Dark"],
+    message: `
+      <p><strong>Creation Date:</strong> September 24, 2025 — 10:27 AM</p>
+      <p><strong>Genres:</strong> Rock, Blues, Gritty, Intense, Dark</p>
+      <p>This song carries a simple salvation message, but also a serious warning: what we watch, listen to, and consume every day shapes us. The serpent who deceived in the Garden is still at work, roaming the earth, filling hearts and minds with lies that blind people to the light of Christ.</p>
+      <p>The lyrics cry out against these “voices in your head” — voices that call evil good and good as dead, voices that twist truth until confusion seems normal. Much of today’s media does this in subtle ways. It doesn’t always look evil on the surface, but it dulls our hearts and distracts us from Christ.</p>
+      <p>At the same time, the song points to hope. Deep within, there is still a Voice that calls: “Come — you have a choice.” That voice is not the heart (which is deceitful), but Christ Himself, breaking the chains of demonic lies through the cross.</p>
+      <p>If you’re not truly a disciple of Jesus, I urge you to consider Him. He is the way, the truth, and the life. And if you are a believer, guard your mind and soul — because the enemy is relentless in trying to drown out the still small voice of God with countless false ones.</p>
+    `
   },
   {
-    title: `Faith Unchained`,
-    videoUrl: `https://www.youtube.com/embed/_m7Ko6mzxd0`,
-    description: `Faith Unchained is a gritty rock/metal anthem inspired by Philippians 1:12–14 and Matthew 28:18–20.  
-Paul’s imprisonment became a platform for the Gospel — and we’re called to live the same way: bold, unashamed, unchained.  
-This song is a wake-up call to believers in a culture of fear and complacency. The Church is not called to sit silent or just bring people to a preacher — we are commissioned to GO, to proclaim Christ, to live unbound by fear.
-
-🔗 Key Scriptures:  
-Philippians 1:12–14  
-Matthew 28:18–20`
-  },
-  {
-    title: `Nothing Held Back`,
-    videoUrl: `https://www.youtube.com/embed/be5UgHGGa4g`,
-    description: `"Nothing Held Back" is a raw, unapologetic rock/metal anthem calling believers to full surrender to Christ. Inspired by passages like Malachi 1, Acts 5, and Psalm 51, it challenges the halfhearted offerings we bring before the King of kings and calls us to lay everything at His feet.
-
-With gritty guitar riffs, heavy drums, and haunting breakdowns, this song confronts the danger of holding back — whether in worship, obedience, or sacrifice. It's a cry for holiness, repentance, and letting Christ reign over every part of our lives.`
-  },
-  {
-    title: `Come and Grow (Rap)`,
-    videoUrl: `https://www.youtube.com/embed/buws9YQyytU`,
-    description: `Come and Grow (Rap) hits hard with raw bars, heavy beats, and a straight-up call to truth.  
-This track isn’t about hype — it’s about hope. It’s for the ones who’ve been burned, scarred, and left behind by fake religion or empty promises.
-
-Every verse spits the reality that Jesus still calls, His Word still heals, and His love still holds.  
-It’s gritty. It’s real. It’s an open door to step into the light and grow in Christ.
-
-If you’ve been searching for something real — Come to Christ.
-
-Scriptures behind the song:  
-John 8:32 – “You will know the truth, and the truth will set you free.”  
-Hebrews 10:25 – “Do not neglect to meet together…”  
-2 Corinthians 6:7 – “In truthful speech and in the power of God…”`
-  },
-  {
-    title: `Not Just Another Pretty Voice`,
-    videoUrl: `https://www.youtube.com/embed/Imp4sM4-7g0`,
-    description: `Not Just Another Pretty Voice — Full description coming soon.`
-  },
-  {
-    title: `The Temple of the Living God`,
-    videoUrl: `https://www.youtube.com/embed/93E1lOJSq6I`,
-    description: `The Temple of the Living God — Full description coming soon.`
-  },
-  {
-    title: `Why Go to Church?`,
-    videoUrl: `https://www.youtube.com/embed/KIF8zRQWsis`,
-    description: `Why Go to Church? — Full description coming soon.`
-  },
-  {
-    title: `Come and Grow`,
-    videoUrl: `https://www.youtube.com/embed/8JGBLmRi14M`,
-    description: `Come and Grow — Full description coming soon.`
-  },
-  {
-    title: `Jesus and Bocephus`,
-    videoUrl: `https://www.youtube.com/embed/9OQmrhu7UPY`,
-    description: `Jesus and Bocephus — Full description coming soon.`
-  },
-  {
-    title: `We Can’t Let Go`,
-    videoUrl: `https://www.youtube.com/embed/0lBXQ7u8Z6g`,
-    description: `We Can’t Let Go — Full description coming soon.`
-  },
-  {
-    title: `Depths Of My Distress`,
-    videoUrl: `https://www.youtube.com/embed/Rh69t81Co9Q`,
-    description: `Depths Of My Distress — Full description coming soon.`
-  },
-  {
-    title: `His Holy Call`,
-    videoUrl: `https://www.youtube.com/embed/GyccPooWTrc`,
-    description: `His Holy Call — Full description coming soon.`
-  },
-  {
-    title: `A New Creation (Behold—the New Has Come)`,
-    videoUrl: `https://www.youtube.com/embed/BZKlUIWSv4E`,
-    description: `A New Creation (Behold—the New Has Come) — Full description coming soon.`
-  },
-  {
-    title: `Are You Truly Born Again (Rock)`,
-    videoUrl: `https://www.youtube.com/embed/yK4YxAU5e_E`,
-    description: `Are You Truly Born Again (Rock) — Full description coming soon.`
-  },
-  {
-    title: `Are You Truly Born Again (Metal)`,
-    videoUrl: `https://www.youtube.com/embed/2DjXCaqsNpk`,
-    description: `Are You Truly Born Again (Metal) — Full description coming soon.`
-  },
-  {
-    title: `Sing Hallelujah`,
-    videoUrl: `https://www.youtube.com/embed/HZYPymgsTNU`,
-    description: `Sing Hallelujah — Full description coming soon.`
-  },
-  {
-    title: `Why Do We Go After Worthless Idols`,
-    videoUrl: `https://www.youtube.com/embed/6DSL94G6Tko`,
-    description: `Why Do We Go After Worthless Idols — Full description coming soon.`
-  },
-  {
-    title: `This Ain’t for Awards—It’s for War`,
-    videoUrl: `https://www.youtube.com/embed/QNN2oaTuWMM`,
-    description: `This Ain’t for Awards—It’s for War — Full description coming soon.`
-  },
-  {
-    title: `Yet I Will Rejoice`,
-    videoUrl: `https://www.youtube.com/embed/NfZtq1BN5LU`,
-    description: `Yet I Will Rejoice — Full description coming soon.`
-  },
-  {
-    title: `Does God Revolve Around You?`,
-    videoUrl: `https://www.youtube.com/embed/Q4_JYGVL8Wo`,
-    description: `Does God Revolve Around You? — Full description coming soon.`
-  },
-  {
-    title: `Dust to Dust`,
-    videoUrl: `https://www.youtube.com/embed/goYC-AN2Rzs`,
-    description: `Dust to Dust — Full description coming soon.`
-  },
-  {
-    title: `Disturb the City (Version 2)`,
-    videoUrl: `https://www.youtube.com/embed/jGJYsMzGUls`,
-    description: `Disturb the City (Version 2) — Full description coming soon.`
-  },
-  {
-    title: `Disturb the City (Original)`,
-    videoUrl: `https://www.youtube.com/embed/QLz4KNQmrAo`,
-    description: `Disturb the City (Original) — Full description coming soon.`
-  },
-  {
-    title: `Disciple or Fan`,
-    videoUrl: `https://www.youtube.com/embed/FulLRuDHai0`,
-    description: `Disciple or Fan — Full description coming soon.`
-  },
-  {
-    title: `From Where I Stand`,
-    videoUrl: `https://www.youtube.com/embed/eOtEThVwtTs`,
-    description: `From Where I Stand — Full description coming soon.`
-  },
-  {
-    title: `Accident or Design`,
-    videoUrl: `https://www.youtube.com/embed/kJU5JDUgItY`,
-    description: `Accident or Design — Full description coming soon.`
-  },
-  {
-    title: `When Minds Meet Machine`,
-    videoUrl: `https://www.youtube.com/embed/Q7cg_SLXDm4`,
-    description: `When Minds Meet Machine — Full description coming soon.`
-  },
-  {
-    title: `Strength in Surrender`,
-    videoUrl: `https://www.youtube.com/embed/ZHfX1J60YcA`,
-    description: `Strength in Surrender — Full description coming soon.`
-  },
-  {
-    title: `The Cry Unheard`,
-    videoUrl: `https://www.youtube.com/embed/EAoTEsSZGVE`,
-    description: `The Cry Unheard — Full description coming soon.`
-  },
-  {
-    title: `Are You Living a Lie?`,
-    videoUrl: `https://www.youtube.com/embed/-SrZNafvoio`,
-    description: `Are You Living a Lie? — Full description coming soon.`
-  },
-  {
-    title: `Come and Grow Pencil Drawings Blues R&B`,
-    videoUrl: `https://www.youtube.com/embed/skXVC7SjMIg`,
-    description: `This version of "Come and Grow" features pencil-drawn visuals and a blues/R&B groove that adds depth to the church invitation message. It’s for those who’ve been hurt by religion but are still hungry for something real.
-
-Blending gospel tones and honest lyrics, it paints a picture of restoration — calling people to healing, discipleship, and growth in Christ in the context of real community.`
-  },
+    id: "no-looking-back-2025-09-22-1736",
+    title: "No Looking Back",
+    youtubeId: "zF46xNrkHWM",
+    published: "2025-09-22",
+    tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
+    message: `
+      <p><strong>Creation Date:</strong> September 22, 2025 — 5:36 PM</p>
+      <p><strong>Genres:</strong> Rock, Blues, Raw, Intense, Dark</p>
+      <p>I wrote this song after seeing a post on Facebook that said:</p>
+      <blockquote><p>“If I sinned a thousand sins today, the one thing I did do right was stay sober. Thankful for that. Let’s stay sober tomorrow.”</p></blockquote>
+      <p>Now, I realize the writer was exaggerating with “a thousand sins in a day.” To do that, you’d have to sin once every 90 seconds for 24 hours straight. None of us are perfect, and yes, we stumble — but if sin still rules your life, it raises the question: have you truly repented and turned to Christ?</p>
+      <p>Too many people hide behind the excuse “I’m not perfect” as a way to continue in their sin. But Scripture tells us otherwise:</p>
+      <h3>Christ Our Advocate<br><small>1 John 2:1–6 (ESV)</small></h3>
+      <blockquote><p>“My little children, I am writing these things to you so that you may not sin. But if anyone does sin, we have an advocate with the Father, Jesus Christ the righteous. He is the propitiation for our sins, and not for ours only but also for the sins of the whole world. And by this we know that we have come to know him, if we keep his commandments. Whoever says ‘I know him’ but does not keep his commandments is a liar, and the truth is not in him, but whoever keeps his word, in him truly the love of God is perfected. By this we may know that we are in him: whoever says he abides in him ought to walk in the same way in which he walked.”</p></blockquote>
+      <h3>Washed, Yet Feet Need Washing<br><small>John 13:7–10 (ESV)</small></h3>
+      <blockquote><p>Jesus answered him, “What I am doing you do not understand now, but afterward you will understand.” Peter said to him, “You shall never wash my feet.” Jesus answered him, “If I do not wash you, you have no share with me.” Simon Peter said to him, “Lord, not my feet only but also my hands and my head!” Jesus said to him, “The one who has bathed does not need to wash, except for his feet, but is completely clean. And you are clean, but not every one of you.”</p></blockquote>
+      <p>Addictions and struggles are real, and we must be diligent to guard against them. But when we come to Christ, we don’t give Him just one part of our life — we surrender everything. Our whole life belongs to Him. And when we fully surrender, even the hardest battles grow lighter, because His grace strengthens us to press on.</p>
+      <p>That’s the heart of this song: repentance, surrender, and the bold declaration — no looking back.</p>
+    `
+  }
 ];
-
-
-function renderVideos() {
-  const container = document.getElementById("video-grid");
-  videos.forEach((video, index) => {
-    const card = document.createElement("div");
-    card.className = "video-card";
-
-    card.innerHTML = `
-      <h3>${video.title}</h3>
-      <iframe src="${video.videoUrl}" allowfullscreen></iframe>
-      <button class="toggle-btn" onclick="toggleDescription(${index})">Show Description</button>
-      <div class="description" id="desc-${index}">${video.description}</div>
-    `;
-
-    container.appendChild(card);
-  });
-}
-
-function toggleDescription(index) {
-  const desc = document.getElementById(`desc-${index}`);
-  const button = desc.previousElementSibling;
-  const isHidden = desc.style.display === "none" || !desc.style.display;
-
-  desc.style.display = isHidden ? "block" : "none";
-  button.textContent = isHidden ? "Hide Description" : "Show Description";
-}
-
-renderVideos();
