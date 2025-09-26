@@ -2,15 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art’s Music Videos — Latest Message</title>
-  <meta name="description" content="Latest video and message from Art’s Music Videos, with archive of previous messages." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preload" as="script" href="videos.js" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Art’s Music Videos — Latest Message" />
-  <meta property="og:description" content="Watch the latest video and read this week’s message. Explore the archive for previous messages." />
-  <meta property="og:image" content="" id="ogImage" />
 </head>
 <body>
   <div class="container">
@@ -18,84 +11,14 @@
       <div class="brand"><a href="./">Art’s Music Videos</a></div>
       <nav class="nav">
         <a href="./">Home</a>
-        <a href="#archive" id="archiveLink">Previous Messages</a>
+        <a href="#archive" id="archiveLink">Previous Videos</a>
       </nav>
     </header>
-
-    <main class="grid" id="app">
-      <!-- Left column: latest video -->
-      <section class="card" id="latestCard" aria-labelledby="latestTitle">
-        <div class="video-wrap" id="videoWrap"></div>
-        <div class="card-body">
-          <h2 id="latestTitle"></h2>
-          <div class="meta" id="latestMeta"></div>
-          <div class="tags" id="latestTags"></div>
-          <div class="prose" id="latestMessage"></div>
-          <div style="margin-top:14px">
-            <a class="btn" id="openPageBtn">Open dedicated page</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Right column: archive list -->
-      <aside class="card" id="archive">
-        <div class="card-body">
-          <h3>Previous Messages</h3>
-          <div class="list" id="archiveList"></div>
-        </div>
-      </aside>
-    </main>
-
+    <main class="grid" id="app"></main>
     <footer class="footer">
-      © <span id="year"></span> Art’s Music Videos — All rights reserved.
+      © <span id="year"></span> Art’s Music Videos — All rights reserved. | Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a>
     </footer>
   </div>
-
   <script src="videos.js"></script>
-  <script>
-    (function() {
-      const el = sel => document.querySelector(sel);
-      const fmtDate = (iso) => new Date(iso + 'T00:00:00').toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
-      const ytEmbed = (id) => `<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-      const ytThumb = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
-
-      const data = (window.VIDEOS || []).filter(v => v && v.youtubeId && v.id);
-      if (!data.length) {
-        el('#app').innerHTML = '<p>⚠️ No videos yet. Add entries to <code>videos.js</code>.</p>';
-        return;
-      }
-
-      const latest = data[0];
-
-      // Populate latest card
-      el('#videoWrap').innerHTML = ytEmbed(latest.youtubeId);
-      el('#latestTitle').textContent = latest.title;
-      el('#latestMeta').textContent = `Published ${fmtDate(latest.published)}`;
-      el('#latestTags').innerHTML = (latest.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
-      el('#latestMessage').innerHTML = latest.message || '';
-      el('#openPageBtn').href = `watch.html?id=${encodeURIComponent(latest.id)}`;
-
-      // Archive list (skip the first one)
-      const list = el('#archiveList');
-      data.slice(1).forEach(v => {
-        const a = document.createElement('a');
-        a.href = `watch.html?id=${encodeURIComponent(v.id)}`;
-        a.innerHTML = `
-          <img class="thumb" src="${ytThumb(v.youtubeId)}" alt="${v.title} thumbnail"/>
-          <div>
-            <div class="title">${v.title}</div>
-            <div class="small">${fmtDate(v.published)}</div>
-          </div>`;
-        list.appendChild(a);
-      });
-
-      // OG image for home = latest thumb
-      const og = el('#ogImage');
-      if (og) og.setAttribute('content', ytThumb(latest.youtubeId));
-
-      // Footer year
-      el('#year').textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>
