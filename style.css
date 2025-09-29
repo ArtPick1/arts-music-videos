@@ -18,5 +18,4 @@ body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:
 .sidebar ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
 .song-link{display:inline-flex;align-items:center;gap:.4rem;width:100%;text-align:left;background:transparent;border:1px solid var(--border);border-radius:8px;padding:.45rem .6rem;color:inherit;cursor:pointer}
 .song-link:hover{border-color:#374151;background:#1e293b}
-.song-link{color:var(--text)}
-.song-link{font-weight:500}
+.song-link{color:var(--text);font-weight:500}
