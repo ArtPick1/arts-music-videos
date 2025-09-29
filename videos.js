@@ -1,4 +1,4 @@
-// Single source of data. Using template literals so newlines render cleanly.
+// Data file — defines BOTH a global `videos` and `window.videos`.
 var videos = window.videos = [
   {
     title: "Alive in Christ",
@@ -79,14 +79,6 @@ As I said many times before everyone has a right to be wrong lol.
 Additional Note:
 This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.`
   },
-  {
-    title: "Voices in Your Head",
-    url: "https://youtu.be/x4U9iuwml18",
-    description: `This song explores the turmoil of inner voices — the lies, doubts, and accusations that battle within the soul. The message is simple: the voice of Jesus cuts through the chaos and speaks truth, peace, and freedom.`
-  },
-  {
-    title: "No Looking Back",
-    url: "https://youtu.be/zF46xNrkHWM",
-    description: `A raw reflection on repentance, perseverance, and not making excuses for ongoing sin.`
-  }
+  { title: "Voices in Your Head", url: "https://youtu.be/x4U9iuwml18", description: "—" },
+  { title: "No Looking Back",     url: "https://youtu.be/zF46xNrkHWM", description: "—" }
 ];
