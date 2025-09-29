@@ -20,8 +20,4 @@ body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:
 .song-link:hover{border-color:#374151;background:#1e293b}
 .song-link{color:var(--text);font-weight:500}
 /* Force icons before every previous song */
-#sidebar li::before{
-  content:"▶ ";
-  color:var(--accent);
-  font-weight:700;
-}
+#sidebar li::before{ content:"▶ "; color:var(--accent); font-weight:700; }
