@@ -1,12 +1,14 @@
 (function(){
   "use strict";
 
+  // ---- Data source (window.videos OR global `videos`) ----
   function readVideos(){
     if (Array.isArray(window.videos)) return window.videos;
     try { if (typeof videos !== "undefined" && Array.isArray(videos)) return videos; } catch(e){}
     return [];
   }
 
+  // ---- DOM helpers ----
   function el(name, props){
     var n = document.createElement(name);
     if (props) for (var k in props){ if (k === "text") n.textContent = props[k]; else n.setAttribute(k, props[k]); }
@@ -15,13 +17,17 @@
 
   function ensureContainer(){
     var app = document.getElementById("app");
-    if (!app){ app = el("main"); app.id = "app"; document.body.appendChild(app); }
+    if (!app){
+      app = el("main"); app.id = "app";
+      document.body.appendChild(app);
+    }
+    // Layout wrapper
     app.innerHTML = "";
     var main = el("section"); main.id = "main";
     var aside = el("aside"); aside.id = "sidebar"; aside.setAttribute("aria-label","Previous songs");
     app.appendChild(main); app.appendChild(aside);
 
-    // Minimal style so icons line up even without external CSS
+    // Minimal styles to guarantee layout + icon alignment (no external CSS required)
     var style = document.getElementById("render-inline-style");
     if (!style){
       style = el("style"); style.id = "render-inline-style";
@@ -38,12 +44,12 @@
         ".song-list{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}",
         ".song-link{display:inline-flex;align-items:center;gap:.4rem;width:100%;text-align:left;background:transparent;border:1px solid #1f2937;border-radius:10px;padding:.5rem .6rem;cursor:pointer;color:inherit}",
         ".song-link:hover{border-color:#374151}",
-        ".icon-fallback{margin-right:.35rem;opacity:.95}"
+        ".song-link svg{width:16px;height:16px;opacity:.95}"
       ].join("");
       document.head.appendChild(style);
     }
 
-    return { main: main, aside: aside };
+    return { app: app, main: main, aside: aside };
   }
 
   function ytId(url){
@@ -55,35 +61,17 @@
   function normalize(desc){
     if (desc == null) return "";
     var s = String(desc);
+    // Convert literal "\n" to real newlines if it has no actual newlines
     if (s.indexOf("\\n")>-1 && s.indexOf("\n")===-1){ s = s.replace(/\\n/g,"\n"); }
     return s;
   }
 
-  function makeSvgIcon(){
+  function iconSVG(){
     var svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
-    svg.setAttribute("viewBox","0 0 24 24");
-    svg.setAttribute("aria-hidden","true");
-    svg.setAttribute("focusable","false");
-    svg.style.width = "16px";
-    svg.style.height = "16px";
-    svg.style.opacity = "0.95";
-    var c = document.createElementNS(svg.namespaceURI,"circle");
-    c.setAttribute("cx","12"); c.setAttribute("cy","12"); c.setAttribute("r","10");
-    c.setAttribute("fill","currentColor"); c.setAttribute("opacity","0.18");
-    var p = document.createElementNS(svg.namespaceURI,"path");
-    p.setAttribute("d","M10 8l6 4-6 4z"); p.setAttribute("fill","currentColor");
-    svg.appendChild(c); svg.appendChild(p);
-    return svg;
-  }
-
-  function addIcon(node){
-    // Add both SVG and a text fallback so you ALWAYS see an icon.
-    var svg = makeSvgIcon();
-    var fallback = document.createElement("span");
-    fallback.className = "icon-fallback";
-    fallback.textContent = "▶︎";
-    node.appendChild(svg);
-    node.appendChild(fallback);
+    svg.setAttribute("viewBox","0 0 24 24"); svg.setAttribute("aria-hidden","true"); svg.setAttribute("focusable","false");
+    var c = document.createElementNS(svg.namespaceURI,"circle"); c.setAttribute("cx","12"); c.setAttribute("cy","12"); c.setAttribute("r","10"); c.setAttribute("fill","currentColor"); c.setAttribute("opacity","0.18");
+    var p = document.createElementNS(svg.namespaceURI,"path"); p.setAttribute("d","M10 8l6 4-6 4z"); p.setAttribute("fill","currentColor");
+    svg.appendChild(c); svg.appendChild(p); return svg;
   }
 
   function renderMain(host, item){
@@ -119,7 +107,7 @@
       if (idx === selectedIdx) return;
       var li = el("li");
       var btn = el("button"); btn.type = "button"; btn.className = "song-link";
-      addIcon(btn);
+      btn.appendChild(iconSVG());
       btn.appendChild(document.createTextNode(v.title || "Untitled"));
       btn.onclick = function(){ onPick(idx); window.scrollTo({ top: 0, behavior: "smooth" }); };
       li.appendChild(btn);
@@ -147,11 +135,13 @@
     });
   }
 
+  // First paint
   if (document.readyState === "loading"){
     document.addEventListener("DOMContentLoaded", function(){ render(0); });
   } else {
     render(0);
   }
 
+  // If something else modifies the list and dispatches this, we re-render
   window.addEventListener("videosUpdated", function(){ render(0); });
 })();
