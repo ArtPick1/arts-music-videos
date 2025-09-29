@@ -1,154 +1,35 @@
-// videos.js — compatibility build (window.videos + ES module export)
-// Generated: 2025-09-28 America/Chicago
-
-const videos = [
-  {
-    title: "Alive in Christ",
-    url: "https://youtu.be/K1cCPjl8eF8",
-    description: `
-Sinner vs. Saint: Identity in Christ
-
-Introduction
-It is common for Christians to say, "I am just a sinner." At first, this sounds like humility. But when we compare it with the New Testament’s language, something feels off. Scripture consistently calls believers saints, children of God, and new creations — never sinners. This raises an important question: Should a Christian identify as a sinner, or has Christ given us a new identity that we must embrace?
-
-________________________________________
-
-Thesis Statement
-A Christian’s identity is not "sinner." In Christ, believers are called saints, new creations, and children of God. True repentance means turning away from sin and dying to the old self. Christians are not meant to continue sinning as a way of life (Rom. 6:1–2; 1 John 3:9). Yes, we stumble at times, but those stumbles do not define who we are. The truth of the gospel is this: we are saints in Christ who may occasionally stumble, not sinners who occasionally do something right.
-
-Clarification
-This is not a claim of perfection or sinless living. Scripture is plain: "If we say we have no sin, we deceive ourselves" (1 John 1:8). Christians still wrestle with temptation and must confess their sins (1 John 1:9). But imperfection does not equal identity. Sinner describes our condition before Christ; saint describes our condition after Christ.
-
-________________________________________
-
-Sinner vs. Saint — Identity Traits
-
-Sinner (Before Christ)              Saint (In Christ)
-Defined by sin (Eph. 2:1–3)        Defined by grace (Eph. 2:4–6)
-Slave to sin (Rom. 6:6, 20)        Slave to righteousness (Rom. 6:18)
-Old self/nature (Col. 3:9)         New creation (2 Cor. 5:17)
-Under condemnation (Rom. 8:1,      No condemnation in Christ (Rom. 8:1)
-outside Christ)
-Separated from God (Isa. 59:2)     Reconciled to God (Rom. 5:10)
-Dead in trespasses (Eph. 2:1)      Alive in Christ (Rom. 6:11)
-Enemy of God (Rom. 5:10)           Child of God (1 John 3:1–2)
-Habitual practice of sin           Called to holiness (1 Pet. 1:15–16)
-(1 John 3:8)
-
-________________________________________
-
-Paul and John on Sin and Identity
-
-Paul’s Teaching
-Paul is often cited as calling himself the "chief of sinners" (1 Tim. 1:15). But careful reading shows he was magnifying grace, not describing his present identity.
-• Formerly a sinner: "Though formerly I was a blasphemer, persecutor, and insolent opponent" (1 Tim. 1:13). The Greek adverb πρότερον (proteron) means "formerly, once, in the past." It points to Paul’s old life, not his current state.
-• "Chief of sinners" clarified: In verse 15 Paul says, "of whom I am (εἰμί, eimi) foremost." Though this is present tense, NT Greek often uses present verbs to express a category or rhetorical emphasis rather than strict time reference. Paul uses this as humble self-categorization, not as a doctrinal statement of his present identity. Verse 16 makes this explicit: Paul became an example of Christ’s perfect patience, not proof that he remained a sinner.
-• New identity: Elsewhere Paul never calls Christians sinners. He addresses believers as saints (Rom. 1:7; 1 Cor. 1:2; Eph. 1:1). He insists they are dead to sin and alive to God (Rom. 6:11), new creations (2 Cor. 5:17), and under no condemnation (Rom. 8:1).
-
-John’s Teaching
-John strikes a careful balance between honesty about sin and clarity about identity.
-• Acknowledges sin’s reality: "If we say we have no sin, we deceive ourselves" (1 John 1:8). Christians still stumble, but they confess and are cleansed (1 John 1:9).
-• Not a lifestyle of sin: "No one born of God makes a practice of sinning" (1 John 3:9). The Greek phrase ποιεῖν τὴν ἁμαρτίαν (poiein tēn hamartian) indicates ongoing, habitual sin, not occasional failure.
-• Born sinners, reborn saints: Scripture affirms original sin — "Behold, I was brought forth in iniquity" (Ps. 51:5). All are born sinners (Rom. 3:23). But in Christ, believers are reborn as saints and children of God (1 John 3:1–2).
-
-________________________________________
-
-Timeline of Identity
-
-Stage            Identity                                           Scripture
-Before Christ    Sinner by nature — born in sin, enslaved to sin,   Ps. 51:5; Rom. 3:23;
-                 under wrath                                       Eph. 2:1–3
-At Conversion    Forgiven — washed, justified, adopted              Acts 22:16; Rom. 5:1;
-                                                                   Gal. 4:4–7
-After Conversion Saint / Child of God — new creation, dead to sin,  2 Cor. 5:17; Rom. 6:11;
-                 alive in Christ                                    1 John 3:1–2
-
-________________________________________
-
-Theological & Practical Implications
-
-1. How we speak about ourselves
-Words shape identity. To call ourselves "just sinners" reinforces an identity Scripture says is dead. The New Testament never uses this label for believers but consistently calls them saints.
-
-2. Assurance in Christ
-Identifying as a sinner can erode confidence and keep believers in constant doubt. Identifying as a saint honors Christ’s finished work and strengthens assurance (Rom. 8:1).
-
-3. Motivation for holiness
-If I believe I am a sinner, sin feels inevitable. If I believe I am a saint, holiness becomes the expectation.
-
-4. Humility rightly understood
-True humility does not deny what Christ has done. It says: "I was a sinner, but Christ has made me new." Paul models this by remembering his past while boasting in Christ’s grace (1 Tim. 1:15–16; Gal. 6:14).
-
-5. The danger of excuses
-Many Christians misuse "I’m just a sinner" as a "get out of jail free card" for lukewarm living. But Scripture never permits this (Rom. 6:15). Grace restores us when we stumble, but it never excuses sin.
-
-________________________________________
-
-Conclusion
-Scripture is black-and-white: all people are born sinners, condemned under sin and separated from God. But those who repent and believe in Christ are forever changed — forgiven, washed, adopted, and made saints. Paul and John both affirm that Christians may stumble, but they are no longer defined as sinners.
-
-To keep calling ourselves "just sinners" is not humility. It denies the new identity Christ purchased and can become an excuse for mediocrity in holiness. The balance of Scripture is this: Christians are not perfect, but they are being perfected. They are not yet sinless, but they are no longer slaves to sin.
-
-Final Statement
-We must stop identifying as sinners who occasionally do something right.
-The gospel declares we are saints in Christ who may occasionally stumble — but our true identity is forever rooted in Him.
-
-________________________________________
-
-Notes
-1. πρότερον (proteron): "formerly, earlier, once" — used of past states, not present identity (cf. Gal. 4:13).
-2. Greek present εἰμί (eimi) can express a category or ongoing truth, not necessarily a current state of being; compare 1 Cor. 15:9 — "I am the least of the apostles."
-3. ποιεῖν τὴν ἁμαρτίαν (poiein tēn hamartian) = "to practice sin" (1 John 3:9). The verb poiein indicates habitual practice, not isolated acts.
-
-________________________________________
-
-Personal Reflection
-This is something I’ve been thinking about for a long time.
-How we identify ourselves — "I am just a sinner." I understand why this is said, but it has always felt off to me. I am not trying to condemn anyone for saying it.
-
-You may not agree with me, which is fine. We can even have a conversation about it and you can let me know why you think I’m wrong (or, as my wife would like to say, why you disagree). We may end up just agreeing to disagree — no problem.
-
-As I’ve said many times before, everyone has a right to be wrong (lol).
-
-________________________________________
-
-Additional Note
-This song — or the statement — does not mean I believe in "once saved, always saved." I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that's not easy. I may not have agreed with him on other things, but on that point I did agree.
-`
-  },
-  {
-    title: "Voices in Your Head",
-    url: "https://youtu.be/x4U9iuwml18",
-    description: `
-This song explores the turmoil of inner voices — the lies, doubts, and accusations that battle within the soul. Drawing on raw emotion and biblical truth, it portrays the struggle of a believer fighting against the noise of condemnation and confusion, and points to the hope and clarity that Christ brings.
-
-The message is simple: we all face battles in our minds, but the voice of Jesus cuts through the chaos and speaks truth, peace, and freedom. His Word has the final say.
-`
-  },
-  {
-    title: "No Looking Back",
-    url: "https://youtu.be/zF46xNrkHWM",
-    description: `
-Creation Date: September 22, 2025, 5:36 PM
-Genres: rock, blues, raw, intense, dark
-
-The reason I wrote this song came from a post I saw on Facebook that said:
-"If I sinned a thousand sins today, the one thing I did do right was stay sober. Thankful for that. Let’s stay sober tomorrow."
-
-Now, I realize in his statement he was being over the top — a thousand sins in a day would mean sinning every 1.4 minutes for 24 hours, or roughly once every 90 seconds. No, we are not perfect, and we will stumble, but if you are having that much trouble with sin in your life after following Christ, it raises the question: have you truly repented and turned?
-
-I know there are many people who use the excuse "I’m not perfect yet" to continue in their sins. Yes, we will stumble — and we have an answer for that in Christ — but repentance means turning away, not excusing ourselves.
-`
+(function() {
+  "use strict";
+  const videos = [
+    {
+      title: "Alive in Christ",
+      url: "https://youtu.be/K1cCPjl8eF8",
+      description: "Sinner vs. Saint: Identity in Christ\n\nIntroduction\nIt is common for Christians to say, \"I am just a sinner.\" At first, this sounds like humility. But when we compare it with the New Testament's language, something feels off. Scripture consistently calls believers saints, children of God, and new creations -- never sinners. This raises an important question: Should a Christian identify as a sinner, or has Christ given us a new identity that we must embrace?\n\n________________________________________\n\nThesis Statement\nA Christian's identity is not \"sinner.\" In Christ, believers are called saints, new creations, and children of God. True repentance means turning away from sin and dying to the old self. Christians are not meant to continue sinning as a way of life (Rom. 6:1-2; 1 John 3:9). Yes, we stumble at times, but those stumbles do not define who we are. The truth of the gospel is this: we are saints in Christ who may occasionally stumble, not sinners who occasionally do something right.\n\nClarification\nThis is not a claim of perfection or sinless living. Scripture is plain: \"If we say we have no sin, we deceive ourselves\" (1 John 1:8). Christians still wrestle with temptation and must confess their sins (1 John 1:9). But imperfection does not equal identity. Sinner describes our condition before Christ; saint describes our condition after Christ.\n\n________________________________________\n\nSinner vs. Saint -- Identity Traits\n\nSinner (Before Christ)              Saint (In Christ)\nDefined by sin (Eph. 2:1-3)        Defined by grace (Eph. 2:4-6)\nSlave to sin (Rom. 6:6, 20)        Slave to righteousness (Rom. 6:18)\nOld self/nature (Col. 3:9)         New creation (2 Cor. 5:17)\nUnder condemnation (Rom. 8:1,      No condemnation in Christ (Rom. 8:1)\noutside Christ)\nSeparated from God (Isa. 59:2)     Reconciled to God (Rom. 5:10)\nDead in trespasses (Eph. 2:1)      Alive in Christ (Rom. 6:11)\nEnemy of God (Rom. 5:10)           Child of God (1 John 3:1-2)\nHabitual practice of sin           Called to holiness (1 Pet. 1:15-16)\n(1 John 3:8)\n\n________________________________________\n\nPaul and John on Sin and Identity\n\nPaul's Teaching\nPaul is often cited as calling himself the \"chief of sinners\" (1 Tim. 1:15). But careful reading shows he was magnifying grace, not describing his present identity.\n• Formerly a sinner: \"Though formerly I was a blasphemer, persecutor, and insolent opponent\" (1 Tim. 1:13). The Greek adverb proteron means \"formerly, once, in the past.\" It points to Paul's old life, not his current state.\n• \"Chief of sinners\" clarified: In verse 15 Paul says, \"of whom I am (eimi) foremost.\" Though this is present tense, NT Greek often uses present verbs to express a category or rhetorical emphasis rather than strict time reference. Paul uses this as humble self-categorization, not as a doctrinal statement of his present identity. Verse 16 makes this explicit: Paul became an example of Christ's perfect patience, not proof that he remained a sinner.\n• New identity: Elsewhere Paul never calls Christians sinners. He addresses believers as saints (Rom. 1:7; 1 Cor. 1:2; Eph. 1:1). He insists they are dead to sin and alive to God (Rom. 6:11), new creations (2 Cor. 5:17), and under no condemnation (Rom. 8:1).\n\nJohn's Teaching\nJohn strikes a careful balance between honesty about sin and clarity about identity.\n• Acknowledges sin's reality: \"If we say we have no sin, we deceive ourselves\" (1 John 1:8). Christians still stumble, but they confess and are cleansed (1 John 1:9).\n• Not a lifestyle of sin: \"No one born of God makes a practice of sinning\" (1 John 3:9). The Greek phrase poiein ten hamartian indicates ongoing, habitual sin, not occasional failure.\n• Born sinners, reborn saints: Scripture affirms original sin -- \"Behold, I was brought forth in iniquity\" (Ps. 51:5). All are born sinners (Rom. 3:23). But in Christ, believers are reborn as saints and children of God (1 John 3:1-2).\n\n________________________________________\n\nTimeline of Identity\n\nStage            Identity                                           Scripture\nBefore Christ    Sinner by nature -- born in sin, enslaved to sin,   Ps. 51:5; Rom. 3:23;\n                 under wrath                                       Eph. 2:1-3\nAt Conversion    Forgiven -- washed, justified, adopted              Acts 22:16; Rom. 5:1;\n                                                                   Gal. 4:4-7\nAfter Conversion Saint / Child of God -- new creation, dead to sin,  2 Cor. 5:17; Rom. 6:11;\n                 alive in Christ                                    1 John 3:1-2\n\n________________________________________\n\nTheological & Practical Implications\n\n1. How we speak about ourselves\nWords shape identity. To call ourselves \"just sinners\" reinforces an identity Scripture says is dead. The New Testament never uses this label for believers but consistently calls them saints.\n\n2. Assurance in Christ\nIdentifying as a sinner can erode confidence and keep believers in constant doubt. Identifying as a saint honors Christ's finished work and strengthens assurance (Rom. 8:1).\n\n3. Motivation for holiness\nIf I believe I am a sinner, sin feels inevitable. If I believe I am a saint, holiness becomes the expectation.\n\n4. Humility rightly understood\nTrue humility does not deny what Christ has done. It says: \"I was a sinner, but Christ has made me new.\" Paul models this by remembering his past while boasting in Christ's grace (1 Tim. 1:15-16; Gal. 6:14).\n\n5. The danger of excuses\nMany Christians misuse \"I'm just a sinner\" as a \"get out of jail free card\" for lukewarm living. But Scripture never permits this (Rom. 6:15). Grace restores us when we stumble, but it never excuses sin.\n\n________________________________________\n\nConclusion\nScripture is black-and-white: all people are born sinners, condemned under sin and separated from God. But those who repent and believe in Christ are forever changed -- forgiven, washed, adopted, and made saints. Paul and John both affirm that Christians may stumble, but they are no longer defined as sinners.\n\nTo keep calling ourselves \"just sinners\" is not humility. It denies the new identity Christ purchased and can become an excuse for mediocrity in holiness. The balance of Scripture is this: Christians are not perfect, but they are being perfected. They are not yet sinless, but they are no longer slaves to sin.\n\nFinal Statement\nWe must stop identifying as sinners who occasionally do something right.\nThe gospel declares we are saints in Christ who may occasionally stumble -- but our true identity is forever rooted in Him.\n\n________________________________________\n\nNotes\n1. proteron: \"formerly, earlier, once\" -- used of past states, not present identity (cf. Gal. 4:13).\n2. Greek present eimi can express a category or ongoing truth, not necessarily a current state of being; compare 1 Cor. 15:9 -- \"I am the least of the apostles.\"\n3. poiein ten hamartian = \"to practice sin\" (1 John 3:9). The verb poiein indicates habitual practice, not isolated acts.\n\n________________________________________\n\n[ADDITIONAL NOTE START]\nThis song -- or the statement -- does not mean I believe in \"once saved, always saved.\" I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware -- you have to try very hard to destroy it, and that's not easy. I may not have agreed with him on other things, but on that point I did agree.\n[ADDITIONAL NOTE END]"
+    },
+    {
+      title: "Voices in Your Head",
+      url: "https://youtu.be/x4U9iuwml18",
+      description: "This song explores the turmoil of inner voices -- the lies, doubts, and accusations that battle within the soul. Drawing on raw emotion and biblical truth, it portrays the struggle of a believer fighting against the noise of condemnation and confusion, and points to the hope and clarity that Christ brings.\n\nThe message is simple: we all face battles in our minds, but the voice of Jesus cuts through the chaos and speaks truth, peace, and freedom. His Word has the final say."
+    },
+    {
+      title: "No Looking Back",
+      url: "https://youtu.be/zF46xNrkHWM",
+      description: "Creation Date: September 22, 2025, 5:36 PM\nGenres: rock, blues, raw, intense, dark\n\nThe reason I wrote this song came from a post I saw on Facebook that said:\n\"If I sinned a thousand sins today, the one thing I did do right was stay sober. Thankful for that. Let's stay sober tomorrow.\"\n\nNow, I realize in his statement he was being over the top -- a thousand sins in a day would mean sinning every 1.4 minutes for 24 hours, or roughly once every 90 seconds. No, we are not perfect, and we will stumble, but if you are having that much trouble with sin in your life after following Christ, it raises the question: have you truly repented and turned?\n\n I know there are many people who use the excuse \"I'm not perfect yet\" to continue in their sins. Yes, we will stumble -- and we have an answer for that in Christ -- but repentance means turning away, not excusing ourselves."
+    }
+  ];
+  // Expose for non-module pages
+  if (typeof window !== "undefined") {
+    window.videos = videos;
   }
-];
-
-// Expose for non‑module pages
-if (typeof window !== "undefined") {
-  window.videos = videos;
-}
-
-// Also export for module-based pages
-export default videos;
-
-// Debug helper (can remove later)
-console.log("videos.js loaded:", videos.map(v => v.title));
+  // Support ES module import if used
+  try {
+    // eslint-disable-next-line no-undef
+    export default videos;
+  } catch (e) {
+    // Ignore if not in a module context
+  }
+  // Debug
+  if (typeof console !== "undefined") {
+    console.log("videos.js loaded (compat):", videos.map(v => v.title));
+  }
+})();
