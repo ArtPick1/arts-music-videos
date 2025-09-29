@@ -24,7 +24,7 @@
   (function(){
     "use strict";
 
-    function getVideos(){ return window.videos || []; }
+    function getVideos(){ return Array.isArray(window.videos) ? window.videos : []; }
 
     function ytId(url){
       var u = String(url||"");
@@ -32,17 +32,11 @@
       return (u.split("/").pop()||"").split("?")[0];
     }
 
-    function makeIcon(){
-      var span=document.createElement("span");
-      span.className="icon";
-      span.textContent="▶︎"; // simple reliable icon
-      return span;
-    }
-
     function renderMain(host, item){
       host.innerHTML="";
       var card=document.createElement("article"); card.className="card";
       var h2=document.createElement("h2"); h2.textContent=item.title||"Untitled"; card.appendChild(h2);
+
       if(item.url){
         var player=document.createElement("div"); player.className="player";
         var iframe=document.createElement("iframe");
@@ -53,8 +47,11 @@
         player.appendChild(iframe);
         card.appendChild(player);
       }
-      var desc=document.createElement("div"); desc.className="desc"; desc.textContent=item.description||"";
+
+      var desc=document.createElement("div"); desc.className="desc";
+      desc.textContent = item.description || "";
       card.appendChild(desc);
+
       host.appendChild(card);
     }
 
@@ -64,10 +61,10 @@
       var h3=document.createElement("h3"); h3.textContent="Previous songs"; wrap.appendChild(h3);
       var ul=document.createElement("ul");
       items.forEach(function(v,i){
-        if(i===selected) return;
+        if (i===selected) return;
         var li=document.createElement("li");
         var btn=document.createElement("button"); btn.className="song-link"; btn.type="button";
-        btn.appendChild(makeIcon()); btn.appendChild(document.createTextNode(" " + v.title));
+        btn.textContent = "▶︎ " + (v.title || "Untitled");
         btn.onclick=function(){ onPick(i); window.scrollTo({top:0,behavior:"smooth"}); };
         li.appendChild(btn); ul.appendChild(li);
       });
@@ -81,12 +78,15 @@
       var main=document.createElement("section"); main.id="main";
       var aside=document.createElement("aside"); aside.id="sidebar";
       app.appendChild(main); app.appendChild(aside);
-      if(!vids.length){ main.textContent="No videos yet."; return; }
-      renderMain(main,vids[idx]);
-      renderSidebar(aside,vids,idx,function(n){ renderMain(main,vids[n]); renderSidebar(aside,vids,n,arguments.callee); });
+      if (!vids.length){ main.textContent="No videos yet."; return; }
+      renderMain(main, vids[idx]);
+      renderSidebar(aside, vids, idx, function(n){
+        renderMain(main, vids[n]);
+        renderSidebar(aside, vids, n, arguments.callee);
+      });
     }
 
-    document.addEventListener("DOMContentLoaded",function(){ renderAll(0); });
+    document.addEventListener("DOMContentLoaded", function(){ renderAll(0); });
   })();
   </script>
 </body>
