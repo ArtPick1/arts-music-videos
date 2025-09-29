@@ -1,3 +1,7 @@
+// videos.js — generated 2025-09-28 21:05 America/Chicago
+// This file defines the full videos list for the site.
+// If you don't see updates on the site after upload, hard refresh (Ctrl+F5).
+
 const videos = [
   {
     title: "Alive in Christ",
@@ -14,7 +18,7 @@ Thesis Statement
 A Christian’s identity is not “sinner.” In Christ, believers are called saints, new creations, and children of God. True repentance means turning away from sin and dying to the old self. Christians are not meant to continue sinning as a way of life (Rom. 6:1–2; 1 John 3:9). Yes, we stumble at times, but those stumbles do not define who we are. The truth of the gospel is this: we are saints in Christ who may occasionally stumble, not sinners who occasionally do something right.
 
 Clarification  
-This is not a claim of perfection or sinless living. Scripture is plain: “If we say we have no sin, we deceive ourselves” (1 John 1:8). Christians still wrestle with temptation and must confess their sins (1 John 1:9). But imperfection does not equal identity. *Sinner* describes our condition before Christ; *saint* describes our condition after Christ.
+This is not a claim of perfection or sinless living. Scripture is plain: “If we say we have no sin, we deceive ourselves” (1 John 1:8). Christians still wrestle with temptation and must confess their sins (1 John 1:9). But imperfection does not equal identity. Sinner describes our condition before Christ; saint describes our condition after Christ.
 
 ________________________________________
 
@@ -38,15 +42,15 @@ Paul and John on Sin and Identity
 
 Paul’s Teaching  
 Paul is often cited as calling himself the “chief of sinners” (1 Tim. 1:15). But careful reading shows he was magnifying grace, not describing his present identity.  
-- Formerly a sinner: “Though formerly I was a blasphemer, persecutor, and insolent opponent” (1 Tim. 1:13). The Greek adverb πρότερον (*proteron*) means “formerly, once, in the past.” It points to Paul’s old life, not his current state.  
-- “Chief of sinners” clarified: In verse 15 Paul says, “of whom I am (εἰμί, *eimi*) foremost.” Though this is present tense, NT Greek often uses present verbs to express a category or rhetorical emphasis rather than strict time reference. Paul uses this as humble self-categorization, not as a doctrinal statement of his present identity. Verse 16 makes this explicit: Paul became an example of Christ’s perfect patience, not proof that he remained a sinner.  
-- New identity: Elsewhere Paul never calls Christians sinners. He addresses believers as saints (Rom. 1:7; 1 Cor. 1:2; Eph. 1:1). He insists they are dead to sin and alive to God (Rom. 6:11), new creations (2 Cor. 5:17), and under no condemnation (Rom. 8:1).  
+• Formerly a sinner: “Though formerly I was a blasphemer, persecutor, and insolent opponent” (1 Tim. 1:13). The Greek adverb πρότερον (proteron) means “formerly, once, in the past.” It points to Paul’s old life, not his current state.  
+• “Chief of sinners” clarified: In verse 15 Paul says, “of whom I am (εἰμί, eimi) foremost.” Though this is present tense, NT Greek often uses present verbs to express a category or rhetorical emphasis rather than strict time reference. Paul uses this as humble self-categorization, not as a doctrinal statement of his present identity. Verse 16 makes this explicit: Paul became an example of Christ’s perfect patience, not proof that he remained a sinner.  
+• New identity: Elsewhere Paul never calls Christians sinners. He addresses believers as saints (Rom. 1:7; 1 Cor. 1:2; Eph. 1:1). He insists they are dead to sin and alive to God (Rom. 6:11), new creations (2 Cor. 5:17), and under no condemnation (Rom. 8:1).  
 
 John’s Teaching  
 John strikes a careful balance between honesty about sin and clarity about identity.  
-- Acknowledges sin’s reality: “If we say we have no sin, we deceive ourselves” (1 John 1:8). Christians still stumble, but they confess and are cleansed (1 John 1:9).  
-- Not a lifestyle of sin: “No one born of God makes a practice of sinning” (1 John 3:9). The Greek phrase ποιεῖν τὴν ἁμαρτίαν (*poiein tēn hamartian*) indicates ongoing, habitual sin, not occasional failure.  
-- Born sinners, reborn saints: Scripture affirms original sin — “Behold, I was brought forth in iniquity” (Ps. 51:5). All are born sinners (Rom. 3:23). But in Christ, believers are reborn as saints and children of God (1 John 3:1–2).  
+• Acknowledges sin’s reality: “If we say we have no sin, we deceive ourselves” (1 John 1:8). Christians still stumble, but they confess and are cleansed (1 John 1:9).  
+• Not a lifestyle of sin: “No one born of God makes a practice of sinning” (1 John 3:9). The Greek phrase ποιεῖν τὴν ἁμαρτίαν (poiein tēn hamartian) indicates ongoing, habitual sin, not occasional failure.  
+• Born sinners, reborn saints: Scripture affirms original sin — “Behold, I was brought forth in iniquity” (Ps. 51:5). All are born sinners (Rom. 3:23). But in Christ, believers are reborn as saints and children of God (1 John 3:1–2).  
 
 ________________________________________
 
@@ -93,9 +97,9 @@ The gospel declares we are saints in Christ who may occasionally stumble — but
 ________________________________________
 
 Notes  
-1. πρότερον (*proteron*): “formerly, earlier, once” — used of past states, not present identity (cf. Gal. 4:13).  
-2. Greek present εἰμί (*eimi*) can express a category or ongoing truth, not necessarily a current state of being; compare 1 Cor. 15:9 — “I am the least of the apostles.”  
-3. ποιεῖν τὴν ἁμαρτίαν (*poiein tēn hamartian*) = “to practice sin” (1 John 3:9). The verb *poiein* indicates habitual practice, not isolated acts.  
+1. πρότερον (proteron): “formerly, earlier, once” — used of past states, not present identity (cf. Gal. 4:13).  
+2. Greek present εἰμί (eimi) can express a category or ongoing truth, not necessarily a current state of being; compare 1 Cor. 15:9 — “I am the least of the apostles.”  
+3. ποιεῖν τὴν ἁμαρτίαν (poiein tēn hamartian) = “to practice sin” (1 John 3:9). The verb poiein indicates habitual practice, not isolated acts.  
 
 ________________________________________
 
