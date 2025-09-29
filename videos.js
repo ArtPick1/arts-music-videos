@@ -1,5 +1,4 @@
-// Data file. Uses template literals so descriptions contain real newlines.
-window.videos = [
+var videos = [
   {
     title: "Alive in Christ",
     url: "https://youtu.be/K1cCPjl8eF8",
@@ -69,33 +68,28 @@ Sinner vs. Saint: Identity in Christ
 Introduction
 It is common for Christians to say, “I am just a sinner.” At first, this sounds like humility. But when we compare it with the New Testament’s language, something feels off. 
 This is something I've been thinking about for a long time now
-How we identify ourselves “I am just a sinner.”  I understand why I is said. 
+How we identify ourselves “I am just a sinner.”  I understand why this is said. 
 But it has always felt off to me. I am not trying to condemn anybody for saying it.
 You may not agree with me which is fine We can even have a conversation about it and let me know why I am wrong Where is my wife would like to say why you disagree. 
 We can end up just agreeing to disagree, no problem. 
 As I said many times before everyone has a right to be wrong lol.
  
 Additional Note:
-This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.`
+This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.
+
+Contact: artpicknet@gmail.com`
   },
   {
     title: "Voices in Your Head",
     url: "https://youtu.be/x4U9iuwml18",
-    description: `This song explores the turmoil of inner voices — the lies, doubts, and accusations that battle within the soul. Drawing on raw emotion and biblical truth, it portrays the struggle of a believer fighting against the noise of condemnation and confusion, and points to the hope and clarity that Christ brings.
-
-The message is simple: we all face battles in our minds, but the voice of Jesus cuts through the chaos and speaks truth, peace, and freedom. His Word has the final say.`
+    description: "This song explores the turmoil of inner voices and points to the hope and clarity that Christ brings."
   },
   {
     title: "No Looking Back",
     url: "https://youtu.be/zF46xNrkHWM",
-    description: `Creation Date: September 22, 2025, 5:36 PM
-Genres: rock, blues, raw, intense, dark
-
-The reason I wrote this song came from a post I saw on Facebook that said:
-“If I sinned a thousand sins today, the one thing I did do right was stay sober. Thankful for that. Let’s stay sober tomorrow.”
-
-Now, I realize in his statement he was being over the top — a thousand sins in a day would mean sinning every 1.4 minutes for 24 hours, or roughly once every 90 seconds. No, we are not perfect, and we will stumble, but if you are having that much trouble with sin in your life after following Christ, it raises the question: have you truly repented and turned?
-
-I know there are many people who use the excuse “I’m not perfect yet” to continue in their sins. Yes, we will stumble — and we have an answer for that in Christ — but repentance means turning away, not excusing ourselves.`
+    description: "A raw reflection on repentance, perseverance, and not making excuses for ongoing sin."
   }
 ];
+
+// Ensure global access for renderers that expect window.videos
+window.videos = videos;
