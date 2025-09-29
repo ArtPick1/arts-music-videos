@@ -16,8 +16,16 @@ body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:
 .sidebar{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.75rem}
 .sidebar h3{margin:0 0 .5rem;font-size:1rem}
 .sidebar ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
-.song-link{display:inline-flex;align-items:center;width:100%;text-align:left;background:transparent;border:1px solid var(--border);border-radius:8px;padding:.45rem .6rem;color:inherit;cursor:pointer}
+.song-link{display:inline-flex;align-items:center;width:100%;text-align:left;background:transparent;border:1px solid var(--border);border-radius:8px;padding:.45rem .6rem;color:inherit;cursor:pointer;gap:.5rem}
 .song-link:hover{border-color:#374151;background:#1e293b}
 .song-link{color:var(--text);font-weight:500}
-/* Force icons before every previous song */
-#sidebar li::before{ content:"▶ "; color:var(--accent); font-weight:700; }
+
+/* Put the icon inside the button so it always shows */
+.song-link::before{
+  content:"▶";
+  color:var(--accent);
+  font-weight:700;
+  flex:0 0 auto;
+  display:inline-block;
+  transform: translateY(1px);
+}
