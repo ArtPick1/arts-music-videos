@@ -1,19 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art's Music Videos</title>
   <link rel="stylesheet" href="style.css">
-  <script src="videos.js"></script>
-  <script src="render.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Art’s Music Videos</h1>
+  <header class="site-header">
+    <h1>Art's Music Videos</h1>
   </header>
-  <main id="app"></main>
-  <footer>
-    Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a>
+
+  <main id="app" class="container">
+    <noscript>This site requires JavaScript to display videos.</noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a></p>
   </footer>
+
+  <!-- Load data first -->
+  <script src="videos.js"></script>
+  <!-- Then render -->
+  <script src="app.js"></script>
 </body>
 </html>
