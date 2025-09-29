@@ -44,3 +44,12 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .btn:hover { filter: brightness(1.1); }
 
 .prose p { line-height: 1.7; margin: 0 0 12px; }
+
+/* Ensure Previous songs show a ▶ icon */
+.sidebar ul li::before,
+#sidebar ul li::before,
+.video-list li::before{
+  content:"▶ ";
+  color:#60a5fa;
+  font-weight:700;
+}
