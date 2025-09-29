@@ -1,19 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art's Music Videos</title>
   <link rel="stylesheet" href="style.css">
-  <script src="videos.js"></script>
-  <script src="render.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Art’s Music Videos</h1>
+  <header class="site-header">
+    <h1>Art's Music Videos</h1>
   </header>
-  <main id="app"></main>
-  <footer>
+
+  <main id="app" class="container">
+    <noscript>This site requires JavaScript to display videos.</noscript>
+  </main>
+
+  <footer class="site-footer">
     Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a>
   </footer>
+
+  <!-- Load data first -->
+  <script src="videos.js"></script>
+
+  <!-- Inline renderer (no new files) -->
+  <script>
+  (function () {
+    "use strict";
+
+    // Read data from window.videos or global var videos
+    function getVideos(){
+      if (Array.isArray(window.videos)) return window.videos;
+      try { if (typeof videos !== "undefined" && Array.isArray(videos)) return videos; } catch(e){}
+      return [];
+    }
+
+    // Utility: YouTube ID from url
+    function ytId(url){
+      var u = String(url || "");
+      if (u.indexOf("watch?v=") > -1) {
+        var s = u.split("v=")[1] || "";
+        return s.split("&")[0];
+      }
+      var tail = u.split("/").pop() || "";
+      return tail.split("?")[0];
+    }
+
+    // Normalize description (convert literal \n to newline if needed)
+    function normalize(desc){
+      if (desc == null) return "";
+      var s = String(desc);
+      if (s.indexOf("\\n") > -1 && s.indexOf("\n") === -1) {
+        // Double-escaped protection (rare)
+        s = s.replace(/\\n/g, "\n");
+      }
+      if (s.indexOf("\n") > -1 && s.indexOf("\n\n") === -1 && s.indexOf("\n") === s.length - 2) {
+        s = s.replace(/\n/g, "\n");
+      }
+      // If literal 
+, turn into real newlines
+      if (s.indexOf("\n") > -1 && s.indexOf("\n\n") !== -1) {
+        s = s.replace(/\n/g, "\n");
+      }
+      if (s.indexOf("\n") > -1) {
+        s = s.replace(/\n/g, "\n");
+      }
+      if (s.indexOf("\n") > -1) {
+        s = s.replace(/\n/g, "\n");
+      }
+      // Final pass: if there are STILL literal backslash-ns, replace them
+      s = s.replace(/\n/g, "\n");
+      return s;
+    }
+
+    // Simple element helper
+    function el(name, className){
+      var n = document.createElement(name);
+      if (className) n.className = className;
+      return n;
+    }
+
+    // Build layout
+    function ensureLayout(){
+      var app = document.getElementById("app");
+      app.innerHTML = "";
+      var main = el("section"); main.id = "main";
+      var aside = el("aside"); aside.id = "sidebar"; aside.setAttribute("aria-label", "Previous songs");
+      app.appendChild(main); app.appendChild(aside);
+      return { main: main, aside: aside };
+    }
+
+    // SVG icon + fallback
+    function makeIconWrap(){
+      var wrap = el("span", "icon-wrap");
+      try {
+        var svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+        svg.setAttribute("viewBox","0 0 24 24");
+        svg.setAttribute("aria-hidden","true");
+        svg.setAttribute("focusable","false");
+        var c = document.createElementNS(svg.namespaceURI,"circle");
+        c.setAttribute("cx","12"); c.setAttribute("cy","12"); c.setAttribute("r","10");
+        c.setAttribute("fill","currentColor"); c.setAttribute("opacity","0.18");
+        var p = document.createElementNS(svg.namespaceURI,"path");
+        p.setAttribute("d","M10 8l6 4-6 4z");
+        p.setAttribute("fill","currentColor");
+        svg.appendChild(c); svg.appendChild(p);
+        wrap.appendChild(svg);
+      } catch(e) {}
+      var fallback = el("span","icon-fallback"); fallback.textContent = "▶︎";
+      wrap.appendChild(fallback);
+      return wrap;
+    }
+
+    function renderMain(host, item){
+      host.innerHTML = "";
+      var card = el("article","card");
+
+      var h2 = el("h2"); h2.textContent = item.title || "Untitled";
+      card.appendChild(h2);
+
+      if (item.url){
+        var player = el("div","player");
+        var iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube.com/embed/" + ytId(item.url);
+        iframe.title = "YouTube video player";
+        iframe.frameBorder = "0";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        player.appendChild(iframe);
+        card.appendChild(player);
+      }
+
+      var desc = el("div","desc");
+      // videos.js uses template literals (real newlines); normalize is for safety
+      var text = item.description || "";
+      if (typeof text === "string") {
+        // Convert literal 
+ if present
+        text = text.replace(/\n/g, "\n");
+      }
+      desc.textContent = text;
+      card.appendChild(desc);
+
+      host.appendChild(card);
+    }
+
+    function renderSidebar(host, items, selectedIdx, onPick){
+      host.innerHTML = "";
+      var wrap = el("div","sidebar-wrap sticky");
+      var h3 = el("h3"); h3.textContent = "Previous songs";
+      wrap.appendChild(h3);
+
+      var ul = el("ul","song-list");
+      items.forEach(function(v, idx){
+        if (idx === selectedIdx) return;
+        var li = el("li");
+        var btn = el("button","song-link");
+        btn.type = "button";
+        btn.appendChild(makeIconWrap());
+        btn.appendChild(document.createTextNode(v.title || "Untitled"));
+        btn.onclick = function(){ onPick(idx); window.scrollTo({top:0, behavior:"smooth"}); };
+        li.appendChild(btn);
+        ul.appendChild(li);
+      });
+      wrap.appendChild(ul);
+      host.appendChild(wrap);
+    }
+
+    function renderAll(selectedIdx){
+      var data = getVideos();
+      var layout = ensureLayout();
+      if (!data.length){
+        var empty = el("div","card"); empty.textContent = "No videos yet.";
+        layout.main.appendChild(empty);
+        return;
+      }
+      renderMain(layout.main, data[selectedIdx]);
+      renderSidebar(layout.aside, data, selectedIdx, function(next){
+        renderMain(layout.main, getVideos()[next]);
+        renderSidebar(layout.aside, getVideos(), next, arguments.callee);
+      });
+    }
+
+    if (document.readyState === "loading"){
+      document.addEventListener("DOMContentLoaded", function(){ renderAll(0); });
+    } else {
+      renderAll(0);
+    }
+  })();
+  </script>
 </body>
 </html>
