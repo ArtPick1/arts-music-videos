@@ -2,9 +2,10 @@
   --bg:#0f172a; --card:#111827; --text:#e5e7eb; --accent:#60a5fa; --border:#1f2937;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--text)}
 .site-header,.site-footer{background:var(--card);border-bottom:1px solid var(--border);text-align:center;padding:1rem}
-.site-footer{border-top:1px solid var(--border);border-bottom:0}
+.site-footer{border-top:1px solid var(--border);border-bottom:0;display:flex;justify-content:center;gap:1rem;align-items:center;flex-wrap:wrap}
+.build{font-size:.85rem;color:#9ca3af}
 .container{max-width:1100px;margin:1.25rem auto;padding:0 1rem;display:grid;gap:1rem}
 @media(min-width:900px){.container{grid-template-columns:1fr 320px;align-items:start}}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
@@ -14,7 +15,8 @@ body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:
 .desc{white-space:pre-wrap;line-height:1.55}
 .sidebar{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.75rem}
 .sidebar h3{margin:0 0 .5rem;font-size:1rem}
+.sidebar ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
 .song-link{display:inline-flex;align-items:center;gap:.4rem;width:100%;text-align:left;background:transparent;border:1px solid var(--border);border-radius:8px;padding:.45rem .6rem;color:inherit;cursor:pointer}
 .song-link:hover{border-color:#374151;background:#1e293b}
 .song-link{color:var(--text)}
-.song-link::first-letter{color:var(--accent)} /* the ▶︎ will be accent colored */
+.song-link{font-weight:500}
