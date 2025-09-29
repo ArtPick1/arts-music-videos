@@ -33,14 +33,9 @@
     }
 
     function makeIcon(){
-      var span=document.createElement("span"); span.className="icon";
-      span.innerHTML = `
-        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="var(--accent)" opacity="0.25"/>
-          <path d="M10 8l6 4-6 4z" fill="var(--accent)"/>
-        </svg>`;
-      var fb=document.createElement("span"); fb.textContent="▶︎"; fb.className="fallback";
-      span.appendChild(fb);
+      var span=document.createElement("span");
+      span.className="icon";
+      span.textContent="▶︎"; // simple reliable icon
       return span;
     }
 
@@ -72,7 +67,7 @@
         if(i===selected) return;
         var li=document.createElement("li");
         var btn=document.createElement("button"); btn.className="song-link"; btn.type="button";
-        btn.appendChild(makeIcon()); btn.appendChild(document.createTextNode(v.title));
+        btn.appendChild(makeIcon()); btn.appendChild(document.createTextNode(" " + v.title));
         btn.onclick=function(){ onPick(i); window.scrollTo({top:0,behavior:"smooth"}); };
         li.appendChild(btn); ul.appendChild(li);
       });

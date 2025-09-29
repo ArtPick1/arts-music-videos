@@ -15,5 +15,4 @@ body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:
 .sidebar h3{margin:0 0 .5rem;font-size:1rem;}
 .song-link{display:inline-flex;align-items:center;gap:.4rem;width:100%;background:transparent;border:1px solid var(--border);border-radius:8px;padding:.4rem .6rem;cursor:pointer;color:inherit;text-align:left;}
 .song-link:hover{border-color:#374151;background:#1e293b;}
-.icon svg{width:16px;height:16px;fill:var(--accent);}
-.fallback{margin-left:.2rem;opacity:1;color:var(--accent);}
+.icon{color:var(--accent);font-weight:bold;}
