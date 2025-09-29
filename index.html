@@ -34,7 +34,11 @@
 
     function makeIcon(){
       var span=document.createElement("span"); span.className="icon";
-      span.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.18"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg>';
+      span.innerHTML = `
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="var(--accent)" opacity="0.25"/>
+          <path d="M10 8l6 4-6 4z" fill="var(--accent)"/>
+        </svg>`;
       var fb=document.createElement("span"); fb.textContent="▶︎"; fb.className="fallback";
       span.appendChild(fb);
       return span;
