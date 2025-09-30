@@ -1,4 +1,4 @@
-// videos.js — canonical manifest (newest first)
+// videos.js — canonical (newest first)
 window.VIDEOS = [
   {
     id: "alive-in-christ-2025-09-28",
