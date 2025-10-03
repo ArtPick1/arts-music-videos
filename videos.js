@@ -1,4 +1,5 @@
-// videos.js — vA45 manifest (newest first)
+// videos.js — vA48 (explicit order)
+// Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
   {
     id: "giving-thanks-always-2025-09-30-0823",
@@ -141,7 +142,7 @@ window.VIDEOS = [
 <p>This is something I've been thinking about for a long time now. How we identify ourselves: “I am just a sinner.” I understand why this is said. But it has always felt off to me. I am not trying to condemn anybody for saying it. You may not agree with me — which is fine. We can even have a conversation about it and you can let me know why I am wrong. We can end up just agreeing to disagree — no problem. As I’ve said many times before, everyone has a right to be wrong — lol.</p>
 
 <h4>Additional Note</h4>
-<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.</p>`
+<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, bu...`
   },
   {
     id: "voices-in-your-head-2025-09-24-1027",
@@ -149,11 +150,9 @@ window.VIDEOS = [
     youtubeId: "x4U9iuwml18",
     published: "2025-09-24T10:27:00-05:00",
     tags: ["Rock", "Blues", "Gritty", "Intense", "Dark"],
-    message: `
-      <p><strong>Creation Date:</strong> September 24, 2025 — 10:27 AM</p>
-      <p><strong>Genres:</strong> Rock, Blues, Gritty, Intense, Dark</p>
-      <p>This song carries a simple salvation message, but also a serious warning: what we watch, listen to, and consume every day shapes us.</p>
-    `
+    message: `<p><strong>Creation Date:</strong> September 24, 2025 — 10:27 AM</p>
+<p><strong>Genres:</strong> Rock, Blues, Gritty, Intense, Dark</p>
+<p>This song carries a simple salvation message, but also a serious warning: what we watch, listen to, and consume every day shapes us.</p>`
   },
   {
     id: "no-looking-back-2025-09-22-1736",
@@ -161,10 +160,29 @@ window.VIDEOS = [
     youtubeId: "zF46xNrkHWM",
     published: "2025-09-22T17:36:00-05:00",
     tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
-    message: `
-      <p><strong>Creation Date:</strong> September 22, 2025 — 5:36 PM</p>
-      <p><strong>Genres:</strong> Rock, Blues, Raw, Intense, Dark</p>
-      <p>Repentance, surrender, and the bold declaration — no looking back.</p>
-    `
+    message: `<p><strong>Creation Date:</strong> September 22, 2025 — 5:36 PM</p>
+<p><strong>Genres:</strong> Rock, Blues, Raw, Intense, Dark</p>
+<p>Repentance, surrender, and the bold declaration — no looking back.</p>`
+  },
+  {
+    id: "glory-to-god-amen-amen-2025-10-03",
+    title: "Glory to God Amen and Amen",
+    youtubeId: "0tgAdB2wpSQ",
+    published: "2025-10-03T12:00:00-05:00",
+    tags: ["Worship", "Rock", "Blues", "Acoustic", "Intense"],
+    message: `<h2>Glory to God (Amen and Amen)</h2>
+<p><strong>Creation Date:</strong> 3 Oct 2025</p>
+<p><strong>Genres:</strong> Worship, Rock, Blues, Acoustic, Intense</p>
+
+<p><em>Glory to God (Amen and Amen)</em> is an intense, acoustic-driven worship anthem that blends rock, blues, and heartfelt devotion. With deep, resonant vocals and raw passion, this song declares that all praise belongs to the Lord alone. The imagery in this video reflects the cry of the chorus: “I bow my head low, raise my voice loud, lift my hands high to You. Glory to God, glory to God, Amen and Amen!”</p>
+
+<p>This is not performance — it’s surrender. A testimony of mercy, grace, and redemption poured out through Christ. May this song stir your heart to worship with your whole being.</p>
+
+<p>🙏 Psalm 29:2 – “Ascribe to the Lord the glory due His name; worship the Lord in the splendor of holiness.”</p>
+<p>🎶 Lyrics on screen — worship along wherever you are.</p>
+
+<p>🔔 Don’t forget to like, comment, and subscribe if this song encourages you.</p>
+
+<p><strong>Lyrics &amp; Video by:</strong> Art Pickens</p>`
   }
 ];
