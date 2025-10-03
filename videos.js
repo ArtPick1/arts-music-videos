@@ -1,10 +1,43 @@
-// videos.js — formatted manifest (newest first)
+// videos.js — vA45 manifest (newest first)
 window.VIDEOS = [
+  {
+    id: "giving-thanks-always-2025-09-30-0823",
+    title: "Giving Thanks Always",
+    youtubeId: "qoetjKlLFwk",
+    published: "2025-09-30T08:23:00-05:00",
+    tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
+    message: `<h2>Giving Thanks Always</h2>
+<p><strong>Creation Date:</strong> 30 Sep 2025, 8:23 AM</p>
+<p><strong>Genres:</strong> rock, blues, raw, intense, dark</p>
+
+<h3>Psalm 30 &amp; Ephesians 5:18 – From Mourning to Dancing</h3>
+<p>This original song blends the words of King David in Psalm 30 with the exhortation of Paul in Ephesians 5:18: “Do not be drunk with wine, which is debauchery, but be filled with the Spirit…”</p>
+<p>It begins with Paul’s command to live Spirit-filled lives, then journeys through David’s raw lament, his cry for mercy, and the triumphant joy of God’s deliverance. The verses wrestle with sorrow and desperation, but the chorus bursts with eternal hope: <em>“Weeping may endure for a night, but joy comes in the morning!”</em></p>
+<p>With a gritty rock/blues edge, this song proclaims thanksgiving, worship, and the transforming power of God — the One who turns mourning into dancing.</p>
+
+<hr/>
+
+<h3>Production Note</h3>
+<p>I almost wasn’t able to produce this song. When I went to put the Scriptures in, I used my ESV in the program I use to generate the music and vocals. After working on it, the program told me it couldn’t continue because the text was copyrighted. Yes — the Bible is copyrighted. I should say the newer versions are copyrighted.</p>
+<p>So I switched to the King James Version, and it still came back saying it was copyrighted. That couldn’t be true. To move forward, I had to put a disclaimer at the top, where you normally give instructions for how you want your song to sound:</p>
+<blockquote>[Note: All source text is from the King James Bible (1611), which is public domain.]</blockquote>
+<p>That finally let me finish producing the song.</p>
+
+<hr/>
+
+<h3>Credits</h3>
+<p><strong>This is one song I cannot say I wrote.</strong></p>
+<p><strong>Psalm 30 &amp; Ephesians 5:18</strong></p>
+<ul>
+  <li><strong>David</strong> — giant killer, adulterer, murderer, King of Israel — <em>but forgiven</em></li>
+  <li><strong>Paul</strong> — persecutor, accomplice to murder, chief of sinners — <em>but forgiven, transformed, prisoner of Christ</em></li>
+</ul>`
+  },
   {
     id: "alive-in-christ-2025-09-28",
     title: "Alive in Christ",
     youtubeId: "K1cCPjl8eF8",
-    published: "2025-09-28",
+    published: "2025-09-28T12:00:00-05:00",
     tags: ["Rock", "Blues Rock", "Driving", "Anthemic", "Worshipful"],
     message: `<h2>Sinner vs. Saint: Identity in Christ</h2>
 
@@ -114,7 +147,7 @@ window.VIDEOS = [
     id: "voices-in-your-head-2025-09-24-1027",
     title: "Voices in Your Head",
     youtubeId: "x4U9iuwml18",
-    published: "2025-09-24",
+    published: "2025-09-24T10:27:00-05:00",
     tags: ["Rock", "Blues", "Gritty", "Intense", "Dark"],
     message: `
       <p><strong>Creation Date:</strong> September 24, 2025 — 10:27 AM</p>
@@ -126,7 +159,7 @@ window.VIDEOS = [
     id: "no-looking-back-2025-09-22-1736",
     title: "No Looking Back",
     youtubeId: "zF46xNrkHWM",
-    published: "2025-09-22",
+    published: "2025-09-22T17:36:00-05:00",
     tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
     message: `
       <p><strong>Creation Date:</strong> September 22, 2025 — 5:36 PM</p>
@@ -134,27 +167,4 @@ window.VIDEOS = [
       <p>Repentance, surrender, and the bold declaration — no looking back.</p>
     `
   }
-  ,
-  {
-    id: "glory-to-god-amen-amen-2025-10-03",
-    title: "Glory to God Amen and Amen",
-    youtubeId: "0tgAdB2wpSQ",
-    published: "2025-10-03T12:00:00-05:00",
-    tags: ["Worship", "Rock", "Blues", "Acoustic", "Intense"],
-    message: `<h2>Glory to God (Amen and Amen)</h2>
-<p><strong>Creation Date:</strong> 3 Oct 2025</p>
-<p><strong>Genres:</strong> Worship, Rock, Blues, Acoustic, Intense</p>
-
-<p><em>Glory to God (Amen and Amen)</em> is an intense, acoustic-driven worship anthem that blends rock, blues, and heartfelt devotion. With deep, resonant vocals and raw passion, this song declares that all praise belongs to the Lord alone. The imagery in this video reflects the cry of the chorus: “I bow my head low, raise my voice loud, lift my hands high to You. Glory to God, glory to God, Amen and Amen!”</p>
-
-<p>This is not performance — it’s surrender. A testimony of mercy, grace, and redemption poured out through Christ. May this song stir your heart to worship with your whole being.</p>
-
-<p>🙏 Psalm 29:2 – “Ascribe to the Lord the glory due His name; worship the Lord in the splendor of holiness.”</p>
-<p>🎶 Lyrics on screen — worship along wherever you are.</p>
-
-<p>🔔 Don’t forget to like, comment, and subscribe if this song encourages you.</p>
-
-<p><strong>Lyrics &amp; Video by:</strong> Art Pickens</p>`
-  }
-
 ];
