@@ -185,4 +185,29 @@ window.VIDEOS = [
 
 <p><strong>Lyrics &amp; Video by:</strong> Art Pickens</p>`
   }
+  ,
+  {
+    id: "wake-up-call-2025-10-03",
+    title: "Wake-Up Call - Make Us Disciple-Makers Again",
+    youtubeId: "kSFIm-xog_Y",
+    published: "2025-10-03T12:00:00-05:00",
+    tags: ["Acoustic Rock", "Worship", "Revival"],
+    message: `<h2>Wake-Up Call (Make Us Disciple-Makers Again)</h2>
+<p><strong>Creation Date:</strong> 3 Oct 2025</p>
+<p><strong>Genres:</strong> Acoustic Rock, Worship, Revival</p>
+
+<p><em>Wake-Up Call (Make Us Disciple-Makers Again)</em> is an acoustic-rock anthem calling the church to rise from complacency and return to Jesus’ command in the Great Commission. Too many have reduced evangelism to sitting in pews, giving tithes, or handing out quick invitations. But Christ has called us to more: to pray, to care, and to share until disciples are made who will go and make more disciples.</p>
+
+<p>This song is a cry for revival:</p>
+<ul>
+<li><strong>Prayer</strong> — because only God changes hearts.</li>
+<li><strong>Care</strong> — because love opens the door to truth.</li>
+<li><strong>Share</strong> — because the gospel must be proclaimed.</li>
+</ul>
+
+<p>It’s time to leave the building and go boldly into homes, streets, and communities — with compassion, with truth, and with the fire of the Holy Spirit.</p>
+
+<p>👉 If this song stirs your heart, share it and join the call to be a disciple-maker again.</p>`
+  }
+
 ];
