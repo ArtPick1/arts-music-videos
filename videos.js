@@ -1,5 +1,39 @@
-// videos.js — formatted manifest (newest first)
+// videos.js — updated with "Giving Thanks Always" (newest first)
 window.VIDEOS = [
+  {
+    id: "giving-thanks-always-2025-09-30-0823",
+    title: "Giving Thanks Always",
+    youtubeId: "qoetjKlLFwk",
+    published: "2025-09-30",
+    tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
+    message: `<h2>Giving Thanks Always</h2>
+<p><strong>Creation Date:</strong> 30 Sep 2025, 8:23 AM</p>
+<p><strong>Genres:</strong> rock, blues, raw, intense, dark</p>
+
+<h3>Psalm 30 &amp; Ephesians 5:18 – From Mourning to Dancing</h3>
+<p>This original song blends the words of King David in Psalm 30 with the exhortation of Paul in Ephesians 5:18: “Do not be drunk with wine, which is debauchery, but be filled with the Spirit…”</p>
+<p>It begins with Paul’s command to live Spirit-filled lives, then journeys through David’s raw lament, his cry for mercy, and the triumphant joy of God’s deliverance. The verses wrestle with sorrow and desperation, but the chorus bursts with eternal hope: <em>“Weeping may endure for a night, but joy comes in the morning!”</em></p>
+<p>With a gritty rock/blues edge, this song proclaims thanksgiving, worship, and the transforming power of God — the One who turns mourning into dancing.</p>
+
+<hr/>
+
+<h3>Production Note</h3>
+<p>I almost wasn’t able to produce this song. When I went to put the Scriptures in, I used my ESV in the program I use to generate the music and vocals. After working on it, the program told me it couldn’t continue because the text was copyrighted. Yes — the Bible is copyrighted. I should say the newer versions are copyrighted.</p>
+<p>So I switched to the King James Version, and it still came back saying it was copyrighted. That couldn’t be true. To move forward, I had to put a disclaimer at the top, where you normally give instructions for how you want your song to sound:</p>
+<blockquote>[Note: All source text is from the King James Bible (1611), which is public domain.]</blockquote>
+<p>That finally let me finish producing the song.</p>
+
+<hr/>
+
+<h3>Credits</h3>
+<p><strong>This is one song I cannot say I wrote.</strong></p>
+<p><strong>Psalm 30 &amp; Ephesians 5:18</strong></p>
+<ul>
+  <li><strong>David</strong> — giant killer, adulterer, murderer, King of Israel — <em>but forgiven</em></li>
+  <li><strong>Paul</strong> — persecutor, accomplice to murder, chief of sinners — <em>but forgiven, transformed, prisoner of Christ</em></li>
+</ul>`
+  },
+  // --- existing entries ---
   {
     id: "alive-in-christ-2025-09-28",
     title: "Alive in Christ",
@@ -108,7 +142,7 @@ window.VIDEOS = [
 <p>This is something I've been thinking about for a long time now. How we identify ourselves: “I am just a sinner.” I understand why this is said. But it has always felt off to me. I am not trying to condemn anybody for saying it. You may not agree with me — which is fine. We can even have a conversation about it and you can let me know why I am wrong. We can end up just agreeing to disagree — no problem. As I’ve said many times before, everyone has a right to be wrong — lol.</p>
 
 <h4>Additional Note</h4>
-<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.</p>`
+<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, bu...
   },
   {
     id: "voices-in-your-head-2025-09-24-1027",
