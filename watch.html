@@ -1,12 +1,90 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>Watch - Art's Music Videos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Message — Art’s Music Videos</title>
+  <meta name="description" content="Watch this message and video from Art’s Music Videos." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="script" href="videos.js?vA49" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="" id="ogTitle" />
+  <meta property="og:description" content="Video + message" />
+  <meta property="og:image" content="" id="ogImage" />
 </head>
 <body>
-  <h1>Watch</h1>
-  <div id="player"></div>
-  <script src="./videos.js?vA51"></script>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><a href="./">Art’s Music Videos</a></div>
+      <nav class="nav">
+        <a href="./">Home</a>
+      </nav>
+    </header>
+
+    <article class="card">
+      <div class="video-wrap" id="videoWrap"></div>
+      <div class="card-body">
+        <h1 id="title" style="margin:0 0 8px"></h1>
+        <div class="meta" id="meta"></div>
+        <div class="tags" id="tags"></div>
+        <div class="prose" id="message" style="margin-top:12px"></div>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="./">Back to Latest</a>
+          <a class="btn" id="prevBtn" style="display:none"></a>
+          <a class="btn" id="nextBtn" style="display:none"></a>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer">
+      © <span id="year"></span> Art’s Music Videos — All rights reserved.
+    </footer>
+  </div>
+
+  <script src="videos.js?vA49"></script>
+  <script>
+    (function(){
+      const el = s => document.querySelector(s);
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id');
+      const data = (window.VIDEOS || []).filter(v => v && v.id);
+      const fmtDate = (iso) => new Date(iso + 'T00:00:00').toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+      const ytEmbed = (id) => `<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      const ytThumb = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+
+      if (!id || !data.length) {
+        document.body.innerHTML = '<div class="container"><p>Not found. <a class="btn" href="./">Go Home</a></p></div>';
+        return;
+      }
+
+      const idx = data.findIndex(x => x.id === id);
+      const item = data[idx];
+      if (!item) {
+        document.body.innerHTML = '<div class="container"><p>Not found. <a class="btn" href="./">Go Home</a></p></div>';
+        return;
+      }
+
+      // Fill content
+      el('#videoWrap').innerHTML = ytEmbed(item.youtubeId);
+      el('#title').textContent = item.title;
+      el('#meta').textContent = `Published ${fmtDate(item.published)}`;
+      el('#tags').innerHTML = (item.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+      el('#message').innerHTML = item.message || '';
+      el('#year').textContent = new Date().getFullYear();
+
+      // Prev/Next buttons (based on ordering in VIDEOS)
+      const prev = data[idx + 1];
+      const next = data[idx - 1];
+      if (prev) { const a = el('#prevBtn'); a.style.display = 'inline-block'; a.href = `watch.html?id=${encodeURIComponent(prev.id)}`; a.textContent = '← Previous'; }
+      if (next) { const a = el('#nextBtn'); a.style.display = 'inline-block'; a.href = `watch.html?id=${encodeURIComponent(next.id)}`; a.textContent = 'Next →'; }
+
+      // OG tags for shares
+      const ogTitle = el('#ogTitle'); if (ogTitle) ogTitle.setAttribute('content', item.title);
+      const ogImage = el('#ogImage'); if (ogImage) ogImage.setAttribute('content', ytThumb(item.youtubeId));
+
+      // Also set page title
+      document.title = `${item.title} — Art’s Music Videos`;
+    })();
+  </script>
 </body>
 </html>
