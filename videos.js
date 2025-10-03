@@ -210,4 +210,17 @@ window.VIDEOS = [
 <p>👉 If this song stirs your heart, share it and join the call to be a disciple-maker again.</p>`
   }
 
+  ,
+  {
+    id: "living-in-a-fallen-world-2025-10-03",
+    title: "Living in a Fallen World",
+    youtubeId: "dBn2NleHquY",
+    published: "2025-10-03T12:00:00-05:00",
+    tags: ["Rock", "Metal", "Gritty", "Raw", "Dark", "Worship"],
+    message: `<h2>Living in a Fallen World</h2>
+<p><strong>Genres:</strong> Rock, Metal, Gritty, Raw, Dark, Worship</p>
+<p><em>Living in a Fallen World</em> is a gritty rock/metal anthem that wrestles with the pain and brokenness all around us — addiction, anger, silence, and lies. It’s real. It’s raw. But it doesn’t stop there. The song declares that only Christ can break the chains of sin, heal the wounds within, and anchor our souls. Even when scars remain, His mercy meets us in the pain. This song is for anyone who’s ever looked at the darkness and wondered if hope is too far. The answer is clear: Christ has overcome....
+<p>🎧 Listen, share, and let the truth of the Cross remind you — the curse has lost its place.</p>`
+  }
+
 ];
