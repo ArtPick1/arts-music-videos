@@ -1,10 +1,10 @@
-// videos.js — updated with "Giving Thanks Always" (newest first)
+// videos.js — vA45 manifest (newest first)
 window.VIDEOS = [
   {
     id: "giving-thanks-always-2025-09-30-0823",
     title: "Giving Thanks Always",
     youtubeId: "qoetjKlLFwk",
-    published: "2025-09-30",
+    published: "2025-09-30T08:23:00-05:00",
     tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
     message: `<h2>Giving Thanks Always</h2>
 <p><strong>Creation Date:</strong> 30 Sep 2025, 8:23 AM</p>
@@ -33,12 +33,11 @@ window.VIDEOS = [
   <li><strong>Paul</strong> — persecutor, accomplice to murder, chief of sinners — <em>but forgiven, transformed, prisoner of Christ</em></li>
 </ul>`
   },
-  // --- existing entries ---
   {
     id: "alive-in-christ-2025-09-28",
     title: "Alive in Christ",
     youtubeId: "K1cCPjl8eF8",
-    published: "2025-09-28",
+    published: "2025-09-28T12:00:00-05:00",
     tags: ["Rock", "Blues Rock", "Driving", "Anthemic", "Worshipful"],
     message: `<h2>Sinner vs. Saint: Identity in Christ</h2>
 
@@ -142,13 +141,13 @@ window.VIDEOS = [
 <p>This is something I've been thinking about for a long time now. How we identify ourselves: “I am just a sinner.” I understand why this is said. But it has always felt off to me. I am not trying to condemn anybody for saying it. You may not agree with me — which is fine. We can even have a conversation about it and you can let me know why I am wrong. We can end up just agreeing to disagree — no problem. As I’ve said many times before, everyone has a right to be wrong — lol.</p>
 
 <h4>Additional Note</h4>
-<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, bu...
+<p>This song — or the statement — does not mean I believe in “once saved, always saved.” I do believe it is possible for us to willfully fall away and become shipwrecked. But this does not happen simply when you stumble or fall, as long as you repent, turn away, and keep following Christ. One thing I once heard from a pastor at the church I used to attend is that salvation is like Tupperware — you have to try very hard to destroy it, and that’s not easy. I may not have agreed with him on other things, but on that point I did agree.</p>`
   },
   {
     id: "voices-in-your-head-2025-09-24-1027",
     title: "Voices in Your Head",
     youtubeId: "x4U9iuwml18",
-    published: "2025-09-24",
+    published: "2025-09-24T10:27:00-05:00",
     tags: ["Rock", "Blues", "Gritty", "Intense", "Dark"],
     message: `
       <p><strong>Creation Date:</strong> September 24, 2025 — 10:27 AM</p>
@@ -160,7 +159,7 @@ window.VIDEOS = [
     id: "no-looking-back-2025-09-22-1736",
     title: "No Looking Back",
     youtubeId: "zF46xNrkHWM",
-    published: "2025-09-22",
+    published: "2025-09-22T17:36:00-05:00",
     tags: ["Rock", "Blues", "Raw", "Intense", "Dark"],
     message: `
       <p><strong>Creation Date:</strong> September 22, 2025 — 5:36 PM</p>
