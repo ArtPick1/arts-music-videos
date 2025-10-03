@@ -1,3 +1,4 @@
+// videos.js — vA52
 // videos.js — vA48 (explicit order)
 // Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
@@ -221,6 +222,26 @@ window.VIDEOS = [
 <p><strong>Genres:</strong> Rock, Metal, Gritty, Raw, Dark, Worship</p>
 <p><em>Living in a Fallen World</em> is a gritty rock/metal anthem that wrestles with the pain and brokenness all around us — addiction, anger, silence, and lies. It’s real. It’s raw. But it doesn’t stop there. The song declares that only Christ can break the chains of sin, heal the wounds within, and anchor our souls. Even when scars remain, His mercy meets us in the pain. This song is for anyone who’s ever looked at the darkness and wondered if hope is too far. The answer is clear: Christ has overcome....
 <p>🎧 Listen, share, and let the truth of the Cross remind you — the curse has lost its place.</p>`
+  }
+
+  ,
+  {
+    id: "strike-at-the-light-2025-10-04",
+    title: "Strike at the Light",
+    youtubeId: "WhVA0ITq3bI",
+    published: "2025-10-04T12:00:00-05:00",
+    tags: ["Acoustic", "Worship", "Rock", "Anthem"],
+    message: `<h2>Strike at the Light</h2>
+<p><strong>Genres:</strong> Acoustic, Worship, Rock, Anthem</p>
+
+<p><em>Strike at the Light</em> is a powerful acoustic-worship anthem exposing the lie of self-reliance and declaring the victory of Christ’s light over darkness.</p>
+
+<p>We live in a world where many try to claw their way out of despair by their own strength — yet remain blind to the truth. Scripture tells us:</p>
+<blockquote>“The god of this world has blinded the minds of the unbelievers, to keep them from seeing the light of the gospel of the glory of Christ, who is the image of God.” (2 Corinthians 4:4)</blockquote>
+
+<p>This song is a response to that blindness. It’s about what happens when hearts glimpse the Light but refuse to surrender — striking at the very truth that exposes them. And it’s about the ultimate triumph of Christ, the Light who shines in the darkness… and the darkness has not overcome it (John 1:5).</p>
+
+<p>🎶 If you’ve ever felt the battle between despair and hope, or seen the world lash out at truth, this song is for you. The message is clear: You can strike at the Light, but the Light remains.</p>`
   }
 
 ];
