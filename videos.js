@@ -1,3 +1,4 @@
+// videos.js — vA53
 // videos.js — vA52
 // videos.js — vA48 (explicit order)
 // Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
@@ -242,6 +243,25 @@ window.VIDEOS = [
 <p>This song is a response to that blindness. It’s about what happens when hearts glimpse the Light but refuse to surrender — striking at the very truth that exposes them. And it’s about the ultimate triumph of Christ, the Light who shines in the darkness… and the darkness has not overcome it (John 1:5).</p>
 
 <p>🎶 If you’ve ever felt the battle between despair and hope, or seen the world lash out at truth, this song is for you. The message is clear: You can strike at the Light, but the Light remains.</p>`
+  }
+
+  ,
+  {
+    id: "that-dragon-serpent-of-deceit-2025-10-04",
+    title: "That Dragon - Serpent of Deceit",
+    youtubeId: "XNDrqbwUGGM",
+    published: "2025-10-04T12:00:00-05:00",
+    tags: ["Rock", "Metal", "Dark", "Raw", "Worship"],
+    message: `<h2>That Dragon – Serpent of Deceit</h2>
+<p><strong>Genres:</strong> Rock, Metal, Dark, Raw, Worship</p>
+
+<p><em>That Dragon – Serpent of Deceit</em> is a bold anthem confronting the lie that we can conquer sin on our own. The world says, “fight your demons” or “just run away,” but the truth is clear: those are lies. Self-reliance cannot save us.</p>
+
+<p>This song is my response to the growing trend in music videos that promise strength, healing, or escape through self-reliance — while leaving Christ out completely. They may look good and sound fantastic, but behind the message is the same old deception: pride in self.</p>
+
+<p>This song unmasks that lie and points to the only true hope: Jesus Christ, who crushed the serpent’s head, conquered death, and paid the price for our sin.</p>
+
+<p>🐉 If this message speaks to you, please share it — so more people can see the truth behind the serpent’s deception.</p>`
   }
 
 ];
