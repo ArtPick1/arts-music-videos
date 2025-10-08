@@ -1,9 +1,34 @@
-// videos.js — vA53
+// videos.js — vA54 (added King With No Crown)
 // videos.js — vA52
 // videos.js — vA48 (explicit order)
 // Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
+  
   {
+    id: "king-with-no-crown-2025-10-08",
+    title: "King With No Crown (The only way out)",
+    youtubeId: "q3yWdE0i5_k",
+    published: "2025-10-08T15:40:00-05:00",
+    tags: ["Soulful", "Christian", "Blues Rock", "Repentance", "Hope"],
+    message: `
+      <h2>King With No Crown (The only way out)</h2>
+      <p><strong>Creation Date:</strong> 8 Oct 2025</p>
+      <p><strong>Genres:</strong> soulful, rock, blues, dark</p>
+
+      <p><em>I make the fedora look great — really great — at the end of the video! lol</em></p>
+      <p>It’s made me break out the harmonica and try to learn it one more time.</p>
+
+      <h3>New Music Video</h3>
+      <p>A soulful Christian blues-rock song about pride, repentance, and the hope found at the rugged cross.</p>
+      <p>It tells the story of a man deceived by sin, weighed down by life, and surrounded by darkness — yet in his brokenness, he discovers the Savior who gave His life on the rugged cross.</p>
+
+      <h3>Call to Response</h3>
+      <blockquote>➡️ Die to self, be born again, and follow the One who is faithful.</blockquote>
+      <p>🎧 If this song speaks to you, share it with someone who needs to hear the truth today.</p>
+      <p>✝️ There’s hope. You are not alone.</p>
+    `
+  },
+{
     id: "giving-thanks-always-2025-09-30-0823",
     title: "Giving Thanks Always",
     youtubeId: "qoetjKlLFwk",
