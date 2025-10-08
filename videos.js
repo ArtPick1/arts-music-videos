@@ -1,4 +1,7 @@
-// videos.js — vA58
+// videos.js — vA53
+// videos.js — vA52
+// videos.js — vA48 (explicit order)
+// Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
   {
     id: "giving-thanks-always-2025-09-30-0823",
