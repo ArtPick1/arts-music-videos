@@ -6,7 +6,7 @@
   <title>Message — Art’s Music Videos</title>
   <meta name="description" content="Watch this message and video from Art’s Music Videos." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preload" as="script" href="videos.js?vA49" />
+  <link rel="preload" as="script" href="videos.js?vA54" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="" id="ogTitle" />
   <meta property="og:description" content="Video + message" />
@@ -41,14 +41,27 @@
     </footer>
   </div>
 
-  <script src="videos.js?vA49"></script>
+  <script src="videos.js?vA54"></script>
   <script>
     (function(){
       const el = s => document.querySelector(s);
       const params = new URLSearchParams(location.search);
       const id = params.get('id');
       const data = (window.VIDEOS || []).filter(v => v && v.id);
-      const fmtDate = (iso) => new Date(iso + 'T00:00:00').toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+      const fmtDate = (s) => {
+      try {
+        const str = (typeof s === 'string') ? s : String(s || '');
+        // Use as-is if already full ISO, else add midnight time for date-only strings
+        const d = new Date(str.includes('T') ? str : (str + 'T00:00:00'));
+        if (!isNaN(d.getTime())) {
+          return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+        }
+        // Fallback: if still invalid, try to show the date portion before 'T'
+        return (str.includes('T') ? str.split('T')[0] : str) || '';
+      } catch {
+        return '';
+      }
+    };
       const ytEmbed = (id) => `<iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
       const ytThumb = (id) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
