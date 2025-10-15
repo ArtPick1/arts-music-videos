@@ -1,57 +1,9 @@
-// videos.js — vA54 (added King With No Crown)
+// videos.js — vA53
 // videos.js — vA52
 // videos.js — vA48 (explicit order)
 // Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
-  
-  
   {
-    id: "light-up-the-shadows-2025-10-10-1356",
-    title: "Light Up the Shadows",
-    youtubeId: "Ny5vdi6tDs4",
-    published: "2025-10-10T13:56:00-05:00",
-    tags: ["Acoustic", "Soulful", "Blues", "Raw", "Dark"],
-    message: `
-      <h2>Light Up the Shadows</h2>
-      <p><strong>Creation Date:</strong> 10 Oct 2025, 1:56 PM</p>
-      <p><strong>Genres:</strong> acoustic, soulful, blues, raw, dark</p>
-
-      <p>This original gospel-blues song is a cry from the street corner — a harmonica-driven, raw and mournful blues about the world’s desperate need for Jesus. It blends gritty imagery of darkness and lost souls with the hope and fire of the Gospel.</p>
-
-      <p>The verses call out to the harlots, the dreamers, the broken, and the weary — those counting the cost of life without Christ. The pre-chorus rises as a soul-deep conviction: <em>“Proclaim His Word.”</em> And the chorus declares the mission: <em>“How will they know if we don’t show ’em Jesus? How will they hear if we don’t speak His name?”</em></p>
-
-      <p>With harmonica weeping through every line, the bridge unleashes the sound of redemption — guitar and harp together cutting through the night. The song closes with a mournful harmonica outro, echoing the Gospel into the silence.</p>
-
-      <p>📖 Inspired by scriptures like Romans 10:14 (“How shall they hear without a preacher?”) and Matthew 5:14–16 (“You are the light of the world… let your light shine before others.”), this song is both a lament and a call to action.</p>
-
-      <p><strong>Video and lyrics by:</strong> Art Pickens</p>
-    `
-  },
-{
-    id: "king-with-no-crown-2025-10-08",
-    title: "King With No Crown (The only way out)",
-    youtubeId: "q3yWdE0i5_k",
-    published: "2025-10-08T15:40:00-05:00",
-    tags: ["Soulful", "Christian", "Blues Rock", "Repentance", "Hope"],
-    message: `
-      <h2>King With No Crown (The only way out)</h2>
-      <p><strong>Creation Date:</strong> 8 Oct 2025</p>
-      <p><strong>Genres:</strong> soulful, rock, blues, dark</p>
-
-      <p><em>I make the fedora look great — really great — at the end of the video! lol</em></p>
-      <p>It’s made me break out the harmonica and try to learn it one more time.</p>
-
-      <h3>New Music Video</h3>
-      <p>A soulful Christian blues-rock song about pride, repentance, and the hope found at the rugged cross.</p>
-      <p>It tells the story of a man deceived by sin, weighed down by life, and surrounded by darkness — yet in his brokenness, he discovers the Savior who gave His life on the rugged cross.</p>
-
-      <h3>Call to Response</h3>
-      <blockquote>➡️ Die to self, be born again, and follow the One who is faithful.</blockquote>
-      <p>🎧 If this song speaks to you, share it with someone who needs to hear the truth today.</p>
-      <p>✝️ There’s hope. You are not alone.</p>
-    `
-  },
-{
     id: "giving-thanks-always-2025-09-30-0823",
     title: "Giving Thanks Always",
     youtubeId: "qoetjKlLFwk",
