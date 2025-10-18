@@ -1,9 +1,32 @@
-// videos.js — vA56 (added Chains of Grace)
+// videos.js — vA57 (added No Fellowship with Darkness)
 // videos.js — vA54 (added King With No Crown)
 // videos.js — vA52
 // videos.js — vA48 (explicit order)
 // Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
 window.VIDEOS = [
+  {
+    id: "no-fellowship-with-darkness-2025-10-18",
+    title: "No Fellowship with Darkness",
+    youtubeId: "SguuDtluoRI",
+    published: "2025-10-18T00:00:00-05:00",
+    tags: ["Acoustic", "Blues", "Raw", "Prophetic", "Spoken-Word Grit"],
+    message: `
+      <h2>No Fellowship with Darkness</h2>
+      <p><strong>🎸 Genre:</strong> Acoustic Blues · Raw · Prophetic · Spoken-Word Grit</p>
+      <p><strong>📖 Scripture:</strong> Ephesians 5:11 · 2 Corinthians 6:14–18 · Deuteronomy 18:9–14</p>
+      <p><em>No Fellowship with Darkness</em> — an original acoustic-blues song exposing the spiritual compromise behind Halloween and the call for believers to live set apart. This is not a song of condemnation but of clarity — a cry to remember who we serve and to walk as children of light.</p>
+      <blockquote>“Have no fellowship with the unfruitful works of darkness, but rather reprove them.” (Ephesians 5:11)</blockquote>
+      <h3>About the Song</h3>
+      <p>We’ve blended so much with the world that we call darkness “fun.” I’m not here to condemn anyone — only to remind us what God’s Word says. Now it’s between you and the Lord, and what the Holy Spirit shows you.</p>
+      <p>We live in a world that calls darkness fun — a night of masks and shadows — but Christ calls us out of that fellowship and into His marvelous Light. This song was written to remind the Church: we don’t celebrate death; we serve the Living God.</p>
+      <h3>Lyrics Preview</h3>
+      <p>This world calls it fun — a night of masks and shadows.<br/>
+      But I remember what my Father said: “Come out from among them, and be ye separate.”<br/>
+      No fellowship with darkness — I walk in the Light…</p>
+      <p><em>(Full lyrics available in the video captions.)</em></p>
+    `
+  },
+
   {
     id: "chains-of-grace-2025-10-15",
     title: "Chains of Grace (A Father’s Warning)",
