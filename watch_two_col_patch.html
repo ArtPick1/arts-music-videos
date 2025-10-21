@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watch | Art's Music Videos</title>
+  <style>
+    :root { --bg:#0b0b0c; --fg:#ececf1; --muted:#b7b7c3; --card:#151518; --line:#222; }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;}
+    .wrap{max-width:1200px; margin:0 auto; padding:16px;}
+    header{background:#0f0f12; border-bottom:1px solid var(--line);}
+    a.back{color:#bcd0ff; text-decoration:none;}
+    .layout{display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:start; padding:20px 0;}
+    @media (max-width: 980px){ .layout{grid-template-columns:1fr;} }
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden;}
+    iframe{width:100%; aspect-ratio:16/9; border:0; background:#000; display:block;}
+    .pad{padding:14px;}
+    .title{font-weight:800; font-size:22px; margin:8px 0 4px;}
+    .meta{color:var(--muted); font-size:14px; margin-bottom:10px;}
+    .desc{white-space:pre-wrap; line-height:1.5; color:#d7d7de; font-size:15px;}
+    .list{display:flex; flex-direction:column; gap:10px;}
+    .item{display:flex; gap:10px; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
+    .thumb{width:120px; aspect-ratio:16/9; background:#000; flex:0 0 auto; display:block;}
+    .itxt{padding:10px 10px; overflow:hidden;}
+    .ititle{font-weight:700; font-size:14px; margin:0 0 4px; line-height:1.2;}
+    .isnippet{color:var(--muted); font-size:13px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="back" href="index.html">← Back to all videos</a>
+  </header>
+  <main class="wrap">
+    <div class="layout">
+      <section id="view">
+        <article class="card">
+          <div id="player"></div>
+          <div class="pad">
+            <h1 class="title" id="v_title"></h1>
+            <div class="meta" id="v_meta"></div>
+            <div class="desc" id="v_desc"></div>
+          </div>
+        </article>
+      </section>
+      <aside>
+        <h3 style="margin:10px 0 10px;">More Videos</h3>
+        <div id="list" class="list"></div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Load catalog then patch-in new release -->
+  <script src="videos.js?vA100"></script>
+  
+<script>
+// --- Patch: Prepend new video without destroying existing list ---
+(function() {
+  const NEW = {
+    id: "j5I0KC7REEc",
+    title: "Riddle of the Clock (Tick-Tick, Tock-Tock)",
+    description: "Time twists. Shadows whisper.\nSome say there\u2019s a message in this song\u2026 others say it\u2019s just madness in motion.\nThere might be a riddle in here \u2014 or there might not be.\nYou decide.\nWhen this video hits 1,000 views, I\u2019ll release the full lyrics \u2014 and tell the story behind Riddle of the Clock.\nUntil then\u2026 listen closely.\nThe clues might already be ticking. \u23f1\ufe0f\nMaybe this is what it\u2019s like when you do drugs \u2014 but I wouldn\u2019t know.\nI don\u2019t do drugs; I barely even take what the doctor prescribes.\nMore likely, this is just what happens when you\u2019re sleep-deprived and working on too many strange videos at 3 a.m.\n\ud83c\udfa7 Genre: Dark Blues-Rock \u00b7 Surreal Rock \u00b7 Poetic Groove\n\ud83c\udfb8 Written and produced by Art Pickens",
+    published: "2025-10-21",
+    tags: ["Dark Blues-Rock","Surreal Rock","Poetic Groove"]
+  };
+  if (!Array.isArray(window.videos)) window.videos = [];
+  const exists = window.videos.some(v => v && v.id === NEW.id);
+  if (!exists) window.videos.unshift(NEW);
+})();
+</script>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const vid = params.get('vid');
+    const vids = Array.isArray(window.videos) ? window.videos : [];
+    const cur = vids.find(v => v.id === vid) || vids[0];
+
+    // Player
+    const player = document.getElementById('player');
+    const vTitle = document.getElementById('v_title');
+    const vMeta  = document.getElementById('v_meta');
+    const vDesc  = document.getElementById('v_desc');
+    if (cur) {
+      player.innerHTML = `<iframe src="https://www.youtube.com/embed/${cur.id}" allowfullscreen title="${cur.title}"></iframe>`;
+      vTitle.textContent = cur.title || '';
+      vMeta.textContent = cur.published ? `Published: ${cur.published}` : '';
+      vDesc.textContent = cur.description || '';
+    } else {
+      player.innerHTML = '<div class="pad">Video not found.</div>';
+    }
+
+    // Sidebar list (exclude current)
+    const list = document.getElementById('list');
+    function row(v) {
+      const url = `watch.html?vid=${encodeURIComponent(v.id)}`;
+      const thumb = `https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`;
+      const snip = (v.description||'').replace(/\n/g,' ').slice(0,160);
+      return `
+        <a class="item" href="${url}">
+          <img class="thumb" src="${thumb}" alt="Thumb: ${v.title}">
+          <div class="itxt">
+            <div class="ititle">${v.title}</div>
+            <div class="isnippet">${snip}</div>
+          </div>
+        </a>`;
+    }
+    list.innerHTML = vids.filter(v => !cur || v.id !== cur.id).map(row).join('');
+  </script>
+</body>
+</html>
