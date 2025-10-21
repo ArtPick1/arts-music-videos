@@ -5,51 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art's Music Videos</title>
   <style>
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0b0b0c; color:#e9e9ee;}
-    header{padding:24px 16px; border-bottom:1px solid #222; background:#0f0f12;}
-    .wrap{max-width:1024px; margin:0 auto; padding:0 12px;}
-    h1{margin:0; font-size:clamp(24px,4vw,36px);}
-    .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; padding:20px 0 40px;}
-    .card{background:#151518; border:1px solid #222; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.2);}
-    .thumb{aspect-ratio:16/9; width:100%; display:block; background:#000;}
-    .pad{padding:12px 14px;}
-    .title{font-weight:700; font-size:18px; line-height:1.2; margin:0 0 8px;}
-    .desc{font-size:14px; color:#c7c7d1; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;}
-    a.button{display:inline-block; margin-top:10px; padding:8px 12px; border-radius:10px; background:#2b59ff; color:#fff; text-decoration:none;}
-    footer{padding:20px 16px; border-top:1px solid #222; color:#a7a7b3; font-size:14px;}
+    :root {
+      --bg:#0b0b0c; --fg:#ececf1; --muted:#b7b7c3; --card:#151518; --line:#222;
+      --accent:#2b59ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;}
+    header{background:#0f0f12; border-bottom:1px solid var(--line);}
+    .wrap{max-width:1200px; margin:0 auto; padding:16px;}
+    h1{margin:4px 0 0 0; font-size:clamp(22px,4vw,34px);}
+    .layout{display:grid; grid-template-columns:1fr 360px; gap:20px; align-items:start; padding:20px 0;}
+    @media (max-width: 980px){ .layout{grid-template-columns:1fr;} }
+    .card{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.25);}
+    .pad{padding:14px;}
+    iframe{width:100%; aspect-ratio:16/9; border:0; display:block; background:#000;}
+    .title{font-weight:800; font-size:22px; margin:8px 0 4px;}
+    .meta{color:var(--muted); font-size:14px; margin-bottom:10px;}
+    .desc{line-height:1.5; color:#d7d7de; font-size:15px;}
+    .list{display:flex; flex-direction:column; gap:10px;}
+    .item{display:flex; gap:10px; text-decoration:none; color:inherit; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
+    .thumb{width:120px; aspect-ratio:16/9; background:#000; flex:0 0 auto; display:block;}
+    .itxt{padding:10px 10px; overflow:hidden;}
+    .ititle{font-weight:700; font-size:14px; margin:0 0 4px; line-height:1.2;}
+    .isnippet{color:var(--muted); font-size:13px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+    footer{border-top:1px solid var(--line); color:#a7a7b3; font-size:14px; padding:14px 16px;}
+    a{color:#bcd0ff;}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
+      <div>Build vA101</div>
       <h1>Art's Music Videos</h1>
-      <div>Newest release appears first.</div>
+      <div style="color:#b7b7c3">Newest release on the left · Previous videos on the right</div>
     </div>
   </header>
   <main class="wrap">
-    <div id="grid" class="grid" role="list"></div>
+    <div class="layout">
+      <section id="featured">
+        <article class="card">
+          <div id="player"></div>
+          <div class="pad">
+            <h2 class="title" id="ft_title"></h2>
+            <div class="meta" id="ft_meta"></div>
+            <div class="desc" id="ft_desc"></div>
+          </div>
+        </article>
+      </section>
+      <aside>
+        <h3 style="margin:10px 0 10px;">Previous Videos</h3>
+        <div id="list" class="list"></div>
+      </aside>
+    </div>
   </main>
   <footer class="wrap">
-    Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a> · Build vA99
+    Contact: <a href="mailto:artpicknet@gmail.com">artpicknet@gmail.com</a>
   </footer>
-  <script src="videos.js?vA99"></script>
+
+  <!-- Load your existing catalog first -->
+  <script src="videos.js?vA101"></script>
+  
+  <!-- Schema shim: support both window.VIDEOS (site) and window.videos (old) -->
   <script>
-    const grid = document.getElementById('grid');
-    function card(v) {
-      const url = `watch.html?vid=${encodeURIComponent(v.id)}`;
-      const thumb = `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`;
-      return `
-      <article class="card" role="listitem">
-        <a href="${url}"><img class="thumb" src="${thumb}" alt="Thumbnail: ${v.title}"></a>
-        <div class="pad">
-          <h2 class="title"><a href="${url}" style="color:#fff; text-decoration:none;">${v.title}</a></h2>
-          <p class="desc">${v.description.replace(/\n/g,' ')}</p>
-          <a class="button" href="${url}">Watch</a>
-        </div>
-      </article>`;
+    (function() {
+      if (Array.isArray(window.VIDEOS) && !Array.isArray(window.videos)) {
+        window.videos = window.VIDEOS;
+      } else if (Array.isArray(window.videos) && !Array.isArray(window.VIDEOS)) {
+        window.VIDEOS = window.videos;
+      }
+    })();
+  </script>
+
+  
+  <!-- Prepend new release into window.VIDEOS without duplicates -->
+  <script>
+    (function() {
+      if (!Array.isArray(window.VIDEOS)) window.VIDEOS = [];
+      const NEW = {
+        id: "riddle-of-the-clock-2025-10-21",
+        title: "Riddle of the Clock (Tick-Tick, Tock-Tock)",
+        youtubeId: "j5I0KC7REEc",
+        published: "2025-10-21T00:00:00-05:00",
+        tags: ["Dark Blues-Rock","Surreal Rock","Poetic Groove"],
+        message: `<h2>Riddle of the Clock (Tick‑Tick, Tock‑Tock)</h2>
+<p><strong>🎧 Genre:</strong> Dark Blues‑Rock · Surreal Rock · Poetic Groove</p>
+<p><em>Time twists. Shadows whisper.</em> Some say there’s a message in this song… others say it’s just madness in motion. There might be a riddle in here — or there might not be. <strong>You decide.</strong></p>
+<p>When this video hits <strong>1,000 views</strong>, I’ll release the full lyrics — and tell the story behind <em>Riddle of the Clock</em>. Until then… listen closely. The clues might already be ticking. ⏱️</p>
+<hr/>
+<p><em>Maybe this is what it’s like when you do drugs — but I wouldn’t know. I don’t do drugs; I barely even take what the doctor prescribes. More likely, this is just what happens when you’re sleep‑deprived and working on too many strange videos at 3 a.m.</em></p>
+<p><strong>🎸 Written and produced by:</strong> Art Pickens</p>
+`
+      };
+      const exists = window.VIDEOS.some(v => v && (v.youtubeId === NEW.youtubeId || v.id === NEW.id));
+      if (!exists) window.VIDEOS.unshift(NEW);
+      // keep shim in sync
+      window.videos = window.VIDEOS;
+    })();
+  </script>
+
+  <script>
+    // Use window.VIDEOS as the source of truth
+    const vids = Array.isArray(window.VIDEOS) ? window.VIDEOS : [];
+    const [first, ...rest] = vids;
+
+    // Featured
+    const player = document.getElementById('player');
+    const ftTitle = document.getElementById('ft_title');
+    const ftMeta  = document.getElementById('ft_meta');
+    const ftDesc  = document.getElementById('ft_desc');
+    function safeHTML(html) { return html || ''; }
+    if (first) {
+      player.innerHTML = `<iframe src="https://www.youtube.com/embed/${first.youtubeId}" allowfullscreen title="${first.title}"></iframe>`;
+      ftTitle.textContent = first.title || '';
+      ftMeta.textContent = first.published ? `Published: ${first.published}` : '';
+      ftDesc.innerHTML = safeHTML(first.message);
+    } else {
+      player.innerHTML = '<div class="pad">No videos found.</div>';
     }
-    // Newest first (array is already newest-first here)
-    grid.innerHTML = (window.videos||[]).map(card).join('');
+
+    // Sidebar list
+    const list = document.getElementById('list');
+    function row(v) {
+      const url = `watch.html?vid=${encodeURIComponent(v.youtubeId)}`;
+      const thumb = `https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg`;
+      // Strip HTML tags for snippet
+      const txt = (v.message||'').replace(/<[^>]+>/g,' ');
+      const snip = txt.replace(/\s+/g,' ').trim().slice(0,160);
+      return `
+        <a class="item" href="${url}">
+          <img class="thumb" src="${thumb}" alt="Thumb: ${v.title}">
+          <div class="itxt">
+            <div class="ititle">${v.title}</div>
+            <div class="isnippet">${snip}</div>
+          </div>
+        </a>`;
+    }
+    list.innerHTML = rest.map(row).join('');
   </script>
 </body>
 </html>
