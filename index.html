@@ -15,9 +15,10 @@
     .card h2 { margin:0; padding:12px 16px; border-bottom:1px solid #232325; font-size:1rem; letter-spacing:0.3px; }
     .video { aspect-ratio:16/9; width:100%; border:0; display:block; }
     .list { padding:8px 0; }
-    .item { display:flex; gap:12px; padding:10px 14px; border-bottom:1px solid #1e1e20; align-items:center; }
+    .item { display:flex; gap:12px; padding:10px 14px; border-bottom:1px solid #1e1e20; align-items:center; text-decoration:none; color:#eaeaea; }
+    .item:hover { background:#18181a; }
     .item:last-child { border-bottom:0; }
-    .thumb { width:120px; aspect-ratio:16/9; flex:0 0 auto; background:#222; border-radius:6px; overflow:hidden; }
+    .thumb { width:120px; aspect-ratio:16/9; flex:0 0 auto; background:#222; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center; font-size:12px; opacity:.8; }
     .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
     .meta { flex:1; min-width:0; }
     .title { font-weight:600; }
@@ -36,8 +37,7 @@
     <section class="card" id="latest">
       <h2>Latest Video</h2>
       <div id="latestEmbed"></div>
-      <div class="desc" id="latestDesc"></div>
-      <details><summary>Full write‑up</summary><div class="desc" id="latestDescLong"></div></details>
+      <div class="desc" id="latestMsg"></div>
     </section>
 
     <aside class="card">
@@ -46,33 +46,34 @@
     </aside>
   </main>
 
-  <script src="videos.js?v=A57" defer></script>
+  <script src="videos.js?v=A59" defer></script>
   <script>
-    // helpers
-    function ytThumb(id){ return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; }
+    function ytThumb(id){ return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ""; }
     function ytEmbed(id){ return `<iframe class="video" src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; }
 
     window.addEventListener('DOMContentLoaded', () => {
-      const latest = window.VIDEOS?.[0];
-      if (!latest) return;
+      const list = window.VIDEOS || [];
+      if (!list.length) return;
 
-      // Latest embed + description
-      document.getElementById('latestEmbed').innerHTML = ytEmbed(latest.id);
-      document.getElementById('latestDesc').textContent = latest.descriptionShort || "";
-      document.getElementById('latestDescLong').textContent = latest.descriptionLong || "";
+      // Latest
+      const latest = list[0];
+      if (latest?.youtubeId) {
+        document.getElementById('latestEmbed').innerHTML = ytEmbed(latest.youtubeId);
+      }
+      document.getElementById('latestMsg').innerHTML = latest?.message || "";
 
-      // Previous list (everything after index 0)
-      const prev = window.VIDEOS.slice(1);
+      // Previous
+      const prev = list.slice(1);
       const prevList = document.getElementById('prevList');
       prev.forEach(v => {
         const a = document.createElement('a');
         a.className = 'item';
-        a.href = `watch.html?v=${encodeURIComponent(v.id)}`;
+        a.href = v.youtubeId ? `watch.html?v=${encodeURIComponent(v.id)}` : '#';
         a.innerHTML = `
-          <div class="thumb"><img alt="" src="${ytThumb(v.id)}"></div>
+          <div class="thumb">${v.youtubeId ? `<img alt="" src="${ytThumb(v.youtubeId)}">` : "No thumbnail"}</div>
           <div class="meta">
             <div class="title">${v.title || "Untitled"}</div>
-            <div class="date">${v.date || ""}</div>
+            <div class="date">${v.published || ""}</div>
             <span class="cta">Watch</span>
           </div>
         `;
