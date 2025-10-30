@@ -24,12 +24,11 @@
     <section class="card">
       <h2 id="title">Now Playing</h2>
       <div id="player"></div>
-      <div class="pad" id="desc"></div>
-      <details class="pad"><summary>Full write‑up</summary><div id="descLong"></div></details>
+      <div class="pad" id="msg"></div>
     </section>
   </main>
 
-  <script src="videos.js?v=A57" defer></script>
+  <script src="videos.js?v=A59" defer></script>
   <script>
     function getParam(name) {
       const url = new URL(window.location.href);
@@ -39,12 +38,14 @@
 
     window.addEventListener('DOMContentLoaded', () => {
       const id = getParam('v');
-      const video = (window.VIDEOS || []).find(v => v.id === id) || window.VIDEOS?.[0];
+      const list = window.VIDEOS || [];
+      const video = list.find(v => v.id === id) || list[0];
       if (!video) return;
       document.getElementById('title').textContent = video.title || 'Now Playing';
-      document.getElementById('player').innerHTML = ytEmbed(video.id);
-      document.getElementById('desc').textContent = video.descriptionShort || "";
-      document.getElementById('descLong').textContent = video.descriptionLong || "";
+      if (video.youtubeId) {
+        document.getElementById('player').innerHTML = ytEmbed(video.youtubeId);
+      }
+      document.getElementById('msg').innerHTML = video.message || "";
     });
   </script>
 </body>
