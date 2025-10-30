@@ -1,94 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Watch | Art's Music Videos</title>
-<style>
-  :root{--bg:#0b0b0c;--fg:#ececf1;--muted:#b7b7c3;--card:#151518;--line:#222}
-  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:1200px;margin:0 auto;padding:16px}
-  header{background:#0f0f12;border-bottom:1px solid var(--line)}
-  .layout{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start;padding:20px 0}
-  @media (max-width:980px){.layout{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-  iframe{width:100%;aspect-ratio:16/9;border:0;background:#000;display:block}
-  .pad{padding:14px}
-  .title{font-weight:800;font-size:22px;margin:8px 0 4px}
-  .meta{color:var(--muted);font-size:14px;margin-bottom:10px}
-  .desc{line-height:1.5;color:#d7d7de;font-size:15px}
-  .list{display:flex;flex-direction:column;gap:10px}
-  .item{display:flex;gap:10px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .thumb{width:120px;aspect-ratio:16/9;background:#000;flex:0 0 auto;display:block}
-  .itxt{padding:10px 10px;overflow:hidden}
-  .ititle{font-weight:700;font-size:14px;margin:0 0 4px;line-height:1.2}
-  .isnippet{color:#b7b7c3;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .banner{background:#3b0b0b;color:#fff;padding:10px 14px;border:1px solid #611;border-radius:8px;margin:10px 0;font-size:14px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watch — Art’s Music Videos</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0f0f10; color:#f5f5f5; }
+    header { padding:16px 20px; border-bottom:1px solid #222; position:sticky; top:0; background:#111; z-index:2; }
+    header a { color:#f5f5f5; text-decoration:none; }
+    main { max-width:1100px; margin: 18px auto; padding: 0 16px; }
+    .card { background:#151516; border:1px solid #232325; border-radius:12px; overflow:hidden; }
+    .card h2 { margin:0; padding:12px 16px; border-bottom:1px solid #232325; font-size:1rem; letter-spacing:0.3px; }
+    .video { aspect-ratio:16/9; width:100%; border:0; display:block; }
+    .pad { padding:14px 16px; }
+  </style>
 </head>
 <body>
-<header class="wrap"><a href="index.html" style="color:#bcd0ff;text-decoration:none;">← Back to all videos</a></header>
-<main class="wrap">
-  <div id="alert"></div>
-  <div class="layout">
-    <section id="view"><article class="card"><div id="player"></div><div class="pad">
-      <h1 class="title" id="v_title"></h1><div class="meta" id="v_meta"></div><div class="desc" id="v_desc"></div>
-    </div></article></section>
-    <aside><h3 style="margin:10px 0 10px;">More Videos</h3><div id="list" class="list"></div></aside>
-  </div>
-</main>
+  <header>
+    <a href="index.html">← Back to Latest</a>
+  </header>
+  <main>
+    <section class="card">
+      <h2 id="title">Now Playing</h2>
+      <div id="player"></div>
+      <div class="pad" id="desc"></div>
+      <details class="pad"><summary>Full write‑up</summary><div id="descLong"></div></details>
+    </section>
+  </main>
 
-<script>
-  let catalogLoaded=false; function videosLoaded(){catalogLoaded=true;}
-</script>
-<script src="videos.js?vA102" onload="videosLoaded()" onerror="document.getElementById('alert').innerHTML='<div class=\'banner\'>Could not load <b>videos.js</b>.</div>'"></script>
-<script>
-(function() {
-  const params = new URLSearchParams(location.search);
-  const vid = params.get('vid');
-  const alert = document.getElementById('alert');
-  const arr = window.VIDEOS;
+  <script src="videos.js?v=A57" defer></script>
+  <script>
+    function getParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+    function ytEmbed(id){ return `<iframe class="video" src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; }
 
-  if (!Array.isArray(arr) || arr.length===0) {
-    alert.innerHTML = '<div class="banner">Your catalog array <b>window.VIDEOS</b> is missing or empty.</div>';
-    document.getElementById('player').innerHTML = '<div class="pad">Video not found.</div>';
-    return;
-  }
-
-  const exists = arr.some(v => v && (v.youtubeId === "j5I0KC7REEc" || (v.id||'').indexOf("riddle-of-the-clock")===0));
-  if (!exists) {
-    arr.unshift({
-      id: "riddle-of-the-clock-2025-10-21",
-      title: "Riddle of the Clock (Tick-Tick, Tock-Tock)",
-      youtubeId: "j5I0KC7REEc",
-      published: "2025-10-21T00:00:00-05:00",
-      tags: ["Dark Blues-Rock","Surreal Rock","Poetic Groove"],
-      message: `<h2>Riddle of the Clock (Tick‑Tick, Tock‑Tock)</h2><p><strong>🎧 Genre:</strong> Dark Blues‑Rock · Surreal Rock · Poetic Groove</p><p><em>Time twists. Shadows whisper.</em> Some say there’s a message in this song… others say it’s just madness in motion. There might be a riddle in here — or there might not be. <strong>You decide.</strong></p><p>When this video hits <strong>1,000 views</strong>, I’ll release the full lyrics — and tell the story behind <em>Riddle of the Clock</em>. Until then… listen closely. The clues might already be ticking. ⏱️</p><hr/><p><em>Maybe this is what it’s like when you do drugs — but I wouldn’t know. I don’t do drugs; I barely even take what the doctor prescribes. More likely, this is just what happens when you’re sleep‑deprived and working on too many strange videos at 3 a.m.</em></p><p><strong>🎸 Written and produced by:</strong> Art Pickens</p>`
+    window.addEventListener('DOMContentLoaded', () => {
+      const id = getParam('v');
+      const video = (window.VIDEOS || []).find(v => v.id === id) || window.VIDEOS?.[0];
+      if (!video) return;
+      document.getElementById('title').textContent = video.title || 'Now Playing';
+      document.getElementById('player').innerHTML = ytEmbed(video.id);
+      document.getElementById('desc').textContent = video.descriptionShort || "";
+      document.getElementById('descLong').textContent = video.descriptionLong || "";
     });
-  }
-
-  const cur = arr.find(v => v.youtubeId === vid) || arr[0];
-
-  const player = document.getElementById('player');
-  const vTitle = document.getElementById('v_title');
-  const vMeta  = document.getElementById('v_meta');
-  const vDesc  = document.getElementById('v_desc');
-  function safeHTML(html) { return html || ''; }
-
-  player.innerHTML = `<iframe src="https://www.youtube.com/embed/${cur.youtubeId}" allowfullscreen title="${cur.title}"></iframe>`;
-  vTitle.textContent = cur.title || '';
-  vMeta.textContent = cur.published ? `Published: ${cur.published}` : '';
-  vDesc.innerHTML = safeHTML(cur.message);
-
-  const list = document.getElementById('list');
-  function row(v) {
-    const url = `watch.html?vid=${encodeURIComponent(v.youtubeId)}`;
-    const thumb = `https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg`;
-    const txt = (v.message||'').replace(/<[^>]+>/g,' ');
-    const snip = txt.replace(/\s+/g,' ').trim().slice(0,160);
-    return `<a class="item" href="${url}"><img class="thumb" src="${thumb}" alt="Thumb: ${v.title}"><div class="itxt"><div class="ititle">${v.title}</div><div class="isnippet">${snip}</div></div></a>`;
-  }
-  list.innerHTML = arr.filter(v => v.youtubeId !== cur.youtubeId).map(row).join('');
-})();
-</script>
+  </script>
 </body>
 </html>
