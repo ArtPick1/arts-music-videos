@@ -1,13 +1,85 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Holy Noise – Reverent Boldness</title>
-  <script src="videos.js?v=A59"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Art’s Music Videos — Latest</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0f0f10; color:#f5f5f5; }
+    header { padding:16px 20px; border-bottom:1px solid #222; position:sticky; top:0; background:#111; z-index:2; }
+    header h1 { margin:0; font-size:1.25rem; }
+    main { display:grid; grid-template-columns: 2fr 1fr; gap:16px; padding:16px; }
+    @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+    .card { background:#151516; border:1px solid #232325; border-radius:12px; overflow:hidden; }
+    .card h2 { margin:0; padding:12px 16px; border-bottom:1px solid #232325; font-size:1rem; letter-spacing:0.3px; }
+    .video { aspect-ratio:16/9; width:100%; border:0; display:block; }
+    .list { padding:8px 0; }
+    .item { display:flex; gap:12px; padding:10px 14px; border-bottom:1px solid #1e1e20; align-items:center; text-decoration:none; color:#eaeaea; }
+    .item:hover { background:#18181a; }
+    .item:last-child { border-bottom:0; }
+    .thumb { width:120px; aspect-ratio:16/9; flex:0 0 auto; background:#222; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center; font-size:12px; opacity:.8; }
+    .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .meta { flex:1; min-width:0; }
+    .title { font-weight:600; }
+    .date { font-size:0.85rem; opacity:0.7; margin-top:2px; }
+    .cta { display:inline-block; margin-top:8px; font-size:0.9rem; padding:6px 10px; border:1px solid #2a2a2d; border-radius:8px; text-decoration:none; color:#eaeaea; }
+    .desc { padding:14px 16px; font-size:0.95rem; line-height:1.5; white-space:pre-wrap; }
+    details { padding:0 16px 16px; }
+    details summary { cursor:pointer; opacity:0.9; }
+  </style>
 </head>
 <body>
-  <h1>Art’s Music Videos – Holy Noise: Reverent Boldness</h1>
-  <div id="video-list"></div>
+  <header>
+    <h1>Art’s Music Videos — Latest Release</h1>
+  </header>
+  <main>
+    <section class="card" id="latest">
+      <h2>Latest Video</h2>
+      <div id="latestEmbed"></div>
+      <div class="desc" id="latestMsg"></div>
+    </section>
+
+    <aside class="card">
+      <h2>Previous Videos</h2>
+      <div class="list" id="prevList"></div>
+    </aside>
+  </main>
+
+  <script src="videos.js?v=A59" defer></script>
+  <script>
+    function ytThumb(id){ return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ""; }
+    function ytEmbed(id){ return `<iframe class="video" src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const list = window.VIDEOS || [];
+      if (!list.length) return;
+
+      // Latest
+      const latest = list[0];
+      if (latest?.youtubeId) {
+        document.getElementById('latestEmbed').innerHTML = ytEmbed(latest.youtubeId);
+      }
+      document.getElementById('latestMsg').innerHTML = latest?.message || "";
+
+      // Previous
+      const prev = list.slice(1);
+      const prevList = document.getElementById('prevList');
+      prev.forEach(v => {
+        const a = document.createElement('a');
+        a.className = 'item';
+        a.href = v.youtubeId ? `watch.html?v=${encodeURIComponent(v.id)}` : '#';
+        a.innerHTML = `
+          <div class="thumb">${v.youtubeId ? `<img alt="" src="${ytThumb(v.youtubeId)}">` : "No thumbnail"}</div>
+          <div class="meta">
+            <div class="title">${v.title || "Untitled"}</div>
+            <div class="date">${v.published || ""}</div>
+            <span class="cta">Watch</span>
+          </div>
+        `;
+        prevList.appendChild(a);
+      });
+    });
+  </script>
 </body>
 </html>
