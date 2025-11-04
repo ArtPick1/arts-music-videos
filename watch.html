@@ -1,52 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Watch — Art’s Music Videos</title>
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0f0f10; color:#f5f5f5; }
-    header { padding:16px 20px; border-bottom:1px solid #222; position:sticky; top:0; background:#111; z-index:2; }
-    header a { color:#f5f5f5; text-decoration:none; }
-    main { max-width:1100px; margin: 18px auto; padding: 0 16px; }
-    .card { background:#151516; border:1px solid #232325; border-radius:12px; overflow:hidden; }
-    .card h2 { margin:0; padding:12px 16px; border-bottom:1px solid #232325; font-size:1rem; letter-spacing:0.3px; }
-    .video { aspect-ratio:16/9; width:100%; border:0; display:block; }
-    .pad { padding:14px 16px; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch – Rulers of Sodom</title>
+  <script src="videos.js?v=A59"></script>
 </head>
 <body>
-  <header>
-    <a href="index.html">← Back to Latest</a>
-  </header>
-  <main>
-    <section class="card">
-      <h2 id="title">Now Playing</h2>
-      <div id="player"></div>
-      <div class="pad" id="msg"></div>
-    </section>
-  </main>
-
-  <script src="videos.js?v=A59" defer></script>
-  <script>
-    function getParam(name) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name);
-    }
-    function ytEmbed(id){ return `<iframe class="video" src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const id = getParam('v');
-      const list = window.VIDEOS || [];
-      const video = list.find(v => v.id === id) || list[0];
-      if (!video) return;
-      document.getElementById('title').textContent = video.title || 'Now Playing';
-      if (video.youtubeId) {
-        document.getElementById('player').innerHTML = ytEmbed(video.youtubeId);
-      }
-      document.getElementById('msg').innerHTML = video.message || "";
-    });
-  </script>
+  <h1>Now Playing: Rulers of Sodom</h1>
+  <div id="video-container"></div>
 </body>
 </html>
