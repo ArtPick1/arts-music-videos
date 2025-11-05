@@ -1,4 +1,4 @@
-// videos.js — vA60 (added Rulers of Sodom)
+// videos.js — vA61 (added Rulers of Sodom)
 // videos.js — vA54 (added King With No Crown)
 // videos.js — vA52
 // videos.js — vA48 (explicit order)
@@ -7,7 +7,52 @@ window.VIDEOS = [
   
   
 
-    {
+    
+  {
+  id: "not-just-lip-service-2025-11-05",
+  title: "Not Just Lip Service",
+  youtubeId: "jaIIL-CfkHs",
+  published: "2025-11-05T00:00:00-06:00",
+  tags: ["Acoustic Blues","Revival","Repentance","Faith in Action","Scripture-Line-Guide"],
+  message: `<h2>Not Just Lip Service</h2>
+<p><em>“Not Just Lip Service”</em> is a gritty acoustic-blues call to repentance — a cry for revival that starts within. Set in an old urban church at dawn, the song strips away performance and pretension, reminding us that worship without obedience is empty. The harmonica becomes a prayer between verses — the sound of conviction turning to surrender. This song asks the Church to do more than sing for fire from above — to walk the walk, to lay down idols, and to become the altar flame. When our hearts are truly undone, the Spirit can finally heal.</p>
+
+<h3>— Line-by-Line Scripture Reference Guide —</h3>
+<details><summary><strong>[Verse 1]</strong></summary>
+<pre>Why won’t God’s people listen?   Jer 6:10 / Mt 13:15
+Why do we pray for revival yet never choose to do His will?   Jas 1:22 / Mt 7:21
+Why do we cling to our idols   Ex 20:3-5 / 1 Jn 5:21
+Why’d we just talk the talk, not walk His way?   Isa 29:13 / 1 Jn 2:6</pre></details>
+
+<details><summary><strong>[Pre-Chorus 1]</strong></summary>
+<pre>We can pray all day for fire from above   2 Chr 7:1-14
+But revival won’t come till our hearts are undone   Ps 51:17 / Hos 10:12</pre></details>
+
+<details><summary><strong>[Chorus]</strong></summary>
+<pre>Before we ask for revival   Hag 1:5-7 / 1 Pet 4:17
+We need to act on His Word   Jn 14:15 / Jas 2:17
+Lay down our pride, die to self   Lk 9:23
+And honor Him in all we are   1 Cor 10:31
+For only when we truly yield can His Spirit start to heal   Rom 12:1-2 / Hos 6:1-2</pre></details>
+
+<details><summary><strong>[Verse 2]</strong></summary>
+<pre>We know the things that bind us   Heb 12:1
+Do we think God will just ignore it   Gal 6:7 / Rom 2:4-5
+There’s a price to pay for walking our own way   Prov 14:12</pre></details>
+
+<details><summary><strong>[Pre-Chorus 2]</strong></summary>
+<pre>How hard can it be to turn from the world   1 Jn 2:15-17 / Mt 6:24
+Till we fall on our face, cry out for grace   Ezra 9:5 / Eph 2:8 / Ps 107:14</pre></details>
+
+<details><summary><strong>[Bridge]</strong></summary>
+<pre>Let it start with us, from within   Ps 139:23-24 / Php 2:13
+Not empty words or hollow praise   Mt 15:8 / Jas 2:26</pre></details>
+
+<details><summary><strong>[Final Chorus &amp; Outro Prayer]</strong></summary>
+<pre>Let our lives become the altar flame   Rom 12:1 / Acts 2:3-4
+Lord, let my actions show my faith   Jas 2:18 / Col 3:17</pre></details>`
+},
+{
     id: "rulers-of-sodom-2025-11-03",
     title: "Rulers of Sodom",
     youtubeId: "9Aalqrm0dq0",
