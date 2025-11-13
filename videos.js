@@ -1,5 +1,23 @@
-// videos.js — vA62 (added Make Us Disciple-makers again Again)
+// videos.js — vA63 (added Make Us Disciple-makers again Again)
 window.VIDEOS = [
+
+  {
+    id: "lead-me-lord-2025-11-13",
+    title: "Lead Me, Lord",
+    youtubeId: "6nez_LdOmSE",
+    published: "2025-11-13T00:00:00-06:00",
+    tags: ["Duet","Acoustic","Worship","Prayer","Surrender"],
+    message: `<h2>Lead Me, Lord</h2>
+<p>The reason I wrote it began last night after church. On the way home, Cindy asked me what I was feeling about our church. That’s a deep subject for me because of our previous church.</p>
+<p>Later that night, while I was working on something else, I kept sensing that I needed to write down what was stirring in my heart and soul.</p>
+<p>This song is what came out of that moment — a simple prayer of surrender: <em>“Lead me, Lord… wherever You want me to go.”</em></p>
+<p>Lead Me, Lord — a male–female duet built from a simple, honest prayer. A cry for direction, faithfulness, and steady obedience:<br/>
+“Help me follow You wherever You lead…<br/>
+Keep my heart steady in praise…<br/>
+Help me stand firm in Your Word all my days.”</p>
+<p>If you’re seeking clarity, surrender, or need to draw near to Christ again — this song is for you.</p>`
+  },
+
   {
     id: "make-us-disciple-makers-again-again-2025-11-13",
     title: "Make Us Disciple-makers again Again",
