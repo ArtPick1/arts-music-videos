@@ -1,9 +1,22 @@
-// videos.js — vA61 (added Rulers of Sodom)
-// videos.js — vA54 (added King With No Crown)
-// videos.js — vA52
-// videos.js — vA48 (explicit order)
-// Current first, then previous (newest → oldest), with "Glory..." anchored at the very bottom.
+// videos.js — vA62 (added Make Us Disciple-makers again Again)
 window.VIDEOS = [
+  {
+    id: "make-us-disciple-makers-again-again-2025-11-13",
+    title: "Make Us Disciple-makers again Again",
+    youtubeId: "CpmVLKhiC7s",
+    published: "2025-11-13T00:00:00-06:00",
+    tags: ["Acoustic Rock-Blues Worship","Repentance","Discipleship","Revival","Obedience"],
+    message: `<h2>Make Us Disciple-makers again Again</h2>
+<p><em>“Make Us Disciple-makers again Again”</em> – an acoustic rock-blues worship song about rekindled fire, repentance, and the Great Commission. It’s a cry for the Holy Spirit to reignite our hearts — not for numbers, but for true disciples who follow Christ and live for God’s glory.</p>
+<p>A call to lay down our will, take up His, and make disciples who belong to Him.</p>
+<p><strong>🎵 Genre:</strong> Acoustic Rock-Blues Worship<br/>
+<strong>🎤 Vocal:</strong> Deep resonant male (E2–E4)<br/>
+<strong>🔥 Theme:</strong> Repentance · Discipleship · Revival · Obedience</p>
+<p><em>“Reignite my heart, my hunger, my desire — Use me as kindling that starts the fire.”</em></p>
+<p>📖 Matthew 28:19–20 – “Go therefore and make disciples of all nations…”<br/>
+📖 James 4:17 – “Whoever knows the right thing to do and fails to do it, for him it is sin.”</p>`
+},
+
   
   
 
