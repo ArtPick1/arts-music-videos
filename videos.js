@@ -1,5 +1,20 @@
-// videos.js — vA63 (added Make Us Disciple-makers again Again)
+// videos.js — vA64 (added I Praise Your Name)
 window.VIDEOS = [
+  {
+    id: "i-praise-your-name-2025-11-17",
+    title: "I Praise Your Name",
+    youtubeId: "oXPOU-vrtqc",
+    published: "2025-11-17T00:00:00-06:00",
+    tags: ["Acoustic","Blues-Worship","Surrender","Praise","Oklahoma Sunset"],
+    message: `<h2>I Praise Your Name</h2>
+<p><em>“I Praise Your Name”</em> — an acoustic blues–worship song about surrender, obedience, and belonging to Christ.</p>
+<p>Written out of a simple prayer: <strong>“Lord, send me Your peace; I’ll rest in Your arms. Do with my life as You see fit.”</strong></p>
+<p>This song walks through confession, surrender, and praise — from laying everything down before Him, to lifting His name above everything else.</p>
+<p>Shot against an Oklahoma sunset, this video reflects the quiet places where God speaks to the heart and draws us deeper into His will.</p>
+<p><strong>All glory to Jesus Christ. Hallowed be His name.</strong></p>`
+  },
+
+
 
   {
     id: "lead-me-lord-2025-11-13",
