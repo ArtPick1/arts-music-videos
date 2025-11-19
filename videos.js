@@ -1,5 +1,22 @@
 // videos.js — vA64 (added I Praise Your Name)
 window.VIDEOS = [
+
+  {
+    id: "holy-spirit-awaken-the-fire-2025-11-18",
+    title: "Holy Spirit – Awaken the Fire",
+    youtubeId: "EC_iTyRIcdU",
+    published: "2025-11-18T00:00:00-06:00",
+    tags: ["Acoustic","Dark Blues","Boldness","Holy Spirit","Courage","Conviction"],
+    message: `<h2>Holy Spirit – Awaken the Fire</h2>
+<p><em>“Holy Spirit – Awaken the Fire”</em> is a dark acoustic-blues cry for boldness. A prayer from the shadows — for courage, conviction, and the fire of God to rise again.</p>
+<p>This isn’t about thrills, goosebumps, or emotional hype. It’s about the Holy Spirit empowering obedience, truth, courage, and a witness that stands firm where others shrink back.</p>
+<p>Filmed with gritty, low-light blues imagery — alleyways, embers, shadows, and a lone voice in the dark — this video follows the lyrical journey of calling on the Spirit to ignite boldness again.</p>
+<p><strong>No polish. No performance. Just a raw prayer:</strong><br/>
+<strong>“Holy Spirit, awaken the fire in me.”</strong></p>
+<p><strong>All glory to Jesus Christ alone.</strong></p>`
+  },
+
+
   {
     id: "i-praise-your-name-2025-11-17",
     title: "I Praise Your Name",
