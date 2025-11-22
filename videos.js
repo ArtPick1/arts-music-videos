@@ -2,6 +2,21 @@
 window.VIDEOS = [
 
   {
+    id: "christmas-unwrapped-2025-11-22",
+    title: "Christmas Unwrapped",
+    youtubeId: "IJYH9eokfPk",
+    published: "2025-11-22T00:00:00-06:00",
+    tags: ["Christmas","Blues-Rock","Confrontational","Warning","Consumerism","Repentance"],
+    message: `<h2>Christmas Unwrapped</h2>
+<p><em>“Christmas Unwrapped”</em> is a confrontational blues-rock warning about what we’ve turned Christmas into — an endless chase for “more and more” while ignoring the One the season is supposed to be about.</p>
+<p>From the feeding trough in Bethlehem… to the glowing TVs, packed stores, gift-competition, ads, noise, and distraction today — this song exposes the consumerism that has drowned out Christ Himself.</p>
+<p>This isn’t comfortable. It isn’t cute. It isn’t sentimental. <strong>It’s a wake-up call.</strong></p>
+<p>A reminder that the first Christmas was never about the wrapping, the shopping, or the “holiday blowouts.” It was about the One we keep ignoring.</p>
+<p><strong>All glory to Jesus Christ alone.</strong></p>`
+  },
+
+
+  {
     id: "christmas-at-dennys-2025-11-22",
     title: "Christmas at Denny’s",
     youtubeId: "ror9ld0FtRU",
