@@ -1,5 +1,16 @@
-// videos.js — vA64 (added I Praise Your Name)
+// videos.js — vA66 (added Christmas at Denny’s)
 window.VIDEOS = [
+
+  {
+    id: "christmas-at-dennys-2025-11-22",
+    title: "Christmas at Denny’s",
+    youtubeId: "ror9ld0FtRU",
+    published: "2025-11-22T00:00:00-06:00",
+    tags: ["Christmas","Blues","Story Song","Fictional Narrative","Late-Night Diner"],
+    message: `<h2>Christmas at Denny’s</h2>
+<p>This song tells a fictional late-night diner story — a blues-style illustration of what it looks like when the Gospel steps into the quiet corners of life. It’s not a real event, but it paints a picture many of us recognize: a weary soul, an empty booth, and a moment where grace breaks through the dark. Inspired by the mood of Randy Stonehill’s Christmas at Denny’s, this song builds its own imagined scene — a reminder of how easily we overlook the people who sit right in front of us, especially during the holidays. This story isn’t something that happened… It’s something that could happen — and something that should remind us how to live. Let this fictional scene push you to look around, slow down, and reach out. Because even made-up stories can reveal real truth about what it means to follow Christ.</p>`
+  },
+
 
   {
     id: "holy-spirit-awaken-the-fire-2025-11-18",
