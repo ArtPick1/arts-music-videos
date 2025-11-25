@@ -2,6 +2,21 @@
 window.VIDEOS = [
 
   {
+    id: "a-time-to-speak-2025-11-25",
+    title: "A Time to Speak",
+    youtubeId: "Q5BFtfJz0Vg",
+    published: "2025-11-25T00:00:00-06:00",
+    tags: ["Rock","Metal","Prayer","Boldness","Silence vs Speech","Holy Spirit","Scripture-Heavy"],
+    message: `<h2>A Time to Speak</h2>
+<p><em>“A Time to Speak”</em> is a rock/metal prayer built straight from Scripture — the struggle between silence, obedience, boldness, and surrender. Drawn from <strong>Ecclesiastes 3:7</strong> (“a time to keep silence, and a time to speak”), this song wrestles with the fire inside — the burden to warn, to plead, to shake people awake — and the truth that only the Holy Spirit can open ears and change hearts (<strong>John 16:8</strong>; <strong>Zechariah 4:6</strong>).</p>
+<p>The lyrics reflect passages like <strong>Jeremiah 20:9</strong> (“His word was in my heart like a fire… I could not hold it in”), <strong>Ezekiel 3:18–21</strong> (the responsibility to speak when God commands), <strong>Proverbs 17:27–28</strong> (the wisdom of restraint), <strong>James 1:19</strong> (“slow to speak”), <strong>Isaiah 50:4</strong> (“the tongue of the learned” to speak at the right moment), and <strong>Acts 4:29–31</strong> (boldness given by the Spirit, not human force).</p>
+<p>The video’s storm-filled sky and piercing light symbolize that tension: waiting, listening, speaking only when God commands, and trusting His Spirit to do what no amount of shouting can do.</p>
+<p>This reflects a lot of my own struggles — learning not to repeat myself or beat people over the head because I feel like they’re not listening. Learning to say it once, say it clearly (or as clearly as I can), and then let the Holy Spirit take it and do with it as God sees fit. It doesn’t mean that if they want to talk about something, I can’t keep talking — but when I realize they’re not listening, I need to shut up. I’ve planted the seed. That’s all I can do. I can’t beat them over the head. I can’t shake them and make them see.</p>
+<p>The last couple of weeks have been a test for me — listening for that still, small voice and saying what I need to say, or not saying something and letting the Holy Spirit put the words on my lips that I need to say. But at the same time, I often feel like Moses — I stutter, and no one would really want to listen to me or care what I have to say. Yet God still calls and still uses weak, stumbling voices.</p>
+<p><strong>All glory to Jesus Christ alone.</strong></p>`
+  },
+
+  {
     id: "christmas-unwrapped-2025-11-22",
     title: "Christmas Unwrapped",
     youtubeId: "IJYH9eokfPk",
