@@ -2,6 +2,20 @@
 window.VIDEOS = [
 
   {
+    id: "worship-like-david-2025-11-30",
+    title: "Worship Like David",
+    youtubeId: "GjR8skJLSts",
+    published: "2025-11-30T00:00:00-06:00",
+    tags: ["Rock","Metal","Dark-Edge","Worship","David","Fire","Bold Praise"],
+    message: `<h2>Worship Like David</h2>
+<p><em>“Worship Like David”</em> is a dark-edge rock/metal worship track — a prayer to praise God with the same abandon, boldness, and fire that marked the life of King David.</p>
+<p>This song is about wholehearted worship, unashamed devotion, and letting the Spirit’s fire burn in your life no matter who’s watching.</p>
+<p>Drawn from passages like <strong>2 Samuel 6:14</strong>, <strong>Psalm 103:1</strong>, and <strong>Psalm 27:4</strong>, it calls believers to worship with all their might — with passion, truth, and zero compromise.</p>
+<p>May this song stir your heart to worship without fear, without holding back… like David.</p>
+<p><strong>All glory to Jesus Christ alone.</strong></p>`
+  },
+
+  {
     id: "a-time-to-speak-2025-11-25",
     title: "A Time to Speak",
     youtubeId: "Q5BFtfJz0Vg",
