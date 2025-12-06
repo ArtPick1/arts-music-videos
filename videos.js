@@ -2,6 +2,15 @@
 window.VIDEOS = [
 
   {
+    id: "gloria-in-the-night-2025-12-05",
+    title: "Gloria in the Night",
+    youtubeId: "bmh3iQWoCt0",
+    published: "2025-12-05T00:00:00-06:00",
+    tags: ["Christmas","Worship","Storytelling","Luke 2","Shepherds","Glory"],
+    message: `<h2>Gloria in the Night</h2>
+<p>“Gloria in the Night” is a storytelling Christmas worship song told through the eyes of the shepherds on the night Christ was born. From the quiet fields… to the blinding glory of the angel… to the sky exploding with praise… this song follows the biblical narrative of Luke 2:8–20 with intensity, awe, and worship. This isn’t a soft lullaby — it’s the thunder of heaven breaking into a dark world. Lyrics include: the peaceful night in the fields the angel’s announcement the heavenly host praising God the shepherds running to see the newborn King “Gloria in excelsis Deo” rising across the plains If this song blesses you, share it with someone who needs hope this Christmas. Scripture: Luke 2:8–20</p>`
+  },
+  {
     id: "worship-like-david-2025-11-30",
     title: "Worship Like David",
     youtubeId: "GjR8skJLSts",
