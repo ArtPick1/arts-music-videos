@@ -1,5 +1,16 @@
-// videos.js — vA66 (added Christmas at Denny’s)
+// videos.js — vA71 (added Christmas at Denny’s)
 window.VIDEOS = [
+  {
+    id: "dying-to-be-free-2025-12-06",
+    title: "Dying to Be Free",
+    youtubeId: "o8F-ERS3kr0",
+    published: "2025-12-06T00:00:00-06:00",
+    tags: ["Rock","Dark","Prophetic","Freedom","Surrender"],
+    message: `<h2>Dying to Be Free</h2>
+<p>“Dying to Be Free” is a dark, prophetic rock anthem about the illusion of freedom and the reality of the chains we choose. We claw for control. We fight for thrones that were never ours. We run back to bondage thinking it’s freedom.</p>
+<p>But true freedom only comes when the false self dies… and the life God intended finally begins.</p>
+<p>This song is for anyone wrestling with identity, temptation, pride, or the weight of their past. It’s a call to surrender — not weakness, but the doorway to real freedom.</p>`
+  },
 
   {
     id: "gloria-in-the-night-2025-12-05",
