@@ -1,6 +1,21 @@
 // videos.js — vA71 (added Christmas at Denny’s)
 window.VIDEOS = [
   {
+    id: "holy-is-his-name-marys-song-2025-12-06",
+    title: "Holy Is His Name (Mary’s Song)",
+    youtubeId: "6J_NHlIuxFA",
+    published: "2025-12-06T00:00:00-06:00",
+    tags: ["Christmas","Mary","Magnificat","Worship","Acoustic","Meditation"],
+    message: `<h2>Holy Is His Name (Mary’s Song)</h2>
+  <p><em>Holy Is His Name (Mary’s Song)</em> is inspired by Luke 1:46–55 — the Magnificat. This video presents a visual meditation on Mary’s Song: a humble, powerful declaration of praise spoken by a young woman chosen by God.</p>
+  <p>Set to an acoustic/ethereal arrangement, the images follow Mary’s journey, her encounter with Elizabeth, and the prophetic words that have echoed for generations.</p>
+  <p>May this reflection draw your heart to worship the Lord — whose mercy, strength, and holiness endure forever.</p>
+  <p><strong>Scripture:</strong> Luke 1:46–55 (ESV)</p>
+  <p><strong>Credits:</strong> Visuals and editing by Art Pickens · Text from Luke 1:46–55</p>
+  <p>If this ministered to you, please like, share, and subscribe. Your support helps spread biblical truth and encouragement.</p>`
+  },
+
+  {
     id: "dying-to-be-free-2025-12-06",
     title: "Dying to Be Free",
     youtubeId: "o8F-ERS3kr0",
