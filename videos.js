@@ -1,5 +1,18 @@
-// videos.js — vA71 (added Christmas at Denny’s)
+// videos.js — vA73 (added Christmas at Denny’s)
 window.VIDEOS = [
+
+  {
+    id: "following-from-a-distance-2025-12-09",
+    title: "Following from a Distance",
+    youtubeId: "8jWHCqVi47w",
+    published: "2025-12-09T00:00:00-06:00",
+    tags: ["Rock","Blues","Raw","Conviction","Luke 22","Boldness"],
+    message: `<h2>Following from a Distance</h2>
+<p><em>“Following from a Distance”</em> is a dark, blues-raw rock song calling out the quiet denial of Christ we commit through silence, distraction, and misplaced priorities.</p>
+<p>Inspired by <strong>Luke 22:54–62</strong> — Peter followed Jesus “at a distance”… and so do we. We say we’d never deny Him. But we do — every time we stay silent, every time we rush out of church, every time we talk about everything except Jesus.</p>
+<p><strong>Lord, give us boldness.</strong><br>No more distance.</p>`
+  },
+
   {
     id: "holy-is-his-name-marys-song-2025-12-06",
     title: "Holy Is His Name (Mary’s Song)",
