@@ -2,6 +2,17 @@
 window.VIDEOS = [
 
   {
+    id: "silent-night-holy-night-blues-edition-2025-12-09",
+    title: "Silent Night Holy Night — Blues Edition",
+    youtubeId: "n2LI3U_sxfo",
+    published: "2025-12-09T00:00:00-06:00",
+    tags: ["Christmas","Blues","Storytelling","History","WW1","Silent Night"],
+    message: `<h2>Silent Night Holy Night — Blues Edition</h2>
+<p>Silent Night Holy Night — Blues Edition This video tells the full story of how Silent Night came to be — not the version most people know. Through a series of cinematic images, you’ll see the legendary tale unfold...</p>`
+  },
+
+
+  {
     id: "following-from-a-distance-2025-12-09",
     title: "Following from a Distance",
     youtubeId: "8jWHCqVi47w",
