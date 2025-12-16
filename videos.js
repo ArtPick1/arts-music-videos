@@ -2,6 +2,23 @@
 window.VIDEOS = [
 
   {
+    id: "outsourced-obedience-2025-12-16",
+    title: "Outsourced Obedience",
+    youtubeId: "GNLV3k-CJso",
+    published: "2025-12-16T00:00:00-06:00",
+    tags: ["Blues","Raw","Obedience","Evangelism","Church"],
+    message: `<h2>Outsourced Obedience</h2>
+<p>This song was recorded as a raw blues jam — unpolished, unforced, and honest.</p>
+<p>This song comes straight from my heart.</p>
+<p>Let’s not forget our true calling. A building is not the Church. What it looks like doesn’t matter. Whether it “looks like a church” doesn’t matter. What matters is obedience.</p>
+<p>We are called to go out and spread the gospel. Yet we can barely get people to do the simplest things — for example, liking or sharing the pastor’s sermons on social media.</p>
+<p>We struggle to get believers to hand out a tract at a restaurant or even leave one on the table.</p>
+<p>If we won’t do that, how do we expect to reach the lost?</p>
+<p>And that’s not even touching real evangelism — one-on-one conversations, praying with a waitress or waiter before a meal, opening our mouths and speaking the name of Jesus.</p>
+<p><strong>That’s where the rubber meets the road.</strong></p>
+<p>Put on headphones or play it loud. Let the song do what it’s meant to do.</p>`
+  },
+{
     id: "break-my-will-2025-12-16",
     title: "Break My Will",
     youtubeId: "dbmGdIT-4P4",
