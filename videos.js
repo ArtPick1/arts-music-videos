@@ -2,6 +2,22 @@
 window.VIDEOS = [
 
   {
+    id: "break-my-will-2025-12-16",
+    title: "Break My Will",
+    youtubeId: "dbmGdIT-4P4",
+    published: "2025-12-16T00:00:00-06:00",
+    tags: ["Worship","Surrender","Obedience","Brokenness","Prayer"],
+    message: `<h2>Break My Will</h2>
+<p><em>“Break My Will”</em> is a raw, worship-driven song about surrendering control when following God doesn’t lead where we expected.</p>
+<p>It wrestles with the frustration of unanswered questions, unheard words, and the struggle of dying to self — and it ultimately lands in a place of trust.</p>
+<p>This song isn’t about strength. It’s about being broken in the right way.</p>
+<p>When our plans fail… when our voice feels ignored… when obedience costs more than comfort… we learn that freedom doesn’t come from being understood — it comes from being yielded.</p>
+<p><strong>“Break my will, Lord — until I stand in Yours.”</strong></p>`
+  },
+
+
+
+  {
     id: "silent-night-holy-night-blues-edition-2025-12-09",
     title: "Silent Night Holy Night — Blues Edition",
     youtubeId: "n2LI3U_sxfo",
