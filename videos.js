@@ -2,6 +2,71 @@
 window.VIDEOS = [
 
   {
+    id: "you-alone-are-worthy-2025-12-16",
+    title: "You Alone Are Worthy",
+    youtubeId: "4RSW6d-ev34",
+    published: "2025-12-16T00:00:00-06:00",
+    tags: ["Worship","Blues","Gospel","Prayer","Reverence","Surrender"],
+    message: `<h2>You Alone Are Worthy</h2>
+<p><em>“You Alone Are Worthy”</em> is a worship blues gospel song written as a prayer of surrender.</p>
+<p>It’s not performance-driven worship — it’s quiet, reverent, and honest.</p>
+<p>The song reflects a heart posture that says: <em>Lord, shape me. Guide me. Create in me a new heart.</em></p>
+<p>In a noisy world full of distraction, this song slows things down and points back to the holiness of God — the One who alone is worthy of praise.</p>
+<p>This video keeps the visuals simple on purpose, allowing the music and message to lead.</p>
+<p><strong>No lyrics on screen. No spectacle. Just worship.</strong></p>
+
+<hr/>
+
+<h3>Lyrics</h3>
+
+<p><strong>[Verse 1]</strong><br/>
+Lord, here I am, humbled in Your presence<br/>
+I place my life into Your hands<br/>
+Mold me, shape me<br/>
+Do with me as You will<br/>
+There are no words for Your holiness<br/>
+No measure for Your power<br/>
+Shape me into who You’ve called me to be<br/>
+Guide me hour by hour</p>
+
+<p><strong>[Chorus]</strong><br/>
+You alone, You alone are worthy<br/>
+(You alone are worthy)<br/>
+What more can I say?<br/>
+(Lord, what can I say?)<br/>
+Let my life be praise and honor<br/>
+All of my days<br/>
+You alone, You alone are worthy<br/>
+Teach me Your holy ways<br/>
+Let my life reflect Your glory<br/>
+All of my days</p>
+
+<p><strong>[Verse 2]</strong><br/>
+I want to follow only Your will<br/>
+I want to hear Your still small voice<br/>
+Lead me where You call me to walk<br/>
+Let obedience be my choice<br/>
+Guide my steps and create in me a new heart<br/>
+Keep me walking in Your way<br/>
+Let my life bring honor to You<br/>
+Every step, every day</p>
+
+<p><strong>[Bridge]</strong><br/>
+No matter what they think<br/>
+No matter what they say<br/>
+My life belongs to You alone<br/>
+When I speak, let it be with fear of You<br/>
+When I walk, let it be in Your light</p>
+
+<p><strong>[Final Chorus]</strong><br/>
+You alone, You alone are worthy<br/>
+Let me be Your light<br/>
+In this darkened land<br/>
+You alone, You alone are worthy</p>`
+  },
+
+
+  {
     id: "outsourced-obedience-2025-12-16",
     title: "Outsourced Obedience",
     youtubeId: "GNLV3k-CJso",
