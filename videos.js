@@ -2,6 +2,32 @@
 window.VIDEOS = [
 
   {
+    id: "you-alone-are-worthy-worship-2025-12-17",
+    title: "You Alone Are Worthy Worship",
+    youtubeId: "wS1gx_hNZ5o",
+    published: "2025-12-17T00:00:00-06:00",
+    tags: ["Worship","Acoustic","Congregational","Prayer","Surrender","Reverence"],
+    message: `<h2>You Alone Are Worthy — Worship Version</h2>
+<p>This is a rewritten version of my original <em>“You Alone Are Worthy”</em> blues worship song.</p>
+<p>The original version came from a raw, blues-driven place — personal worship, expressive, and reflective.</p>
+<p>As I sat with it, I realized the heart of the song was something that could be shared and sung with others, and that it needed to be simpler.</p>
+<p>So this version strips everything back:</p>
+<ul>
+  <li>One acoustic guitar</li>
+  <li>A simple melody</li>
+  <li>Clear, repeatable lines</li>
+  <li>A slower pace that leaves room to breathe</li>
+</ul>
+<p>This isn’t performance worship.</p>
+<p>It’s prayer.</p>
+<p>It’s surrender.</p>
+<p>It’s a song meant to be sung.</p>
+<p>My hope is that this version makes it easier for quiet moments of worship to lift your voice simply and honestly:</p>
+<p><strong>You alone are worthy.</strong></p>`
+  },
+
+
+  {
     id: "you-alone-are-worthy-2025-12-16",
     title: "You Alone Are Worthy",
     youtubeId: "4RSW6d-ev34",
