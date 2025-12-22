@@ -1,7 +1,29 @@
-// videos.js — vA73 (added Christmas at Denny’s)
+// videos.js — vA80 (added Silent Night Holy Night (acoustical folk version))
 window.VIDEOS = [
 
+  
+
   {
+    id: "silent-night-holy-night-acoustical-folk-version-2025-12-22",
+    title: "Silent Night Holy Night (acoustical folk version)",
+    youtubeId: "8oSKGZsYkYo",
+    published: "2025-12-22T00:00:00-06:00",
+    tags: ["Christmas","Acoustic","Folk","Hymn","Nativity","Worship","Silent Night"],
+    message: `<h2>Silent Night, Holy Night | Traditional Christmas Hymn (Acoustic Nativity Worship)</h2>
+<p><em>“Silent Night, Holy Night”</em> is one of the most beloved traditional Christmas hymns ever written.</p>
+<p>The lyrics were written in 1816 by Joseph Mohr, and the melody was composed in 1818 by Franz Xaver Gruber.</p>
+<p>The hymn was first performed on Christmas Eve, 1818, in Oberndorf, Austria, accompanied by a simple acoustic guitar — a humble beginning that shaped the song’s quiet, intimate character.</p>
+<p>This arrangement returns to that original spirit:</p>
+<ul>
+  <li>Acoustic folk hymn style</li>
+  <li>Slow, reverent tempo</li>
+  <li>Male lead with congregational voices</li>
+  <li>Simple, contemplative worship setting</li>
+</ul>
+<p>The visuals follow the Nativity story — the stillness of the night, the shepherds receiving the message, and the humble stable where Jesus Christ was born.</p>`
+  },
+
+{
     id: "you-alone-are-worthy-worship-2025-12-17",
     title: "You Alone Are Worthy Worship",
     youtubeId: "wS1gx_hNZ5o",
