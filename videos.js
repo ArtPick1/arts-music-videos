@@ -1,9 +1,103 @@
-// videos.js — vA80 (added Silent Night Holy Night (acoustical folk version))
+// videos.js — vA81 (added Silent Night Holy Night (acoustical folk version))
 window.VIDEOS = [
 
   
 
+  
+
+
   {
+    id: "jonahs-prayer-a-blues-lament-from-the-depths-2025-12-24",
+    title: "Jonahs Prayer (A Blues Lament from the Depths)",
+    youtubeId: "j-UfqcEpa0M",
+    published: "2025-12-24T00:00:00-06:00",
+    tags: ["Blues", "Lament", "Jonah", "Scripture", "Repentance", "Thanksgiving", "Prayer"],
+    message: `<h2>Jonah’s Prayer (A Blues Lament from the Depths)</h2>
+
+<p><em>“Jonah’s Prayer”</em> is a slow, minor-key blues lament inspired by Jonah 2 — a cry from the depths of affliction, rebellion, repentance, and deliverance.</p>
+
+<p>This song follows the emotional arc of the prayer itself: <strong>desperate → repentant → grateful → resolved</strong>.</p>
+
+<p>With baritone grit, restrained spoken word, and a deep blues pocket, the song reflects on what it feels like to turn away from God — not being swallowed by a great fish, but feeling the crushing weight of separation from Him. Yet even in the depths, the prayer is heard.</p>
+
+<p>This is not performance worship.<br/>
+It is confession.<br/>
+It is remembrance.<br/>
+It is thanksgiving.</p>
+
+<p><strong>“Salvation is of the Lord.”</strong></p>
+
+<p><strong>📜 Scripture Inspiration:</strong> Jonah 2:1–9 (Psalm-style lament and thanksgiving)</p>
+
+<hr/>
+
+<h3>Lyrics — “Jonah’s Prayer”</h3>
+
+<pre style="white-space:pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;">
+Intro (Spoken)
+We may not be swallowed by a great fish like Jonah…
+When we turn away from God.
+But our corrupted souls drift far from Him.
+And the weight of that separation
+Presses down
+Until we’re drowning.
+
+Verse 1
+I cried by reason of my affliction unto the Lord
+(I cried by reason of my affliction unto the Lord)
+Out of the belly of hell I cried
+And You heard my voice
+(Yes Lord, You heard my voice)
+
+Verse 2
+You cast me into the deep, in the midst of the sea
+You cast me into the deep, Lord, in the midst of the sea
+The floods surrounded me
+All Your waves and billows passed over me
+
+Chorus
+I said, I am cast out of Your sight
+I said, I am cast out of Your sight
+Yet I will look again
+I will look again toward Your holy temple
+
+Verse 3
+The waters compassed me, even down into my soul
+The waters compassed me, even down into my soul
+The depth closed around me
+The weeds were wrapped about my head
+
+Verse 4
+I went down to the bottoms of the mountains
+I went down where the earth with her bars closed me in
+Yet You brought my life up from corruption
+O Lord my God, You brought me up again
+
+Chorus
+I said, I am cast out of Your sight
+I said, I am cast out of Your sight
+Yet I will look again
+I will look again toward Your holy temple
+
+Bridge
+When my soul fainted within me
+I remembered the Lord
+And my prayer came into Your holy temple
+
+Verse 5
+They that observe lying vanities
+They forsake their own mercy
+But I will sacrifice with thanksgiving
+I will pay that which I have vowed
+
+Outro
+Salvation is of the Lord
+Salvation is of the Lord
+Salvation is of the Lord
+</pre>`
+  },
+
+{
     id: "silent-night-holy-night-acoustical-folk-version-2025-12-22",
     title: "Silent Night Holy Night (acoustical folk version)",
     youtubeId: "8oSKGZsYkYo",
