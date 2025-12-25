@@ -1,6 +1,73 @@
 // videos.js — vA81 (added Silent Night Holy Night (acoustical folk version))
 window.VIDEOS = [
 
+  {
+    id: "and-still-i-disobeyed-2025-12-24",
+    title: "And Still I Disobeyed",
+    youtubeId: "xj7kv-21Mv4",
+    published: "2025-12-24T00:00:00-06:00",
+    tags: ["Blues", "Confession", "Repentance", "Struggle", "Galatians 2:20"],
+    message: `<h2>And Still I Disobeyed</h2>
+
+<p><em>“And Still I Disobeyed”</em> is a confessional blues lament about knowing God’s will, knowing the cost, and still choosing the wrong way.</p>
+
+<p>It wrestles honestly with weakness of the flesh, recurring temptation, and the need to die to self and live in Christ.</p>
+
+<p>This song is not performance worship.<br/>
+It is a plea.<br/>
+A prayer spoken from failure.</p>
+
+<p>The closing Scripture reminds us that hope is Christ living in us:</p>
+<blockquote>“I have been crucified with Christ. It is no longer I who live, but Christ who lives in me…”<br/>
+— Galatians 2:20 (ESV)</blockquote>
+
+<hr/>
+
+<h3>Lyrics — “And Still I Disobeyed”</h3>
+
+<pre style="white-space:pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;">
+[Verse 1]
+I know Your voice
+I know Your ways
+I know the cost
+And still I disobeyed
+
+[Verse 2]
+God, what has brought me to this place?
+Why do I wrestle with this temptation today?
+How do I stand when the urge is so great?
+
+My flesh is weak
+I want to give in
+My flesh is weak
+
+[Chorus]
+I know Your voice
+I know Your ways
+I know the cost
+And still I disobeyed
+
+[Verse 3]
+Lord, I thought I had this under control
+I thought I had it buried, laid it low
+But it has raised its ugly head again
+And now I’m face to face with this old sin
+
+[Bridge]
+God, You must be my refuge
+I must run home to You
+Crucify this flesh in me
+Turn my desires only to You
+
+[Outro]
+I am weak, but You are strong
+Not my will
+Not my way
+Put this old man in the grave
+</pre>`
+  },
+
+
   
 
   
