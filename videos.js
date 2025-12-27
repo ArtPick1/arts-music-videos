@@ -1,5 +1,24 @@
-// videos.js — vA81 (added Silent Night Holy Night (acoustical folk version))
+// videos.js — vA83
 window.VIDEOS = [
+  {
+    id: "swing-low-sweet-chariot-v1-2025-12-26",
+    title: "Swing Low Sweet Chariot V1",
+    youtubeId: "Cpfl90AQnD4",
+    published: "2025-12-26T00:00:00-06:00",
+    tags: ["Spiritual","Blues-Gospel","Lament","Hope","Prayer","Public Domain"],
+    message: `<h2>Swing Low, Sweet Chariot — V1</h2>
+<p><em>“Swing Low, Sweet Chariot”</em> is a traditional African-American spiritual, reimagined here in a slow blues-gospel style.</p>
+<p>This version leans into the weight and hope of the song — a quiet cry for deliverance, rest, and home.</p>
+<ul>
+  <li>Slow tempo (~60–65 BPM)</li>
+  <li>Minor feel</li>
+  <li>Male baritone / bass vocal</li>
+</ul>
+<p>This song reflects the tension of life’s struggle — sometimes up, sometimes down — while holding firmly to the promise that the journey ends in glory.</p>
+<p><strong>It’s not performance music.</strong><br/>It’s prayer.<br/>It’s longing.<br/>It’s hope carried on a blues breath.</p>
+<p><em>Traditional Spiritual — Public Domain<br/>New lyrical arrangement</em></p>`
+  },
+
 
   {
     id: "and-still-i-disobeyed-2025-12-24",
