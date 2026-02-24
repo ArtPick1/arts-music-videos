@@ -36,29 +36,6 @@
       border: 1px solid var(--border);
       background: #000;
     }
-    .top-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 14px 0 8px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: .2px;
-      border: 1px solid var(--border);
-      background: #111;
-      color: var(--fg);
-    }
-    .btn:hover { filter: brightness(1.07); }
-    .btn-youtube {
-      background: var(--red);
-      border-color: #7a0000;
-      color: #fff;
-    }
     .grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
@@ -83,7 +60,6 @@
       margin: 0 0 10px;
     }
     .muted { color: var(--muted); }
-    .msg p { margin: 0 0 12px; }
     .verse {
       padding: 10px 12px;
       border-left: 3px solid #333;
@@ -103,9 +79,22 @@
       font-weight: 900;
       font-size: 18px;
     }
-    .small {
-      font-size: 14px;
-      color: var(--muted);
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .2px;
+      border: 1px solid var(--border);
+      background: #111;
+      color: var(--fg);
+    }
+    .btn:hover { filter: brightness(1.07); }
+    .btn-youtube {
+      background: var(--red);
+      border-color: #7a0000;
+      color: #fff;
     }
     .footer {
       margin-top: 18px;
@@ -113,36 +102,103 @@
       color: var(--muted);
       font-size: 13px;
     }
-    a { color: #fff; }
-    a:hover { color: #fff; filter: brightness(1.1); }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 9999;
+    }
+    .modal {
+      width: min(920px, 100%);
+      max-height: min(86vh, 860px);
+      overflow: auto;
+      background: #0b0b0b;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 16px 18px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.6);
+    }
+    .modal-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .modal-title {
+      font-weight: 900;
+      font-size: 18px;
+      margin: 0;
+    }
+    .close {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #111;
+      color: var(--fg);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-weight: 900;
+    }
+    .close:hover { filter: brightness(1.07); }
+    .modal-body p { margin: 0 0 12px; }
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
-<div class="grid">
+
+    <div class="grid">
       <section class="card">
-        <h1>Welcome</h1>
-        <div class="msg" id="welcome"></div>
+        <h1>Important Message</h1>
+        <p class="muted">Please read this message. (You can close it when you’re done.)</p>
+        <a class="btn" href="#" id="openMsg">Important Message</a>
         <p class="muted" style="margin-top:14px;">The video shown here may be a featured video and not always my newest upload. For the latest releases, visit my YouTube channel: https://www.youtube.com/@artpick4259/featured</p>
       </section>
 
       <aside class="card">
         <h2>Featured Video</h2>
         <div id="featured"></div>
-        
       </aside>
     </div>
 
     <div class="footer">© Holy Noise</div>
   </div>
 
-  <script src="videos.js?vHN2602241937"></script>
-  <script>
-    const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
-    const welcomeEl = document.getElementById('welcome');
+  <!-- Modal -->
+  <div class="modal-backdrop" id="backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Important message">
+      <div class="modal-top">
+        <div class="modal-title">Important Message</div>
+        <button class="close" id="closeMsg" aria-label="Close">X</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions">
+        <a class="btn" href="mailto:artpicknet@gmail.com">Email me</a>
+        <button class="close" id="closeMsg2">Close</button>
+      </div>
+    </div>
+  </div>
 
-    function renderMessage(text) {
+  <script src="videos.js?vHN2602242144"></script>
+  <script>
+    // message text (preserve wording)
+    const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
+    const modalBody = document.getElementById('modalBody');
+
+    function renderMessage(targetEl, text) {
+      targetEl.innerHTML = "";
       const blocks = text.split(/\n\n+/);
       for (const block of blocks) {
         const trimmed = block.trim();
@@ -152,18 +208,54 @@
           const div = document.createElement('div');
           div.className = 'verse';
           div.textContent = trimmed;
-          welcomeEl.appendChild(div);
+          targetEl.appendChild(div);
           continue;
         }
 
         const p = document.createElement('p');
         p.textContent = trimmed;
-        welcomeEl.appendChild(p);
+        targetEl.appendChild(p);
       }
     }
+    renderMessage(modalBody, msgText);
 
-    renderMessage(msgText);
+    // modal controls
+    const backdrop = document.getElementById('backdrop');
+    const openBtn = document.getElementById('openMsg');
+    const closeBtn = document.getElementById('closeMsg');
+    const closeBtn2 = document.getElementById('closeMsg2');
 
+    function openModal() {
+      backdrop.style.display = "flex";
+      backdrop.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+    function closeModal() {
+      backdrop.style.display = "none";
+      backdrop.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      sessionStorage.setItem("hn_seen_msg", "1");
+    }
+
+    openBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+    closeBtn.addEventListener('click', closeModal);
+    closeBtn2.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape" && backdrop.style.display === "flex") closeModal();
+    });
+
+    // Auto-open once per browser tab/session
+    if (!sessionStorage.getItem("hn_seen_msg")) {
+      openModal();
+    }
+
+    // featured video
     const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
     const video = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
 
@@ -179,24 +271,22 @@
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.allowFullscreen = true;
 
-      const btn = document.createElement('a');
-      btn.className = 'btn btn-youtube';
-      btn.style.marginTop = "12px";
-      btn.href = `https://youtu.be/${video.youtubeId}`;
-      btn.target = "_blank";
-      btn.rel = "noopener";
-      btn.textContent = "Watch this video";
-
-      
       const row = document.createElement('div');
       row.style.display = "flex";
       row.style.gap = "10px";
       row.style.flexWrap = "wrap";
       row.style.marginTop = "12px";
 
+      const btn = document.createElement('a');
+      btn.className = 'btn btn-youtube';
+      btn.href = `https://youtu.be/${video.youtubeId}`;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+      btn.textContent = "Watch this video";
+
       const btn2 = document.createElement('a');
       btn2.className = 'btn';
-      btn2.href = 'https://www.youtube.com/@artpick4259/featured';
+      btn2.href = "https://www.youtube.com/@artpick4259/featured";
       btn2.target = "_blank";
       btn2.rel = "noopener";
       btn2.textContent = "Watch More Videos";
@@ -207,14 +297,14 @@
       const emailBtn = document.createElement('a');
       emailBtn.className = 'btn';
       emailBtn.style.marginTop = "12px";
-      emailBtn.href = 'mailto:artpicknet@gmail.com';
+      emailBtn.href = "mailto:artpicknet@gmail.com";
       emailBtn.textContent = "Email me";
 
       featuredEl.appendChild(title);
       featuredEl.appendChild(iframe);
       featuredEl.appendChild(row);
       featuredEl.appendChild(emailBtn);
-} else {
+    } else {
       featuredEl.textContent = "No featured video set yet.";
     }
   </script>
