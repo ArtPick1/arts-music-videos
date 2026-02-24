@@ -122,8 +122,7 @@
     <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
 
     <div class="top-actions">
-      <a class="btn btn-youtube" href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">Watch on YouTube</a>
-      <a class="btn" href="watch.html?vHN2602241751">More videos</a>
+      <a class="btn" href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">More videos</a>
       <a class="btn" href="mailto:artpicknet@gmail.com">Email me</a>
     </div>
 
@@ -146,19 +145,17 @@
     <div class="footer">© Holy Noise</div>
   </div>
 
-  <script src="videos.js?vHN2602241751"></script>
+  <script src="videos.js?vHN2602241922"></script>
   <script>
-    // render Message #1 (preserve wording)
     const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
     const welcomeEl = document.getElementById('welcome');
 
     function renderMessage(text) {
-      const lines = text.split(/\n\n+/);
-      for (const block of lines) {
+      const blocks = text.split(/\n\n+/);
+      for (const block of blocks) {
         const trimmed = block.trim();
         if (!trimmed) continue;
 
-        // Scripture lines as callouts
         if (/\b\(ESV\):\b/.test(trimmed) || /^Luke\s\d+:\d+/.test(trimmed) || /^John\s\d+:\d+/.test(trimmed) || /^Matthew\s\d+:\d+/.test(trimmed)) {
           const div = document.createElement('div');
           div.className = 'verse';
@@ -175,7 +172,6 @@
 
     renderMessage(msgText);
 
-    // featured video
     const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
     const video = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
 
