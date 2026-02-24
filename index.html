@@ -1,84 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Art’s Music Videos — Latest</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Holy Noise</title>
+  <meta name="description" content="Holy Noise — music videos and a message about following Jesus Christ." />
+  <link rel="icon" href="data:," />
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin:0; background:#0f0f10; color:#f5f5f5; }
-    header { padding:16px 20px; border-bottom:1px solid #222; position:sticky; top:0; background:#111; z-index:2; }
-    header h1 { margin:0; font-size:1.25rem; }
-    main { display:grid; grid-template-columns: 2fr 1fr; gap:16px; padding:16px; }
-    @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
-    .card { background:#151516; border:1px solid #232325; border-radius:12px; overflow:hidden; }
-    .card h2 { margin:0; padding:12px 16px; border-bottom:1px solid #232325; font-size:1rem; letter-spacing:0.3px; }
-    .video { aspect-ratio:16/9; width:100%; border:0; display:block; }
-    .list { padding:8px 0; }
-    .item { display:flex; gap:12px; padding:10px 14px; border-bottom:1px solid #1e1e20; align-items:center; text-decoration:none; color:#eaeaea; }
-    .item:hover { background:#18181a; }
-    .item:last-child { border-bottom:0; }
-    .thumb { width:120px; aspect-ratio:16/9; flex:0 0 auto; background:#222; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center; font-size:12px; opacity:.8; }
-    .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
-    .meta { flex:1; min-width:0; }
-    .title { font-weight:600; }
-    .date { font-size:0.85rem; opacity:0.7; margin-top:2px; }
-    .cta { display:inline-block; margin-top:8px; font-size:0.9rem; padding:6px 10px; border:1px solid #2a2a2d; border-radius:8px; text-decoration:none; color:#eaeaea; }
-    .desc { padding:14px 16px; font-size:0.95rem; line-height:1.5; white-space:pre-wrap; }
-    details { padding:0 16px 16px; }
-    details summary { cursor:pointer; opacity:0.9; }
+    :root {
+      --bg: #000;
+      --fg: #f2f2f2;
+      --muted: #bdbdbd;
+      --card: #0c0c0c;
+      --border: #222;
+      --red: #ff0000;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 16px 44px;
+    }
+    .site-header {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #000;
+    }
+    .top-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 14px 0 8px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: .2px;
+      border: 1px solid var(--border);
+      background: #111;
+      color: var(--fg);
+    }
+    .btn:hover { filter: brightness(1.07); }
+    .btn-youtube {
+      background: var(--red);
+      border-color: #7a0000;
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 10px;
+    }
+    h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+    .muted { color: var(--muted); }
+    .msg p { margin: 0 0 12px; }
+    .verse {
+      padding: 10px 12px;
+      border-left: 3px solid #333;
+      background: #0a0a0a;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .video-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 12px;
+      background: #000;
+    }
+    .video-title {
+      margin: 12px 0 6px;
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .footer {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    a { color: #fff; }
+    a:hover { color: #fff; filter: brightness(1.1); }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Art’s Music Videos — Latest Release</h1>
-  </header>
-  <main>
-    <section class="card" id="latest">
-      <h2>Latest Video</h2>
-      <div id="latestEmbed"></div>
-      <div class="desc" id="latestMsg"></div>
-    </section>
+  <div class="wrap">
+    <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
 
-    <aside class="card">
-      <h2>Previous Videos</h2>
-      <div class="list" id="prevList"></div>
-    </aside>
-  </main>
+    <div class="top-actions">
+      <a class="btn btn-youtube" href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn" href="watch.html?vHN2602241751">More videos</a>
+      <a class="btn" href="mailto:artpicknet@gmail.com">Email me</a>
+    </div>
 
-  <script src="videos.js?v=A83" defer></script>
+    <div class="grid">
+      <section class="card">
+        <h1>Welcome</h1>
+        <div class="msg" id="welcome"></div>
+        <p class="muted" style="margin-top:14px;">The video shown here may be a featured video and not always my newest upload. For the latest releases, visit my YouTube channel: https://www.youtube.com/@artpick4259/featured</p>
+      </section>
+
+      <aside class="card">
+        <h2>Featured Video</h2>
+        <div id="featured"></div>
+        <p class="small" style="margin-top:10px;">
+          <a href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">Go to channel for latest uploads</a>
+        </p>
+      </aside>
+    </div>
+
+    <div class="footer">© Holy Noise</div>
+  </div>
+
+  <script src="videos.js?vHN2602241751"></script>
   <script>
-    function ytThumb(id){ return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ""; }
-    function ytEmbed(id){ return `<iframe class="video" src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`; }
+    // render Message #1 (preserve wording)
+    const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
+    const welcomeEl = document.getElementById('welcome');
 
-    window.addEventListener('DOMContentLoaded', () => {
-      const list = window.VIDEOS || [];
-      if (!list.length) return;
+    function renderMessage(text) {
+      const lines = text.split(/\n\n+/);
+      for (const block of lines) {
+        const trimmed = block.trim();
+        if (!trimmed) continue;
 
-      // Latest
-      const latest = list[0];
-      if (latest?.youtubeId) {
-        document.getElementById('latestEmbed').innerHTML = ytEmbed(latest.youtubeId);
+        // Scripture lines as callouts
+        if (/\b\(ESV\):\b/.test(trimmed) || /^Luke\s\d+:\d+/.test(trimmed) || /^John\s\d+:\d+/.test(trimmed) || /^Matthew\s\d+:\d+/.test(trimmed)) {
+          const div = document.createElement('div');
+          div.className = 'verse';
+          div.textContent = trimmed;
+          welcomeEl.appendChild(div);
+          continue;
+        }
+
+        const p = document.createElement('p');
+        p.textContent = trimmed;
+        welcomeEl.appendChild(p);
       }
-      document.getElementById('latestMsg').innerHTML = latest?.message || "";
+    }
 
-      // Previous
-      const prev = list.slice(1);
-      const prevList = document.getElementById('prevList');
-      prev.forEach(v => {
-        const a = document.createElement('a');
-        a.className = 'item';
-        a.href = v.youtubeId ? `watch.html?v=${encodeURIComponent(v.id)}` : '#';
-        a.innerHTML = `
-          <div class="thumb">${v.youtubeId ? `<img alt="" src="${ytThumb(v.youtubeId)}">` : "No thumbnail"}</div>
-          <div class="meta">
-            <div class="title">${v.title || "Untitled"}</div>
-            <div class="date">${v.published || ""}</div>
-            <span class="cta">Watch</span>
-          </div>
-        `;
-        prevList.appendChild(a);
-      });
-    });
+    renderMessage(msgText);
+
+    // featured video
+    const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
+    const video = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
+
+    const featuredEl = document.getElementById('featured');
+    if (video) {
+      const title = document.createElement('div');
+      title.className = 'video-title';
+      title.textContent = video.title;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'video-frame';
+      iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}`;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+
+      const btn = document.createElement('a');
+      btn.className = 'btn btn-youtube';
+      btn.style.marginTop = "12px";
+      btn.href = `https://youtu.be/${video.youtubeId}`;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+      btn.textContent = "Watch this video";
+
+      featuredEl.appendChild(title);
+      featuredEl.appendChild(iframe);
+      featuredEl.appendChild(btn);
+    } else {
+      featuredEl.textContent = "No featured video set yet.";
+    }
   </script>
 </body>
 </html>
