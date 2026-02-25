@@ -71,19 +71,8 @@
       margin: 0 0 10px;
     }
     .muted { color: var(--muted); }
-    .verse {
-      padding: 10px 12px;
-      border-left: 3px solid #333;
-      background: #0a0a0a;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
-    .video-title {
-      margin: 12px 0 6px;
-      font-weight: 900;
-      font-size: 18px;
-    }
-.video-frame {
+
+    .video-frame {
       width: 100%;
       aspect-ratio: 16 / 9;
       border: 0;
@@ -91,6 +80,7 @@
       background: #000;
       margin-top: 10px;
     }
+
     .btn {
       display: inline-block;
       padding: 14px 18px;
@@ -108,6 +98,7 @@
       border-color: #7a0000;
       color: #fff;
     }
+
     .btn-caution{
       background: var(--yellow);
       border-color: #8a7300;
@@ -135,6 +126,7 @@
       .caution-row{ flex-wrap:wrap; }
     }
 
+    /* Force the two red buttons to be side-by-side on normal screens */
     .video-btn-row{
       display:flex;
       gap:10px;
@@ -157,6 +149,10 @@
       .video-btn{ width:100%; flex: unset; }
     }
 
+    .sub-btn {
+      margin-top: 10px;
+    }
+
     .email-line{
       display:flex;
       gap:10px;
@@ -176,6 +172,9 @@
       color: var(--muted);
       font-size: 13px;
     }
+
+    a { color: #fff; }
+    a:hover { filter: brightness(1.08); }
 
     /* Modal */
     .modal-backdrop {
@@ -226,6 +225,13 @@
       font-weight: 900;
     }
     .close:hover { filter: brightness(1.07); }
+    .verse {
+      padding: 10px 12px;
+      border-left: 3px solid #333;
+      background: #0a0a0a;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
     .modal-body p { margin: 0 0 12px; }
     .modal-actions {
       display: flex;
@@ -249,7 +255,8 @@
           <span class="caution-text">First-time viewers: please read this message and close when you’re done.</span>
         </div>
 
-        <p class="muted" style="margin-top:8px;">The video shown here may be a featured video and not always my newest upload. For the latest releases, visit my YouTube channel: https://www.youtube.com/@artpick4259/featured</p>
+        <p class="muted" style="margin-top:8px;">The video shown here may be a featured video and not always my newest upload. For the latest releases, visit my YouTube channel:
+<a href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">https://www.youtube.com/@artpick4259/featured</a></p>
       </section>
 
       <aside class="card">
@@ -279,7 +286,7 @@
     </div>
   </div>
 
-  <script src="videos.js?vHN2602250042"></script>
+  <script src="videos.js?vHN2602250049"></script>
   <script>
     // Message text (preserve wording)
     const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
@@ -337,16 +344,14 @@
       if (e.key === "Escape" && backdrop.style.display === "flex") closeModal();
     });
 
-    // Featured video render (one thumbnail + one iframe)
+    // Featured video render (single embed)
     const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
     const video = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
     const featuredEl = document.getElementById('featured');
 
     if (video) {
-      const title = document.createElement('div');
-      title.className = 'video-title';
-      title.textContent = video.title;
-const iframe = document.createElement('iframe');
+      // NO printed title here (user doesn't want it)
+      const iframe = document.createElement('iframe');
       iframe.className = 'video-frame';
       iframe.src = `https://www.youtube-nocookie.com/embed/${video.youtubeId}`;
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
@@ -373,8 +378,7 @@ const iframe = document.createElement('iframe');
       row.appendChild(btn2);
 
       const subBtn = document.createElement('a');
-      subBtn.className = 'btn video-btn';
-      subBtn.style.marginTop = "10px";
+      subBtn.className = 'btn video-btn sub-btn';
       subBtn.href = "https://www.youtube.com/@artpick4259?sub_confirmation=1";
       subBtn.target = "_blank";
       subBtn.rel = "noopener";
@@ -395,6 +399,10 @@ const iframe = document.createElement('iframe');
       emailLine.appendChild(emailBtn);
       emailLine.appendChild(addr);
 
+      featuredEl.innerHTML = "";
+      featuredEl.appendChild(iframe);
+      featuredEl.appendChild(row);
+      featuredEl.appendChild(subBtn);
       featuredEl.appendChild(emailLine);
     } else {
       featuredEl.textContent = "No featured video set yet.";
