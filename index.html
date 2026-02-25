@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Holy Noise</title>
   <meta name="description" content="Holy Noise — music videos and a message about following Jesus Christ." />
-  <link rel="icon" href="data:," />
+  <link rel="icon" type="image/png" href="favicon-32.png">
+  <link rel="icon" href="favicon.ico">
+  <meta name="theme-color" content="#000000">
   <style>
     :root {
       --bg: #000;
@@ -14,6 +16,7 @@
       --card: #0c0c0c;
       --border: #222;
       --red: #ff0000;
+      --yellow: #ffd400;
     }
     * { box-sizing: border-box; }
     body {
@@ -36,7 +39,6 @@
       border: 1px solid var(--border);
       background: #000;
     }
-    
     .tagline{
       margin: 10px 0 0;
       text-align: center;
@@ -45,7 +47,7 @@
       font-weight: 700;
       letter-spacing: .2px;
     }
-.grid {
+    .grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
       gap: 16px;
@@ -76,14 +78,11 @@
       border-radius: 10px;
       margin: 10px 0;
     }
-    .video-frame {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: 0;
-      border-radius: 12px;
-      background: #000;
+    .video-title {
+      margin: 12px 0 6px;
+      font-weight: 900;
+      font-size: 18px;
     }
-    
     .featured-thumb{
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -94,10 +93,13 @@
       object-fit: cover;
       margin-top: 8px;
     }
-.video-title {
-      margin: 12px 0 6px;
-      font-weight: 900;
-      font-size: 18px;
+    .video-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 12px;
+      background: #000;
+      margin-top: 10px;
     }
     .btn {
       display: inline-block;
@@ -116,29 +118,16 @@
       border-color: #7a0000;
       color: #fff;
     }
-    
-    
-    .btn-sub{
-      background: #111;
-      border-color: var(--border);
-      color: var(--fg);
-    }
-.btn-caution{
-      background: #ffd400;
+    .btn-caution{
+      background: var(--yellow);
       border-color: #8a7300;
       color: #000;
       padding: 8px 10px;
       font-size: 15px;
       border-radius: 10px;
+      white-space: nowrap;
     }
     .btn-caution:hover{ filter: brightness(1.03); }
-    .caution-text{
-      color: #ffd400;
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-
     .caution-row{
       display:flex;
       gap:12px;
@@ -146,23 +135,59 @@
       flex-wrap:nowrap;
       margin:10px 0 12px;
     }
+    .caution-text{
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 1.2;
+    }
     @media (max-width: 520px){
       .caution-row{ flex-wrap:wrap; }
     }
-.footer {
+
+    .video-btn-row{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:nowrap;
+      width:100%;
+      margin-top:12px;
+    }
+    .video-btn{
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex: 1;
+      text-align: center;
+    }
+    @media (max-width: 520px){
+      .video-btn-row{ flex-wrap:wrap; }
+      .video-btn{ width:100%; flex: unset; }
+    }
+
+    .email-line{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .email-address{
+      font-weight: 800;
+      color: var(--fg);
+      opacity: .92;
+    }
+
+    .footer {
       margin-top: 18px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
     }
 
-    
-    .copy-note{
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 6px;
-    }
-/* Modal */
+    /* Modal */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -185,7 +210,7 @@
     }
     .modal-top {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 12px;
       margin-bottom: 10px;
@@ -195,14 +220,13 @@
       font-size: 18px;
       margin: 0;
     }
-    
     .scroll-hint{
       color: var(--muted);
       font-size: 12px;
       font-weight: 700;
       margin-top: 2px;
     }
-.close {
+    .close {
       cursor: pointer;
       border: 1px solid var(--border);
       background: #111;
@@ -220,16 +244,11 @@
       margin-top: 12px;
     }
   </style>
-
-  <link rel="icon" type="image/png" href="favicon-32.png">
-  <link rel="icon" href="favicon.ico">
-  <meta name="theme-color" content="#000000">
 </head>
 <body>
   <div class="wrap">
     <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
     <div class="tagline">Music videos + a message worth reading.</div>
-
 
     <div class="grid">
       <section class="card">
@@ -264,15 +283,14 @@
       </div>
       <div class="modal-body" id="modalBody"></div>
       <div class="modal-actions">
-        <a class="btn" href="mailto:artpicknet@gmail.com">Email me</a>
         <button class="close" id="closeMsg2">Close</button>
       </div>
     </div>
   </div>
 
-  <script src="videos.js?vHN2602250019"></script>
+  <script src="videos.js?vHN2602250028"></script>
   <script>
-    // message text (preserve wording)
+    // Message text (preserve wording)
     const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
     const modalBody = document.getElementById('modalBody');
 
@@ -298,7 +316,7 @@
     }
     renderMessage(modalBody, msgText);
 
-    // modal controls
+    // Modal controls
     const backdrop = document.getElementById('backdrop');
     const openBtn = document.getElementById('openMsg');
     const closeBtn = document.getElementById('closeMsg');
@@ -327,11 +345,12 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === "Escape" && backdrop.style.display === "flex") closeModal();
     });
-    // featured video
+
+    // Featured video render (one thumbnail + one iframe)
     const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
     const video = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
-
     const featuredEl = document.getElementById('featured');
+
     if (video) {
       const title = document.createElement('div');
       title.className = 'video-title';
@@ -357,77 +376,72 @@
       iframe.allowFullscreen = true;
 
       const row = document.createElement('div');
-      row.style.display = "flex";
-      row.style.gap = "10px";
-      row.style.flexWrap = "wrap";
-      row.style.marginTop = "12px";
-      row.style.width = "100%";
+      row.className = 'video-btn-row';
 
-      const btn = document.createElement('a');
-      btn.className = 'btn btn-youtube';
-      btn.href = `https://youtu.be/${video.youtubeId}`;
-      btn.target = "_blank";
-      btn.rel = "noopener";
-      btn.textContent = "Watch this video";
+      const btn1 = document.createElement('a');
+      btn1.className = 'btn btn-youtube video-btn';
+      btn1.href = `https://youtu.be/${video.youtubeId}`;
+      btn1.target = "_blank";
+      btn1.rel = "noopener";
+      btn1.textContent = "Watch this video";
 
       const btn2 = document.createElement('a');
-      btn2.className = 'btn btn-youtube';
+      btn2.className = 'btn btn-youtube video-btn';
       btn2.href = "https://www.youtube.com/@artpick4259/featured";
       btn2.target = "_blank";
       btn2.rel = "noopener";
       btn2.textContent = "Watch More Videos";
-      btn2.style.marginLeft = "auto";
 
-      row.appendChild(btn);
+      row.appendChild(btn1);
       row.appendChild(btn2);
 
-      const emailBtn = document.createElement('a');
-      emailBtn.className = 'btn';
-      emailBtn.style.marginTop = "12px";
-      emailBtn.href = "mailto:artpicknet@gmail.com";
-      emailBtn.textContent = "Email me";
-
-      featuredEl.appendChild(title);
-      featuredEl.appendChild(thumbLink);
-      featuredEl.appendChild(iframe);
-      featuredEl.appendChild(row);
-
       const subBtn = document.createElement('a');
-      subBtn.className = 'btn btn-sub video-btn';
+      subBtn.className = 'btn video-btn';
       subBtn.style.marginTop = "10px";
       subBtn.href = "https://www.youtube.com/@artpick4259?sub_confirmation=1";
       subBtn.target = "_blank";
       subBtn.rel = "noopener";
       subBtn.textContent = "Subscribe on YouTube";
 
-      featuredEl.appendChild(subBtn);
-      const emailRow = document.createElement('div');
-      emailRow.style.display = "flex";
-      emailRow.style.gap = "10px";
-      emailRow.style.flexWrap = "wrap";
-      emailRow.style.marginTop = "12px";
+      const emailLine = document.createElement('div');
+      emailLine.className = "email-line";
+
+      const emailBtn = document.createElement('a');
+      emailBtn.className = 'btn';
+      emailBtn.href = "mailto:artpicknet@gmail.com";
+      emailBtn.textContent = "Email me";
+
+      const addr = document.createElement('span');
+      addr.className = "email-address";
+      addr.textContent = "artpicknet@gmail.com";
 
       const copyBtn = document.createElement('button');
       copyBtn.className = 'close';
-      copyBtn.textContent = "Copy email";
+      copyBtn.textContent = "Copy";
       copyBtn.style.padding = "12px 14px";
       copyBtn.style.borderRadius = "12px";
 
       copyBtn.addEventListener('click', async () => {
-        try{
-          await navigator.clipboard.writeText('artpicknet@gmail.com');
+        try {
+          await navigator.clipboard.writeText("artpicknet@gmail.com");
           copyBtn.textContent = "Copied!";
-          setTimeout(()=>copyBtn.textContent="Copy email", 1200);
-        }catch(e){
-          copyBtn.textContent = "Copy failed";
-          setTimeout(()=>copyBtn.textContent="Copy email", 1200);
+          setTimeout(() => copyBtn.textContent = "Copy", 1200);
+        } catch (e) {
+          copyBtn.textContent = "Failed";
+          setTimeout(() => copyBtn.textContent = "Copy", 1200);
         }
       });
 
-      emailRow.appendChild(emailBtn);
-      emailRow.appendChild(copyBtn);
+      emailLine.appendChild(emailBtn);
+      emailLine.appendChild(addr);
+      emailLine.appendChild(copyBtn);
 
-      featuredEl.appendChild(emailRow);
+      featuredEl.appendChild(title);
+      featuredEl.appendChild(thumbLink);
+      featuredEl.appendChild(iframe);
+      featuredEl.appendChild(row);
+      featuredEl.appendChild(subBtn);
+      featuredEl.appendChild(emailLine);
     } else {
       featuredEl.textContent = "No featured video set yet.";
     }
