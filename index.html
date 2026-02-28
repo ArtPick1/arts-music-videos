@@ -5,278 +5,80 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Holy Noise</title>
   <meta name="description" content="Holy Noise — music videos and a message about following Jesus Christ." />
-<style>
+  <link rel="icon" href="data:,">
+  <style>
     :root {
-      --bg: #000;
-      --fg: #f2f2f2;
-      --muted: #bdbdbd;
-      --card: #0c0c0c;
-      --border: #222;
-      --red: #ff0000;
-      --yellow: #ffd400;
+      --bg:#000; --fg:#f2f2f2; --muted:#bdbdbd;
+      --card:#0c0c0c; --border:#222;
+      --red:#ff0000; --yellow:#ffd400;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.55;
-    }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 14px 16px 44px;
-    }
-    .site-header {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: #000;
-    }
-    .tagline{
-      margin: 10px 0 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 16px;
-      margin-top: 16px;
-    }
-    @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-    }
-    h1 {
-      font-size: 28px;
-      margin: 0 0 10px;
-    }
-    h2 {
-      font-size: 18px;
-      margin: 0 0 10px;
-    }
-    .muted { color: var(--muted); }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    .wrap{max-width:980px;margin:0 auto;padding:14px 16px 44px}
+    .site-header{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--border);background:#000}
+    .tagline{margin:10px 0 0;text-align:center;color:var(--muted);font-size:14px;font-weight:700;letter-spacing:.2px}
 
-    .featured-thumb{
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      display: block;
-      background: #000;
-      object-fit: cover;
-      margin-top: 10px;
-    }
+    .header-row{display:flex;gap:14px;align-items:center}
+    .header-left{flex:0 0 auto}
+    .header-right{flex:1}
+    @media (max-width:860px){.header-row{flex-direction:column;align-items:stretch}}
 
+    .btn{display:inline-block;padding:14px 18px;border-radius:12px;text-decoration:none;font-weight:800;letter-spacing:.2px;border:1px solid var(--border);background:#111;color:var(--fg)}
+    .btn:hover{filter:brightness(1.07)}
+    .btn-youtube{background:var(--red);border-color:#7a0000;color:#fff}
+    .btn-caution{background:var(--yellow);border-color:#8a7300;color:#000;padding:8px 10px;font-size:15px;border-radius:10px;line-height:1.15;text-align:left;white-space:normal}
+    .btn-caution:hover{filter:brightness(1.03)}
 
-    .video-frame {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: 0;
-      border-radius: 12px;
-      background: #000;
-      margin-top: 10px;
-    }
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    h2{font-size:18px;margin:0 0 10px}
+    .muted{color:var(--muted)}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: .2px;
-      border: 1px solid var(--border);
-      background: #111;
-      color: var(--fg);
-    }
-    .btn:hover { filter: brightness(1.07); }
-    .btn-youtube {
-      background: var(--red);
-      border-color: #7a0000;
-      color: #fff;
-    }
+    .double-bar{height:8px;border-top:2px solid #fff;border-bottom:2px solid #fff;opacity:.85;margin:18px 0;border-radius:2px}
 
-    .btn-caution{
-      background: var(--yellow);
-      border-color: #8a7300;
-      color: #000;
-      padding: 8px 10px;
-      font-size: 15px;
-      border-radius: 10px;
-      white-space: nowrap;
-    }
-    .btn-caution:hover{ filter: brightness(1.03); }
-    .caution-row{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      flex-wrap:nowrap;
-      margin:10px 0 28px;
-    }
-    .caution-text{
-      color: var(--yellow);
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-    
-    .double-bar{
-      height: 8px;
-      border-top: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      opacity: .85;
-      margin: 18px 0 18px;
-      border-radius: 2px;
-    }
-@media (max-width: 520px){
-      .caution-row{ flex-wrap:wrap; }
-    }
+    .thumb{width:100%;aspect-ratio:16/9;border-radius:12px;border:1px solid var(--border);display:block;background:#000;object-fit:cover;margin-top:10px}
 
-    /* Force the two red buttons to be side-by-side on normal screens */
-    .video-btn-row{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:nowrap;
-      width:100%;
-      margin-top:12px;
-    }
-    .video-btn{
-      padding: 10px 12px;
-      font-size: 14px;
-      border-radius: 10px;
-      white-space: nowrap;
-      flex: 1;
-      text-align: center;
-    }
-    @media (max-width: 520px){
-      .video-btn-row{ flex-wrap:wrap; }
-      .video-btn{ width:100%; flex: unset; }
-    }
+    /* Side-by-side buttons */
+    .btn-row{display:flex;gap:10px;align-items:center;flex-wrap:nowrap;width:100%;margin-top:12px}
+    .btn-row .video-btn{padding:10px 12px;font-size:14px;border-radius:10px;white-space:nowrap;flex:1;text-align:center}
+    @media (max-width:520px){.btn-row{flex-wrap:wrap} .btn-row .video-btn{width:100%;flex:unset}}
 
-    .sub-btn {
-      margin-top: 10px;
-    }
+    .email-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+    .email-address{font-weight:800;opacity:.92}
 
-    .email-line{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-    .email-address{
-      font-weight: 800;
-      color: var(--fg);
-      opacity: .92;
-    }
-
-    .footer {
-      margin-top: 18px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    a { color: #fff; }
-    a:hover { filter: brightness(1.08); }
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    a{color:#fff} a:hover{filter:brightness(1.08)}
 
     /* Modal */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.78);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 18px;
-      z-index: 9999;
-    }
-    .modal {
-      width: min(760px, 100%);
-      max-height: min(72vh, 720px);
-      overflow: auto;
-      background: #0b0b0b;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px 16px 18px;
-      box-shadow: 0 20px 70px rgba(0,0,0,.6);
-    }
-    .modal-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    .modal-title {
-      font-weight: 900;
-      font-size: 18px;
-      margin: 0;
-    }
-    .scroll-hint{
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      margin-top: 2px;
-    }
-    .close {
-      cursor: pointer;
-      border: 1px solid var(--border);
-      background: #111;
-      color: var(--fg);
-      border-radius: 10px;
-      padding: 8px 10px;
-      font-weight: 900;
-    }
-    .close:hover { filter: brightness(1.07); }
-    .verse {
-      padding: 10px 12px;
-      border-left: 3px solid #333;
-      background: #0a0a0a;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
-    .modal-body p { margin: 0 0 12px; }
-    .modal-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}
+    .modal{width:min(760px,100%);max-height:min(72vh,720px);overflow:auto;background:#0b0b0b;border:1px solid var(--border);border-radius:16px;padding:16px 16px 18px;box-shadow:0 20px 70px rgba(0,0,0,.6)}
+    .modal-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
+    .modal-title{font-weight:900;font-size:18px;margin:0}
+    .scroll-hint{color:var(--muted);font-size:12px;font-weight:700;margin-top:2px}
+    .close{cursor:pointer;border:1px solid var(--border);background:#111;color:var(--fg);border-radius:10px;padding:8px 10px;font-weight:900}
+    .close:hover{filter:brightness(1.07)}
+    .verse{padding:10px 12px;border-left:3px solid #333;background:#0a0a0a;border-radius:10px;margin:10px 0}
+    .modal-body p{margin:0 0 12px}
+    .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
   </style>
-
-  <link rel="icon" href="data:,">
 </head>
 <body>
   <div class="wrap">
-    <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
+    <div class="header-row">
+      <div class="header-left">
+        <a class="btn btn-caution" href="#" id="openMsg">Important message<br>For First-time viewers</a>
+      </div>
+      <div class="header-right">
+        <img class="site-header" src="images/holy-noise-site-header-1920x300.webp" alt="Holy Noise header" />
+      </div>
+    </div>
+
     <div class="tagline">Music videos + a message worth reading.</div>
 
     <div class="grid">
       <section class="card">
-        <h1>Welcome</h1>
-
-        <div class="caution-row">
-          <a class="btn btn-caution" href="#" id="openMsg">Important Message</a>
-          <span class="caution-text">First-time viewers: please read this message and close when you’re done.</span>
-        </div>
-
         <div class="double-bar"></div>
-
         <p class="muted" style="margin-top:0;">Thanks for stoppin’ by Holy Noise—let the music speak, and let the truth cut clean. Turn the volume up.<br><br>The video on the right is today’s featured video. For more music videos, head to my YouTube channel: <a href="https://www.youtube.com/@artpick4259/featured" target="_blank" rel="noopener">https://www.youtube.com/@artpick4259/featured</a><br><br>My styles vary—blues, metal, rock, and more.<br>Some of my influences include Resurrection Band (REZ), Daniel Amos (DA), and Kerry Livgren (AD).<br><br>The lyrics are mine. The instruments and singing voices are generated by AI. I use Songer to generate the music.<br><br>Art, a bondservant&nbsp;of Christ Jesus</p>
       </section>
 
@@ -307,9 +109,8 @@
     </div>
   </div>
 
-  <script src="videos.js?vHN2602281317"></script>
+  <script src="videos.js?vHN2602281325"></script>
   <script>
-    // Message text (preserve wording)
     const msgText = "Welcome to the Holy Noise website.\n\nYou may have found this page because you found\u2014or received\u2014one of my Holy Noise poker chips.\n\nI\u2019m glad you\u2019re here. This website is mainly a place to share my music and to direct people to my YouTube channel. But I have one even more important reason for this webpage:\n\nIf you have not made Jesus your Lord and Savior, and you are not a disciple of Christ, I ask you to consider picking up your cross and following Him. This is the most important thing you can do.\n\nNow, some of you may say, \u201cYes, I\u2019m a Christian\u2014I was baptized when I was a baby,\u201d or \u201cI said the sinner\u2019s prayer in church, and they told me I was a Christian.\u201d While we should be baptized, baptism by itself does not save you. And simply saying a prayer will not save you either\u2014there are no magical words that make someone a disciple of Christ.\n\nJohn the Baptist said, \u201cRepent,\u201d and when Christ began His ministry, He also said, \u201cRepent.\u201d Repentance is action\u2014it\u2019s turning away from sin and changing your mind. We are told to repent, pick up our cross, and follow Christ.\n\nLuke 9:23 (ESV): And he said to all, \u201cIf anyone would come after me, let him deny himself and take up his cross daily and follow me.\u201d\n\nJohn 14:15 (ESV): \u201cIf you love me, you will keep my commandments.\u201d\n\nMatthew 28:20 (ESV): \u201cTeaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\u201d\n\nSalvation is a free gift. When we truly repent, turn away from our sins, and start following Christ, we will want to know Him better and follow His teachings. There is nothing we can do in ourselves that will save us\u2014it is only through what Christ did on the cross, and through His resurrection on the third day, that we have the power to be saved.\n\nIf you have any questions about becoming a disciple of Christ, feel free to email me at: artpicknet@gmail.com\n";
     const modalBody = document.getElementById('modalBody');
 
@@ -335,7 +136,6 @@
     }
     renderMessage(modalBody, msgText);
 
-    // Modal controls
     const backdrop = document.getElementById('backdrop');
     const openBtn = document.getElementById('openMsg');
     const closeBtn = document.getElementById('closeMsg');
@@ -365,18 +165,19 @@
       if (e.key === "Escape" && backdrop.style.display === "flex") closeModal();
     });
 
-    // Featured + Newest (thumbnails)
-    const featuredId = window.FEATURED_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
-    const newestId = window.NEWEST_VIDEO_ID || (window.VIDEOS && window.VIDEOS[0] && window.VIDEOS[0].id);
+    // Videos: Featured + Newest
+    const featuredId = window.FEATURED_VIDEO_ID;
+    const newestId = window.NEWEST_VIDEO_ID;
 
     const videoFeatured = (window.VIDEOS || []).find(v => v.id === featuredId) || (window.VIDEOS || [])[0];
     const videoNewest = (window.VIDEOS || []).find(v => v.id === newestId) || null;
 
-    const featuredEl = document.getElementById('featured');
+    const container = document.getElementById('featured');
+    container.innerHTML = "";
 
-    function videoBlock(label, v) {
+    function renderVideoBlock(label, v, includeMoreButtons=false) {
       const wrap = document.createElement('div');
-      wrap.style.marginTop = "8px";
+      wrap.style.marginTop = "6px";
 
       const h = document.createElement('div');
       h.style.fontWeight = "900";
@@ -388,13 +189,12 @@
       thumbLink.target = "_blank";
       thumbLink.rel = "noopener";
 
-      const thumb = document.createElement('img');
-      thumb.className = 'featured-thumb';
-      thumb.loading = "lazy";
-      thumb.src = `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`;
-      thumb.alt = v.title || label;
-
-      thumbLink.appendChild(thumb);
+      const img = document.createElement('img');
+      img.className = 'thumb';
+      img.loading = "lazy";
+      img.src = `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`;
+      img.alt = v.title || label;
+      thumbLink.appendChild(img);
 
       const desc = document.createElement('div');
       desc.className = "muted";
@@ -402,16 +202,26 @@
       desc.textContent = v.message || v.title || "";
 
       const row = document.createElement('div');
-      row.className = 'video-btn-row';
+      row.className = "btn-row";
 
-      const btn = document.createElement('a');
-      btn.className = 'btn btn-youtube video-btn';
-      btn.href = `https://youtu.be/${v.youtubeId}`;
-      btn.target = "_blank";
-      btn.rel = "noopener";
-      btn.textContent = "Watch on YouTube";
+      const watchBtn = document.createElement('a');
+      watchBtn.className = "btn btn-youtube video-btn";
+      watchBtn.href = `https://youtu.be/${v.youtubeId}`;
+      watchBtn.target = "_blank";
+      watchBtn.rel = "noopener";
+      watchBtn.textContent = "Watch on YouTube";
 
-      row.appendChild(btn);
+      row.appendChild(watchBtn);
+
+      if (includeMoreButtons) {
+        const moreBtn = document.createElement('a');
+        moreBtn.className = "btn btn-youtube video-btn";
+        moreBtn.href = "https://www.youtube.com/@artpick4259/featured";
+        moreBtn.target = "_blank";
+        moreBtn.rel = "noopener";
+        moreBtn.textContent = "Watch More Videos";
+        row.appendChild(moreBtn);
+      }
 
       wrap.appendChild(h);
       wrap.appendChild(thumbLink);
@@ -420,37 +230,29 @@
       return wrap;
     }
 
-    featuredEl.innerHTML = "";
-
     if (videoFeatured) {
-      featuredEl.appendChild(videoBlock("Featured Video", videoFeatured));
+      container.appendChild(renderVideoBlock("Featured Video", videoFeatured, true));
     }
 
     if (videoNewest && (!videoFeatured || videoNewest.youtubeId !== videoFeatured.youtubeId)) {
-      featuredEl.appendChild(videoBlock("Newest Video", videoNewest));
+      container.appendChild(renderVideoBlock("Newest Video", videoNewest, false));
     }
 
-    const moreBtn = document.createElement('a');
-    moreBtn.className = 'btn btn-youtube video-btn';
-    moreBtn.style.marginTop = "12px";
-    moreBtn.href = "https://www.youtube.com/@artpick4259/featured";
-    moreBtn.target = "_blank";
-    moreBtn.rel = "noopener";
-    moreBtn.textContent = "Watch More Videos";
-
     const subBtn = document.createElement('a');
-    subBtn.className = 'btn video-btn';
-    subBtn.style.marginTop = "10px";
+    subBtn.className = "btn";
+    subBtn.style.display = "inline-block";
+    subBtn.style.marginTop = "12px";
     subBtn.href = "https://www.youtube.com/@artpick4259?sub_confirmation=1";
     subBtn.target = "_blank";
     subBtn.rel = "noopener";
     subBtn.textContent = "Subscribe on YouTube";
+    container.appendChild(subBtn);
 
     const emailLine = document.createElement('div');
     emailLine.className = "email-line";
 
     const emailBtn = document.createElement('a');
-    emailBtn.className = 'btn';
+    emailBtn.className = "btn";
     emailBtn.href = "mailto:artpicknet@gmail.com";
     emailBtn.textContent = "Email me";
 
@@ -460,10 +262,7 @@
 
     emailLine.appendChild(emailBtn);
     emailLine.appendChild(addr);
-
-    featuredEl.appendChild(moreBtn);
-    featuredEl.appendChild(subBtn);
-    featuredEl.appendChild(emailLine);
-</script>
+    container.appendChild(emailLine);
+  </script>
 </body>
 </html>

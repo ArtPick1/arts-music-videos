@@ -1,5 +1,15 @@
-// vHN2602281317
+// vHN2602281325
 window.VIDEOS = [
+  {
+    "id": "scars-of-my-sin",
+    "title": "Scars Of My Sin",
+    "youtubeId": "txf-bxIJ6PM",
+    "published": "",
+    "tags": [
+      "Newest"
+    ],
+    "message": "Scars Of My Sin (Blues Worship / Gospel Blues Rock)"
+  },
   {
     "id": "holy-awe-you-alone-are-worthy",
     "title": "HOLY AWE You Alone Are Worthy",
@@ -12,3 +22,4 @@ window.VIDEOS = [
   }
 ];
 window.FEATURED_VIDEO_ID = "holy-awe-you-alone-are-worthy";
+window.NEWEST_VIDEO_ID = "scars-of-my-sin";
